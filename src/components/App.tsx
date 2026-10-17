@@ -2,6 +2,7 @@ import { LanguageProvider } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
+import PhotoGallery from "@/components/PhotoGallery";
 import CapacityViewer from "@/components/CapacityViewer";
 import ProfitCalculator from "@/components/ProfitCalculator";
 import QualityAssurance from "@/components/QualityAssurance";
@@ -20,6 +21,7 @@ export default function App() {
       <main>
         <Hero />
         <ComparisonMatrix />
+        <PhotoGallery />
         <CapacityViewer />
         <ProfitCalculator />
         <QualityAssurance />

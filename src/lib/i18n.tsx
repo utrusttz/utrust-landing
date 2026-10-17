@@ -21,6 +21,7 @@ export interface Translations {
     announcementDirect: string;
     announcementTransit: string;
     mitumbaVsUtrust: string;
+    gallery: string;
     factorySpecs: string;
     profitCalc: string;
     qualityAssurance: string;
@@ -170,6 +171,33 @@ export interface Translations {
     successDesc: string;
     resetBtn: string;
   };
+  gallery: {
+    badge: string;
+    titlePrefix: string;
+    titleMain: string;
+    subtitle: string;
+    filterAll: string;
+    filterCotton: string;
+    filterAthletic: string;
+    filterPackaging: string;
+    filterOem: string;
+    zoomHint: string;
+    specsLabel: string;
+    orderSampleBtn: string;
+    closeLightbox: string;
+    prevPhoto: string;
+    nextPhoto: string;
+    photoCounter: string;
+    items: Array<{
+      id: string;
+      category: "cotton" | "athletic" | "packaging" | "oem";
+      title: string;
+      tag: string;
+      description: string;
+      specs: string[];
+      image: string;
+    }>;
+  };
   footer: {
     bio: string;
     madeInTz: string;
@@ -202,6 +230,7 @@ export const translations: Record<Language, Translations> = {
       announcementDirect: "Direct from Dar es Salaam Factory",
       announcementTransit: "EAC Duty-Free Transit Certified",
       mitumbaVsUtrust: "Mitumba vs Utrust",
+      gallery: "Product Gallery",
       factorySpecs: "Factory Specs",
       profitCalc: "Profit Calculator",
       qualityAssurance: "Quality Assurance",
@@ -442,6 +471,162 @@ export const translations: Record<Language, Translations> = {
         "A senior commercial account executive from Utrust Clothing Tanzania Limited will contact you within 24 business hours. Your sample swatch request has been queued.",
       resetBtn: "Submit Another Inquiry",
     },
+    gallery: {
+      badge: "REAL FACTORY PRODUCTION RUNS",
+      titlePrefix: "Industrial Precision",
+      titleMain: "Factory-Direct Apparel Gallery",
+      subtitle:
+        "High-definition photographic proof of our active manufacturing lines in Dar es Salaam. From single-jersey combed cotton boxer shorts to athletic performance mesh, custom jacquard elastic waistbands, and luxury rigid retail presentation boxes.",
+      filterAll: "All Showcase",
+      filterCotton: "Cotton Blanks",
+      filterAthletic: "Athletic & Prints",
+      filterPackaging: "Retail Packaging",
+      filterOem: "OEM / ODM Custom",
+      zoomHint: "Click any image to inspect high-resolution details",
+      specsLabel: "Factory Production Specifications",
+      orderSampleBtn: "Inquire for Wholesale",
+      closeLightbox: "Close",
+      prevPhoto: "Previous Photo",
+      nextPhoto: "Next Photo",
+      photoCounter: "Photo",
+      items: [
+        {
+          id: "cotton-blanks-hero",
+          category: "cotton",
+          title: "Everyday Comfort™ 100% Combed Cotton Blanks",
+          tag: "Classic Cotton Blanks",
+          description:
+            "Our flagship single-jersey combed cotton boxer shorts. Featuring 8 permanent retail colorways and classic highland tartans with pre-shrunk finish.",
+          specs: [
+            "100% Tanzanian Combed Cotton",
+            "160-180 GSM Single Jersey Knit",
+            "Pre-shrunk < 3% Dimensional Stability",
+            "8 Vibrant Solid & Tartan Colorways",
+          ],
+          image: "/gallery/cotton-blanks-hero.jpg",
+        },
+        {
+          id: "gift-box-teal",
+          category: "packaging",
+          title: "6-Pack Luxury Retail Presentation Gift Box",
+          tag: "Retail Presentation",
+          description:
+            "Turnkey luxury packaging solution for high-end retail boutiques and department stores with foil hot-stamping and custom ribbon pull.",
+          specs: [
+            "Rigid Cardboard Hinged Construction",
+            "Teal & Gold Foil Hot-Stamping",
+            "Individual Rolled Garment Separators",
+            "Custom Retail Barcode & Hangtag Ready",
+          ],
+          image: "/gallery/gift-box-teal.jpg",
+        },
+        {
+          id: "athletic-mesh",
+          category: "athletic",
+          title: "Athletic Breathable Performance Mesh Shorts",
+          tag: "Activewear & Mesh",
+          description:
+            "Engineered with micro-perforated breathable mesh for active lifestyle consumers. Features moisture-wicking and quick-drying yarn.",
+          specs: [
+            "Poly-Spandex Breathable Micro-Mesh",
+            "Active Moisture Wicking Finish",
+            "Ergonomic 3D Contour Comfort Pouch",
+            "High-Durability Flatlock Stitching",
+          ],
+          image: "/gallery/athletic-mesh.jpg",
+        },
+        {
+          id: "tropical-prints",
+          category: "athletic",
+          title: "Tropical Flora & Vibrant Resort Prints",
+          tag: "Resort Prints",
+          description:
+            "High-contrast tropical botanical and floral designs printed with premium eco-certified reactive dyes for lasting color depth.",
+          specs: [
+            "Eco-Certified Reactive Printing",
+            "Grade 4.5+ Wash Colorfastness",
+            "Non-Toxic Skin-Safe European Standard Dyes",
+            "Available in 12 Summer Pattern Variations",
+          ],
+          image: "/gallery/tropical-prints.jpg",
+        },
+        {
+          id: "jacquard-briefs",
+          category: "oem",
+          title: "Branded Jacquard Elastic Waistband Briefs",
+          tag: "Jacquard Elastic",
+          description:
+            "Ultra-comfortable boxer briefs equipped with custom woven jacquard brand waistbands engineered to maintain elasticity after dozens of washes.",
+          specs: [
+            "35mm High-Tensile Anti-Roll Waistband",
+            "Direct Jacquard Custom Weaving",
+            "Reinforced Double-Layer Crotch Gusset",
+            "4-Way Stretch Cotton-Modal Blend",
+          ],
+          image: "/gallery/jacquard-briefs.jpg",
+        },
+        {
+          id: "graphic-prints",
+          category: "athletic",
+          title: "Graphic Animal Prints & Urban Camo Line",
+          tag: "Graphic Underwear",
+          description:
+            "Youthful and contemporary patterns including leopard spots, zebra stripes, and geo-camo for fast-moving retail stores.",
+          specs: [
+            "High-Impact Graphic Aesthetics",
+            "Reinforced Stress Points",
+            "Soft-Touch Surface Brushing",
+            "Tested Against Extreme Humidity Wear",
+          ],
+          image: "/gallery/graphic-prints.jpg",
+        },
+        {
+          id: "oem-packaging",
+          category: "packaging",
+          title: "Custom OEM / ODM Labeling & Master Cartons",
+          tag: "OEM / ODM Export",
+          description:
+            "Turnkey private labeling service: bespoke woven labels, customized retail boxes, barcode stickers, and palletized export shipping.",
+          specs: [
+            "Full Private Label Branding Service",
+            "Export-Standard 5-Ply Corrugated Cartons",
+            "Polybagged Individual Packaging Options",
+            "Customs & SADC / EAC Documentation",
+          ],
+          image: "/gallery/oem-packaging.jpg",
+        },
+        {
+          id: "catalog-triptych-1",
+          category: "cotton",
+          title: "Factory Production Summer & Active Series",
+          tag: "Factory Production",
+          description:
+            "Comprehensive production overview showing our seamless transition from cotton blanks to active mesh and presentation gift boxes.",
+          specs: [
+            "2.8M Units Monthly Production Volume",
+            "ISO 9001:2024 Quality Management System",
+            "Factory Direct Dar es Salaam Mill Pricing",
+            "Zero Mitumba Defect Guarantee",
+          ],
+          image: "/gallery/catalog-triptych-1.jpg",
+        },
+        {
+          id: "catalog-triptych-2",
+          category: "oem",
+          title: "Export Wholesale Suites & Custom Packaging Lines",
+          tag: "Export Wholesale",
+          description:
+            "Full spectrum of wholesale products engineered for East African retail distribution, regional wholesalers, and supermarket chains.",
+          specs: [
+            "Standardized Size Grading (S to 4XL)",
+            "Factory Batch Color Consistency",
+            "Direct Delivery to Kariakoo & Regional Hubs",
+            "Flexible B2B Minimum Order Quantities",
+          ],
+          image: "/gallery/catalog-triptych-2.jpg",
+        },
+      ],
+    },
     footer: {
       bio: "is East Africa’s premier industrial apparel manufacturing partner. We replace unreliable second-hand bales (mitumba) with pristine, factory-direct, certified local apparel.",
       madeInTz: "Proudly Made in Tanzania 🇹🇿",
@@ -473,6 +658,7 @@ export const translations: Record<Language, Translations> = {
       announcementDirect: "Moja kwa Moja Kutoka Kiwanda cha Dar es Salaam",
       announcementTransit: "Imethibitishwa Usafirishaji Bila Ushuru EAC",
       mitumbaVsUtrust: "Mitumba vs Utrust",
+      gallery: "Matunzio ya Picha",
       factorySpecs: "Uwezo wa Kiwanda",
       profitCalc: "Kikokotoo cha Faida",
       qualityAssurance: "Uhakika wa Ubora",
@@ -713,6 +899,162 @@ export const translations: Record<Language, Translations> = {
         "Afisa mkuu wa kibiashara kutoka Utrust Clothing Tanzania Limited atawasiliana nawe ndani ya saa 24 za kazi. Ombi lako la sampuli limeandikishwa.",
       resetBtn: "Wasilisha Ombi Lingine",
     },
+    gallery: {
+      badge: "UZALISHAJI HALISI WA KIWANDANI",
+      titlePrefix: "Kiwango cha Juu cha Viwandani",
+      titleMain: "Matunzio ya Mavazi ya Kiwandani",
+      subtitle:
+        "Uthibitisho halisi wa picha za ubora wa juu kutoka kwenye mistari yetu ya uzalishaji jijini Dar es Salaam. Kuanzia boksa za pamba safi hadi nguo za michezo za wavu, lebo za kiunoni za jacquard, na masanduku ya zawadi ya kifahari ya rejareja.",
+      filterAll: "Picha Zote",
+      filterCotton: "Pamba Safi",
+      filterAthletic: "Michezo na Maua",
+      filterPackaging: "Vifurushi vya Rejareja",
+      filterOem: "Lebo Binafsi (OEM)",
+      zoomHint: "Bofya picha yoyote kutazama maelezo ya kina kwa ukubwa",
+      specsLabel: "Vipimo vya Uzalishaji wa Kiwanda",
+      orderSampleBtn: "Ulizia kwa Bei ya Jumla",
+      closeLightbox: "Funga",
+      prevPhoto: "Picha Iliyopita",
+      nextPhoto: "Picha Inayofuata",
+      photoCounter: "Picha",
+      items: [
+        {
+          id: "cotton-blanks-hero",
+          category: "cotton",
+          title: "Pamba Safi 100% ya Everyday Comfort™",
+          tag: "Nguo za Pamba Asilia",
+          description:
+            "Boksa zetu bora za pamba iliyochanwa. Zinajumuisha rangi 8 thabiti na miundo ya kisasa ya tartan iliyotibiwa kuzuia kusinyaa.",
+          specs: [
+            "Pamba Safi 100% ya Tanzania",
+            "Uzito wa 160-180 GSM",
+            "Imenyoshwa kuzuia kusinyaa (<3%)",
+            "Rangi 8 Thabiti na Miundo ya Kisasa",
+          ],
+          image: "/gallery/cotton-blanks-hero.jpg",
+        },
+        {
+          id: "gift-box-teal",
+          category: "packaging",
+          title: "Sanduku la Zawadi la Vipande 6 la Kifahari",
+          tag: "Ufungashaji wa Rejareja",
+          description:
+            "Suluhisho la ufungashaji wa kifahari kwa maduka makubwa na maduka ya nguo yenye chapa ya dhahabu na utepe wa kisasa.",
+          specs: [
+            "Sanduku Imara la Kadibodi Yenye Nguvu",
+            "Chapa ya Dhahabu na Rangi ya Kifahari",
+            "Sehemu Maalum ya Kukunja Nguo",
+            "Tayari kwa Msimbo Pau (Barcode) na Lebo",
+          ],
+          image: "/gallery/gift-box-teal.jpg",
+        },
+        {
+          id: "athletic-mesh",
+          category: "athletic",
+          title: "Boksa za Michezo za Wavu Zinazopumua",
+          tag: "Nguo za Michezo",
+          description:
+            "Zimetengenezwa kwa kitambaa cha wavu chenye matundu madogo kinachoruhusu hewa kupita na kukausha jasho haraka.",
+          specs: [
+            "Mchanganyiko wa Poly-Spandex Unaopumua",
+            "Hukausha Jasho Haraka kwa Michezo",
+            "Muundo wa 3D Unaotoa Faraja ya Juu",
+            "Mshono Imara Usiokwangua Mwili",
+          ],
+          image: "/gallery/athletic-mesh.jpg",
+        },
+        {
+          id: "tropical-prints",
+          category: "athletic",
+          title: "Miundo ya Maua ya Kitropiki na Rangi za Kisasa",
+          tag: "Mitindo ya Maua",
+          description:
+            "Miundo ya rangi yenye kuvutia ya maua ya kitropiki iliyochapishwa kwa rangi thabiti za kisasa zisizopauka.",
+          specs: [
+            "Uchapishaji wa Rangi Thabiti wa Kisasa",
+            "Kiwango cha 4.5+ cha Kudumu Rangi",
+            "Rangi Salama Zisizo na Kemikali Hatari",
+            "Inapatikana katika Miundo 12 Tofauti",
+          ],
+          image: "/gallery/tropical-prints.jpg",
+        },
+        {
+          id: "jacquard-briefs",
+          category: "oem",
+          title: "Boksa zenye Mpira wa Kiuno wa Jacquard",
+          tag: "Lebo ya Jacquard Kiunoni",
+          description:
+            "Boksa zenye mpira mpana wa kiunoni wa jacquard unaodumu bila kulegea hata baada ya kufuliwa mara nyingi.",
+          specs: [
+            "Mpira Imara wa Milimita 35 Usiokunjika",
+            "Ufumaji wa Nembo Binafsi Moja kwa Moja",
+            "Sehemu ya Chini ya Safu Mbili Imara",
+            "Kitambaa cha Kunyumbulika kwa Faraja",
+          ],
+          image: "/gallery/jacquard-briefs.jpg",
+        },
+        {
+          id: "graphic-prints",
+          category: "athletic",
+          title: "Miundo ya Kisasa ya Chui na Mistari ya Pundamilia",
+          tag: "Mitindo ya Kisasa",
+          description:
+            "Mitindo ya kisasa ya michoro ya wanyama na maumbo ya kijiji kwa ajili ya maduka na masoko yanayouza kwa kasi.",
+          specs: [
+            "Mwonekano wa Kisasa wa Kuvutia",
+            "Mishono Imara Maeneo Yanayovutika",
+            "Kitambaa Laini Kisichowasha",
+            "Kimejaribiwa Kuhimili Joto na Unyevu",
+          ],
+          image: "/gallery/graphic-prints.jpg",
+        },
+        {
+          id: "oem-packaging",
+          category: "packaging",
+          title: "Lebo Binafsi (OEM/ODM) na Katoni za Kusafirisha Nje",
+          tag: "Uzalishaji wa Lebo Binafsi",
+          description:
+            "Huduma kamili ya kuweka chapa yako mwenyewe: lebo zilizofumwa, masanduku maalum, na katoni imara za usafirishaji.",
+          specs: [
+            "Huduma Kamili ya Chapa ya Mteja (OEM)",
+            "Katoni Imara za Daraja la 5 za Kusafirisha Nje",
+            "Ufungashaji wa Mfuko Mmoja Mmoja (Polybag)",
+            "Nyaraka za Forodha za SADC na EAC",
+          ],
+          image: "/gallery/oem-packaging.jpg",
+        },
+        {
+          id: "catalog-triptych-1",
+          category: "cotton",
+          title: "Mfululizo Kamili wa Uzalishaji wa Majira ya Joto",
+          tag: "Uzalishaji wa Kiwandani",
+          description:
+            "Mwonekano kamili wa uwezo wetu wa kutengeneza nguo za pamba, nguo za michezo, na vifurushi vya zawadi.",
+          specs: [
+            "Uzalishaji wa Vipande Milioni 2.8 kwa Mwezi",
+            "Usimamizi wa Ubora wa ISO 9001:2024",
+            "Bei ya Moja kwa Moja ya Kiwanda Dar es Salaam",
+            "Dhamana ya 0% ya Kasoro za Nguo",
+          ],
+          image: "/gallery/catalog-triptych-1.jpg",
+        },
+        {
+          id: "catalog-triptych-2",
+          category: "oem",
+          title: "Mkusanyiko wa Jumla wa Kusafirisha Nje na Sanduku za Zawadi",
+          tag: "Usafirishaji wa Jumla",
+          description:
+            "Bidhaa zote za jumla zilizotengenezwa kwa ajili ya maduka na wasambazaji wa Afrika Mashariki na masoko makuu.",
+          specs: [
+            "Vipimo Sanifu vya Saizi (S hadi 4XL)",
+            "Rangi Sawa Katika Kila Kundi la Uzalishaji",
+            "Uwasilishaji wa Haraka Kariakoo na Mikoani",
+            "Kiwango Nafuu cha Kuanzia Kuagiza (MOQ)",
+          ],
+          image: "/gallery/catalog-triptych-2.jpg",
+        },
+      ],
+    },
     footer: {
       bio: "ni mshirika kiongozi wa utengenezaji wa mavazi ya viwandani Afrika Mashariki. Tunachukua nafasi ya marobota ya mitumba yenye hasara kwa kutoa nguo mpya za kiwandani zenye ubora uliothibitishwa.",
       madeInTz: "Imetengenezwa kwa Fahari Tanzania 🇹🇿",
@@ -744,6 +1086,7 @@ export const translations: Record<Language, Translations> = {
       announcementDirect: "达累斯萨拉姆自营大型现代化服装工厂直发",
       announcementTransit: "东非共同体 (EAC) 原产地免关税认证",
       mitumbaVsUtrust: "二手碎布对比",
+      gallery: "产品与工厂图集",
       factorySpecs: "工厂产能",
       profitCalc: "利润测算器",
       qualityAssurance: "质量保证体系",
@@ -983,6 +1326,162 @@ export const translations: Record<Language, Translations> = {
       successDesc:
         "Utrust Clothing Tanzania Limited 的高级商务客户总监将在 24 个工作小时内与您对接，您的实物样品盒申请已进入寄送排单。",
       resetBtn: "提交另一份咨询",
+    },
+    gallery: {
+      badge: "真实自营现代化工厂量产实拍",
+      titlePrefix: "工业制造品质",
+      titleMain: "成衣系列与工厂实景图库",
+      subtitle:
+        "坦桑尼亚达累斯萨拉姆工厂全套量产成衣实景高清实拍。从 100% 精梳纯棉平角内裤，到高弹速干运动网眼、专属字母提花弹力腰带以及外贸精品硬盒零售礼盒包装。",
+      filterAll: "全部图库",
+      filterCotton: "纯棉基础系列",
+      filterAthletic: "运动与印花",
+      filterPackaging: "精品礼盒与外包装",
+      filterOem: "贴牌大宗定制",
+      zoomHint: "点击任意图片可查看高清细节与大图画廊",
+      specsLabel: "工厂生产与工艺规格",
+      orderSampleBtn: "咨询大宗批发",
+      closeLightbox: "关闭画廊",
+      prevPhoto: "上一张",
+      nextPhoto: "下一张",
+      photoCounter: "照片",
+      items: [
+        {
+          id: "cotton-blanks-hero",
+          category: "cotton",
+          title: "Everyday Comfort™ 100% 精梳纯棉平角内裤",
+          tag: "经典纯棉基础款",
+          description:
+            "工厂主力单面精梳纯棉平角内裤系列，涵盖8款长青纯色与经典格纹印花，经过预缩水定型处理，亲肤透气不缩水。",
+          specs: [
+            "100% 坦桑尼亚原生精梳纯棉",
+            "160-180 GSM 紧密针织面料",
+            "预缩水工艺处理（缩水率<3%）",
+            "8款经典常青纯色及英伦格纹",
+          ],
+          image: "/gallery/cotton-blanks-hero.jpg",
+        },
+        {
+          id: "gift-box-teal",
+          category: "packaging",
+          title: "外销精品 6条装礼品展示礼盒",
+          tag: "高端零售精品包装",
+          description:
+            "专为品牌零售专柜与高端商超设计的硬盒礼盒包装方案，烫金工艺配丝绸拉带，大幅提升终端陈列质感与溢价能力。",
+          specs: [
+            "高强韧抗压精品硬纸盒结构",
+            "祖母绿与烫金高档工艺搭配",
+            "独立卷卷分隔内衬槽设计",
+            "支持外销专属条形码与防伪吊牌",
+          ],
+          image: "/gallery/gift-box-teal.jpg",
+        },
+        {
+          id: "athletic-mesh",
+          category: "athletic",
+          title: "高透气速干运动网眼平角短裤",
+          tag: "速干透气运动系列",
+          description:
+            "专为东非炎热气候与运动健身场景研发的高密度微孔透气网眼，吸湿排汗，快速速干不闷热。",
+          specs: [
+            "聚酯氨纶高弹微孔透气网眼",
+            "高效导湿快干工艺处理",
+            "3D立体承托无感U凸囊袋",
+            "高弹力四针六线无缝拼缝",
+          ],
+          image: "/gallery/athletic-mesh.jpg",
+        },
+        {
+          id: "tropical-prints",
+          category: "athletic",
+          title: "热带海岛风情印花与度假花卉系列",
+          tag: "度假风情数码印花",
+          description:
+            "采用高保真环保活性数码印花技术，热带花卉与海岛风情图案细腻生动，久洗耐晒不褪色。",
+          specs: [
+            "环保认证活性数码精细印染",
+            "色牢度达国际 4.5 级以上标准",
+            "通过 OEKO-TEX 无害亲肤染料标准",
+            "支持 12 种以上当季流行花色定制定做",
+          ],
+          image: "/gallery/tropical-prints.jpg",
+        },
+        {
+          id: "jacquard-briefs",
+          category: "oem",
+          title: "专属提花弹力提腰定制平角平脚裤",
+          tag: "提花织唛专属定制",
+          description:
+            "高弹耐磨无压迫感提花织带腰头，支持大宗定制品牌专属英文与图腾织标，反复机洗不卷边、不松弛。",
+          specs: [
+            "35mm 高弹力防卷边加宽腰带",
+            "支持大宗个性化品牌字母提花",
+            "双层加固防摩擦立体底裆",
+            "四向高弹棉莫代尔混纺亲肤面料",
+          ],
+          image: "/gallery/jacquard-briefs.jpg",
+        },
+        {
+          id: "graphic-prints",
+          category: "athletic",
+          title: "潮流波普几何与豹纹动物纹系列",
+          tag: "潮流先锋图案系列",
+          description:
+            "融合都市迷彩、经典斑马纹与豹纹等潮流元素，直击年轻消费群体，是快消专营店的热销爆款。",
+          specs: [
+            "视觉冲击力强劲的潮流印花工艺",
+            "重点受力接缝多道加固缝线",
+            "表层精细磨毛柔顺触感处理",
+            "耐热带高温高湿汗液测试",
+          ],
+          image: "/gallery/graphic-prints.jpg",
+        },
+        {
+          id: "oem-packaging",
+          category: "packaging",
+          title: "OEM / ODM 专属贴牌与集装箱大宗出口包装",
+          tag: "工厂源头贴牌大宗出口",
+          description:
+            "为跨国商超与大型分销商提供一站式贴牌代工：专属洗水唛、定制吊牌、独立防尘袋与抗摔外贸纸箱。",
+          specs: [
+            "全套企业私有品牌 (OEM/ODM) 代工",
+            "出口专用 5 层加厚耐压瓦楞外箱",
+            "单条独立自封袋与展示吊盒可选",
+            "全套符合 SADC / EAC 关税协定证书",
+          ],
+          image: "/gallery/oem-packaging.jpg",
+        },
+        {
+          id: "catalog-triptych-1",
+          category: "cotton",
+          title: "达累斯萨拉姆工厂夏季全品类生产总汇",
+          tag: "自营工厂大宗产能",
+          description:
+            "全景展示从原生精梳纯棉基础款，到速干运动网眼、再到精品礼盒套装的完整流水线生产成果。",
+          specs: [
+            "月度规模化产能达 280 万件",
+            "ISO 9001:2024 国际全流程质量管理",
+            "达累斯萨拉姆原厂直供批发价格",
+            "彻底告别二手衣服高残次与损耗",
+          ],
+          image: "/gallery/catalog-triptych-1.jpg",
+        },
+        {
+          id: "catalog-triptych-2",
+          category: "oem",
+          title: "东非大宗外销成套内衣与礼盒工程方案",
+          tag: "外销批发成套方案",
+          description:
+            "针对东非全境、卡里亚库 (Kariakoo) 商圈及周边国家批发商定制的成套装运与定制礼品方案。",
+          specs: [
+            "标准化欧码/非码全尺码覆盖 (S-4XL)",
+            "每批次面料染色电脑对色零色差",
+            "直供卡里亚库商圈与港口货柜专线",
+            "灵活友好的阶梯起订量 (MOQ)",
+          ],
+          image: "/gallery/catalog-triptych-2.jpg",
+        },
+      ],
     },
     footer: {
       bio: "是东非领先的现代化工业服装制造核心企业。我们以品质可靠、工厂直供、资质齐全的全新本土成衣，全面取代充满不确定性的二手旧衣包 (Mitumba)。",

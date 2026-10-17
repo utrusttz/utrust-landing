@@ -55,6 +55,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#gallery" className="hover:text-white transition-colors">
+                  {t.header.gallery}
+                </a>
+              </li>
+              <li>
                 <a href="#capacity" className="hover:text-white transition-colors">
                   {t.header.factorySpecs}
                 </a>
