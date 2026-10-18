@@ -1,10 +1,12 @@
 
 import { useState } from "react";
-import { Send, MessageCircle, CheckCircle2, AlertCircle, Building2, MapPin, ShieldCheck, RefreshCw } from "lucide-react";
+import { Send, MessageCircle, CheckCircle2, AlertCircle, Building2, MapPin, ShieldCheck, RefreshCw, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import CapacityViewer from "@/components/CapacityViewer";
 
 export default function B2BOnboarding() {
   const { t, language } = useLanguage();
+  const [showSpecs, setShowSpecs] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -360,6 +362,38 @@ export default function B2BOnboarding() {
             )}
           </div>
 
+        </div>
+
+        {/* Collapsible Technical Specs for Trade Buyers & Importers */}
+        <div className="mt-16 pt-12 border-t border-slate-200">
+          <div className="text-center">
+            <button
+              type="button"
+              onClick={() => setShowSpecs(!showSpecs)}
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-800 text-sm font-bold transition-all shadow-2xs hover:shadow-sm cursor-pointer"
+            >
+              <Building2 className="h-4 w-4 text-[#d46f24]" />
+              <span>
+                {showSpecs 
+                  ? (language === "sw" ? "Ficha Vipimo vya Kiufundi na Mitambo ya Kiwandani" : language === "zh" ? "收起工厂设备与工艺技术参数 (GSM / 针距 / 打包)" : "Hide Factory Machinery & Technical Specs (GSM, Stitch, Packaging)") 
+                  : (language === "sw" ? "Tazama Vipimo vya Kiufundi na Mitambo ya Kiwandani (GSM, Mishono, Katoni)" : language === "zh" ? "查阅工厂设备与工艺技术参数 (GSM / 针距 / 打包)" : "View Factory Machinery & Technical Specs (GSM, Stitch, Packaging)")}
+              </span>
+              <ChevronDown className={`h-4 w-4 text-slate-500 transition-transform ${showSpecs ? "rotate-180" : ""}`} />
+            </button>
+            <p className="text-xs text-slate-500 mt-2.5 max-w-lg mx-auto">
+              {language === "sw" 
+                ? "Kwa wauzaji wa jumla, wafanyabiashara wa vitambaa, na wanaohitaji uzalishaji maalum (OEM / Private Label)." 
+                : language === "zh" 
+                ? "供大宗批发采购商、品牌定制 (OEM/ODM) 及验厂客户查验达累斯萨拉姆工厂工艺指标。" 
+                : "For volume distributors, trade stockists, and institutional OEM/Private Label buyers."}
+            </p>
+          </div>
+
+          {showSpecs && (
+            <div className="mt-10 rounded-2xl overflow-hidden border border-slate-200 shadow-sm animate-in fade-in-50 duration-200">
+              <CapacityViewer />
+            </div>
+          )}
         </div>
 
       </div>

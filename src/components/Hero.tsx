@@ -1,10 +1,10 @@
 
-import { ArrowRight, Wind, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, Wind, ShieldCheck, Sparkles, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import ProductShowcaseCarousel from "@/components/ProductShowcaseCarousel";
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-orange-50/40 via-white to-slate-50/60 border-b border-slate-200/70 pt-10 pb-16 md:py-16 lg:py-20">
@@ -96,81 +96,66 @@ export default function Hero() {
             {/* 1. The Animated 2.5s Crossfade Carousel */}
             <ProductShowcaseCarousel />
 
-            {/* 2. Integrated Telemetry Summary Strip */}
+            {/* 2. Consumer Quality & Freshness Guarantee Box */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 space-y-4">
               
-              {/* Telemetry Header */}
-              <div className="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d46f24]" />
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
-                  <span className="font-mono font-bold tracking-wider text-slate-900 uppercase text-[11px]">
-                    {t.hero.telemetryTitle}
+                  <span className="font-bold text-xs uppercase tracking-wider text-slate-800">
+                    {language === "sw" ? "Ahadi ya Ubora wa Utrust" : language === "zh" ? "Utrust 全新正品承诺" : "The Utrust Quality Promise"}
                   </span>
                 </div>
-                <span className="text-[10px] font-mono font-bold text-[#d46f24] bg-orange-50 px-2 py-0.5 rounded border border-orange-200/60">
-                  {t.hero.telemetryLive}
+                <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
+                  {language === "sw" ? "100% Pamba Safi" : language === "zh" ? "100% 精梳纯棉" : "100% Combed Cotton"}
                 </span>
               </div>
 
-              {/* Metrics Grid */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-slate-50/90 rounded-xl p-3 border border-slate-100">
-                  <span className="text-[11px] font-mono uppercase text-slate-500 block mb-0.5">
-                    {t.hero.instantOutputLabel}
+              {/* 2 Highlight Blocks */}
+              <div className="grid grid-cols-2 gap-3 text-left">
+                <div className="p-3 bg-orange-50/70 rounded-xl border border-orange-100/80">
+                  <span className="text-xs font-bold text-slate-900 block">
+                    {language === "sw" ? "Kipimo cha Kitanzania" : language === "zh" ? "东非本土合身版型" : "True Tanzanian Fit"}
                   </span>
-                  <div className="text-2xl font-black text-slate-950 tracking-tight font-mono">
-                    {t.hero.instantOutputVal}
-                  </div>
-                  <span className="text-[11px] font-semibold text-[#d46f24] block">
-                    {t.hero.instantOutputUnit}
+                  <span className="text-[11px] text-slate-500 block mt-0.5">
+                    {language === "sw" ? "M, L, XL, 2XL, 3XL inakaa vizuri" : language === "zh" ? "M 至 3XL 舒适不紧绷" : "Real sizes from M to 3XL"}
                   </span>
                 </div>
 
-                <div className="bg-slate-50/90 rounded-xl p-3 border border-slate-100">
-                  <span className="text-[11px] font-mono uppercase text-slate-500 block mb-0.5">
-                    {t.hero.monthlyCapLabel}
+                <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100/80">
+                  <span className="text-xs font-bold text-slate-900 block">
+                    {language === "sw" ? "Haipauki Rangi" : language === "zh" ? "水洗不褪色不变形" : "Colorfast & Durable"}
                   </span>
-                  <div className="text-2xl font-black text-slate-950 tracking-tight font-mono">
-                    {t.hero.monthlyCapVal}
-                  </div>
-                  <span className="text-[11px] font-semibold text-[#d46f24] block">
-                    {t.hero.monthlyCapUnit}
+                  <span className="text-[11px] text-slate-500 block mt-0.5">
+                    {language === "sw" ? "Inadumu baada ya kufuliwa 50+" : language === "zh" ? "50次以上洗涤依然挺括" : "Tested over 50+ soap washes"}
                   </span>
                 </div>
               </div>
 
-              {/* Line Utilization Progress */}
-              <div className="space-y-1.5 pt-1">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-semibold text-slate-700">{t.hero.lineUtilizationLabel}</span>
-                  <span className="font-mono font-bold text-orange-950">{t.hero.bookedVal}</span>
+              {/* Local Kigamboni / Kariakoo reassurance */}
+              <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-600">
+                <div className="p-2 bg-white rounded-lg text-[#d46f24] shadow-2xs shrink-0">
+                  <MapPin className="h-4 w-4" />
                 </div>
-                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-[#d46f24] rounded-full transition-all duration-1000 w-[78%]" />
-                </div>
-                <div className="flex justify-between text-[10px] text-slate-400 font-mono">
-                  <span>{t.hero.activeUnitsLabel}</span>
-                  <span>{t.hero.availableUnitsLabel}</span>
-                </div>
-              </div>
-
-              {/* Quick Q4 advisory */}
-              <div className="flex items-start gap-2.5 bg-amber-50/80 border border-amber-200/80 rounded-xl p-2.5">
-                <TrendingUp className="h-4 w-4 text-amber-700 shrink-0 mt-0.5" />
-                <div className="text-[11px] text-amber-900 leading-snug">
-                  {t.hero.quarterlyAdvisory}
+                <div className="leading-snug">
+                  <strong className="text-slate-900 font-semibold block">
+                    {language === "sw" ? "Kiwandani Kigamboni • Ofisi Kariakoo" : language === "zh" ? "吉甘博尼自营工厂 · 卡里亚库商业中心" : "Factory in Kigamboni • Hub in Kariakoo"}
+                  </strong>
+                  <span className="text-[11px] text-slate-500">
+                    {language === "sw" ? "Inapatikana kwenye maduka ya nguo Dar es Salaam na kusafirishwa mikoani." : language === "zh" ? "达市各大服装店均有现货销售，支持外地客运快速发货。" : "Available in neighborhood clothing stores & wholesale dispatch."}
+                  </span>
                 </div>
               </div>
 
-              {/* Action Button */}
+              {/* Primary Consumer Action */}
               <a
-                href="#onboarding"
+                href="#gallery"
                 className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white py-3 rounded-xl font-bold text-xs transition-colors shadow-xs"
               >
-                <span>{t.hero.reserveButton}</span>
+                <span>{language === "sw" ? "Tazama Mifano ya Nguo na Rangi" : language === "zh" ? "浏览成衣产品及配色" : "Browse Ready-Made Styles & Colors"}</span>
                 <ArrowRight className="h-3.5 w-3.5" />
               </a>
 
