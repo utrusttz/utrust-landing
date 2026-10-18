@@ -106,11 +106,11 @@ export default function Hero() {
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
                   <span className="font-bold text-xs uppercase tracking-wider text-slate-800">
-                    {language === "sw" ? "Ahadi ya Ubora wa Utrust" : language === "zh" ? "Utrust 全新正品承诺" : "The Utrust Quality Promise"}
+                    {language === "sw" ? "Uzalishaji wa Ndani • Ubora Mpya" : language === "zh" ? "本土自主生产 · 全新出口品质" : "Proudly Tanzanian Made"}
                   </span>
                 </div>
                 <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/60">
-                  {language === "sw" ? "100% Pamba Safi" : language === "zh" ? "100% 精梳纯棉" : "100% Combed Cotton"}
+                  {language === "sw" ? "Miaka 2+ Kigamboni" : language === "zh" ? "扎根达市2年+" : "2+ Years in Kigamboni"}
                 </span>
               </div>
 
@@ -118,19 +118,19 @@ export default function Hero() {
               <div className="grid grid-cols-2 gap-3 text-left">
                 <div className="p-3 bg-orange-50/70 rounded-xl border border-orange-100/80">
                   <span className="text-xs font-bold text-slate-900 block">
-                    {language === "sw" ? "Kipimo cha Kitanzania" : language === "zh" ? "东非本土合身版型" : "True Tanzanian Fit"}
+                    {language === "sw" ? "Ajira 50+ za Watanzania" : language === "zh" ? "50+ 本地专业技工" : "50+ Tanzanian Jobs"}
                   </span>
                   <span className="text-[11px] text-slate-500 block mt-0.5">
-                    {language === "sw" ? "M, L, XL, 2XL, 3XL inakaa vizuri" : language === "zh" ? "M 至 3XL 舒适不紧绷" : "Real sizes from M to 3XL"}
+                    {language === "sw" ? "Kiwanda chetu cha Kigamboni kimeajiri wazawa" : language === "zh" ? "吉甘博尼工厂深度带动本地就业" : "Empowering local textile workers & families"}
                   </span>
                 </div>
 
                 <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100/80">
                   <span className="text-xs font-bold text-slate-900 block">
-                    {language === "sw" ? "Haipauki Rangi" : language === "zh" ? "水洗不褪色不变形" : "Colorfast & Durable"}
+                    {language === "sw" ? "Mashine za Kisasa" : language === "zh" ? "现代化高精机缝" : "State-of-the-Art Sewing"}
                   </span>
                   <span className="text-[11px] text-slate-500 block mt-0.5">
-                    {language === "sw" ? "Inadumu baada ya kufuliwa 50+" : language === "zh" ? "50次以上洗涤依然挺括" : "Tested over 50+ soap washes"}
+                    {language === "sw" ? "Mishono imara na kola zisizolegea" : language === "zh" ? "先进缝纫设备，领口紧实不散边" : "Precision stitching & non-sag collars"}
                   </span>
                 </div>
               </div>
@@ -142,10 +142,10 @@ export default function Hero() {
                 </div>
                 <div className="leading-snug">
                   <strong className="text-slate-900 font-semibold block">
-                    {language === "sw" ? "Kiwandani Kigamboni • Ofisi Kariakoo" : language === "zh" ? "吉甘博尼自营工厂 · 卡里亚库商业中心" : "Factory in Kigamboni • Hub in Kariakoo"}
+                    {language === "sw" ? "Tisheti za Round Neck & Boxer Briefs Zipo Tayari" : language === "zh" ? "印花圆领T恤与平角内裤 · 现货充足" : "Front-Pattern Tees & Boxer Briefs in Ready Stock"}
                   </strong>
                   <span className="text-[11px] text-slate-500">
-                    {language === "sw" ? "Inapatikana kwenye maduka ya nguo Dar es Salaam na kusafirishwa mikoani." : language === "zh" ? "达市各大服装店均有现货销售，支持外地客运快速发货。" : "Available in neighborhood clothing stores & wholesale dispatch."}
+                    {language === "sw" ? "Mizigo ipo ghala Kigamboni na Kariakoo kwa ajili ya maduka ya Dar na mikoani." : language === "zh" ? "吉甘博尼仓库与卡里亚库中心现货直发，支持达市及外地客运。" : "Warehouse inventory ready for immediate Dar duka delivery or upcountry bus dispatch."}
                   </span>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function Hero() {
                 href="#gallery"
                 className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white py-3 rounded-xl font-bold text-xs transition-colors shadow-xs"
               >
-                <span>{language === "sw" ? "Tazama Mifano ya Nguo na Rangi" : language === "zh" ? "浏览成衣产品及配色" : "Browse Ready-Made Styles & Colors"}</span>
+                <span>{language === "sw" ? "Tazama Tisheti na Boxer Zetu" : language === "zh" ? "查阅印花T恤与平角内裤系列" : "Browse Front-Pattern Tees & Boxer Briefs"}</span>
                 <ArrowRight className="h-3.5 w-3.5" />
               </a>
 
