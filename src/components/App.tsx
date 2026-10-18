@@ -7,6 +7,7 @@ import CapacityViewer from "@/components/CapacityViewer";
 import ProfitCalculator from "@/components/ProfitCalculator";
 import QualityAssurance from "@/components/QualityAssurance";
 import B2BOnboarding from "@/components/B2BOnboarding";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
 
 /**
@@ -27,6 +28,7 @@ export default function App() {
         <QualityAssurance />
         <B2BOnboarding />
       </main>
+      <FloatingWhatsApp />
       <Footer />
     </LanguageProvider>
   );

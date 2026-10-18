@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Send, MessageCircle, CheckCircle2, AlertCircle, Building2, Clock, ShieldCheck, RefreshCw } from "lucide-react";
+import { Send, MessageCircle, CheckCircle2, AlertCircle, Building2, MapPin, ShieldCheck, RefreshCw } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
 export default function B2BOnboarding() {
@@ -10,7 +10,7 @@ export default function B2BOnboarding() {
     email: "",
     company: "",
     phone: "",
-    volume: "2500-10000",
+    volume: "3-dozens",
     interests: [] as string[],
     notes: "",
   });
@@ -39,18 +39,12 @@ export default function B2BOnboarding() {
         : language === "zh"
         ? "请输入联系人姓名"
         : "Full name is required";
-    const emailErr =
-      language === "sw"
-        ? "Tafadhali weka barua pepe sahihi"
-        : language === "zh"
-        ? "请输入有效的企业邮箱地址"
-        : "Valid corporate email is required";
     const compErr =
       language === "sw"
-        ? "Tafadhali weka jina la kampuni au biashara"
+        ? "Tafadhali weka jina la duka au biashara"
         : language === "zh"
-        ? "请输入公司或品牌名称"
-        : "Company / Brand name is required";
+        ? "请输入门店或档口名称"
+        : "Shop / Business name is required";
     const phoneErr =
       language === "sw"
         ? "Tafadhali weka nambari ya simu au WhatsApp"
@@ -59,7 +53,6 @@ export default function B2BOnboarding() {
         : "Phone or WhatsApp number is required";
 
     if (!form.name.trim()) newErrors.name = nameErr;
-    if (!form.email.trim() || !/^\S+@\S+\.\S+$/.test(form.email)) newErrors.email = emailErr;
     if (!form.company.trim()) newErrors.company = compErr;
     if (!form.phone.trim()) newErrors.phone = phoneErr;
 
@@ -82,7 +75,7 @@ export default function B2BOnboarding() {
       email: "",
       company: "",
       phone: "",
-      volume: "2500-10000",
+      volume: "3-dozens",
       interests: [],
       notes: "",
     });
@@ -90,7 +83,10 @@ export default function B2BOnboarding() {
   };
 
   return (
-    <section id="onboarding" className="py-20 md:py-28 bg-white border-b border-slate-200">
+    <section id="partner" className="relative py-20 md:py-28 bg-white border-b border-slate-200">
+      {/* Anchor alias for existing onboarding links */}
+      <div id="onboarding" className="absolute -top-24 left-0 pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
@@ -139,7 +135,7 @@ export default function B2BOnboarding() {
                   {t.onboarding.whatsAppDesc}
                 </p>
                 <a
-                  href="https://wa.me/255761644444?text=Hello%20Utrust%20Clothing%20Tanzania%20Limited%2C%20I%20am%20interested%20in%20direct%20B2B%20apparel%20manufacturing."
+                  href="https://wa.me/255761644444?text=Hello%20Utrust%20Clothing%20Kariakoo%2C%20I%20am%20interested%20in%20becoming%20a%20wholesale%2Fretail%20partner%20and%20receiving%20the%20price%20catalog."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20b859] active:bg-[#1caa52] text-white px-5 py-3 rounded-xl font-bold text-sm transition-all shadow-sm"
@@ -153,12 +149,12 @@ export default function B2BOnboarding() {
             {/* Quick Contact Micro Info */}
             <div className="grid grid-cols-2 gap-3 text-xs text-slate-600">
               <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
-                <Clock className="h-4 w-4 text-[#d46f24]" />
-                <span>Response in &lt; 24h</span>
+                <MapPin className="h-4 w-4 text-[#d46f24]" />
+                <span>Kariakoo Showroom Dispatch</span>
               </div>
               <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-[#d46f24]" />
-                <span>NDA &amp; Confidentiality</span>
+                <RefreshCw className="h-4 w-4 text-[#d46f24]" />
+                <span>14-Day Size/Color Swap</span>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 
-import { ArrowRight, Zap, Truck, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowRight, Wind, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import ProductShowcaseCarousel from "@/components/ProductShowcaseCarousel";
 
@@ -22,8 +22,6 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2.5 bg-orange-50 border border-orange-200/80 rounded-full px-4 py-1.5 text-xs font-bold text-orange-950 shadow-xs">
               <span className="flex h-2 w-2 rounded-full bg-[#d46f24]" />
               <span>{t.hero.badge}</span>
-              <span className="text-orange-300">•</span>
-              <span className="text-orange-700">{t.hero.isoBadge}</span>
             </div>
 
             {/* Main Headline */}
@@ -43,25 +41,25 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <a
-                href="#onboarding"
+                href="#gallery"
                 className="inline-flex items-center justify-center gap-2.5 bg-[#d46f24] hover:bg-[#b85816] active:bg-[#9a450e] text-white px-6 py-3.5 rounded-xl font-bold text-base transition-all shadow-md shadow-orange-700/20 hover:shadow-lg hover:shadow-orange-700/30 hover:-translate-y-0.5"
               >
-                <span>{t.common.requestQuote}</span>
+                <span>{t.common.exploreCollection}</span>
                 <ArrowRight className="h-5 w-5" />
               </a>
               <a
-                href="#capacity"
+                href="#partner"
                 className="inline-flex items-center justify-center gap-2 border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-800 px-5 py-3.5 rounded-xl font-bold text-base transition-all shadow-xs"
               >
-                <span>{t.common.viewSpecs}</span>
+                <span>{t.common.beOurPartner}</span>
               </a>
             </div>
 
-            {/* Trust Badges Strip */}
+            {/* 3 Quick-Scan Value Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-slate-200">
               <div className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs">
                 <div className="p-2 bg-orange-50 rounded-lg text-[#d46f24] shrink-0">
-                  <Truck className="h-4 w-4" />
+                  <Wind className="h-4 w-4" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900">{t.hero.turnaroundTitle}</div>
@@ -81,7 +79,7 @@ export default function Hero() {
 
               <div className="flex items-center gap-2.5 bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs">
                 <div className="p-2 bg-orange-50 rounded-lg text-[#d46f24] shrink-0">
-                  <Zap className="h-4 w-4" />
+                  <Sparkles className="h-4 w-4" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900">{t.hero.automationTitle}</div>

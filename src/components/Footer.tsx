@@ -75,7 +75,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#onboarding" className="hover:text-white transition-colors">
+                <a href="#partner" className="hover:text-white transition-colors">
                   {t.header.wholesaleAccounts}
                 </a>
               </li>

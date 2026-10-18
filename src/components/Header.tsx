@@ -100,7 +100,7 @@ export default function Header() {
             <a href="#qa" className="hover:text-[#d46f24] transition-colors">
               {t.header.qualityAssurance}
             </a>
-            <a href="#onboarding" className="hover:text-[#d46f24] transition-colors">
+            <a href="#partner" className="hover:text-[#d46f24] transition-colors">
               {t.header.wholesaleAccounts}
             </a>
           </nav>
@@ -161,7 +161,7 @@ export default function Header() {
 
             {/* B2B Portal Button */}
             <a
-              href="#onboarding"
+              href="#partner"
               className="inline-flex items-center gap-2 bg-[#d46f24] hover:bg-[#b85816] active:bg-[#9a450e] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all shadow-sm hover:shadow-md hover:shadow-orange-700/20 whitespace-nowrap"
             >
               <UserCircle className="h-4 w-4 shrink-0" />
