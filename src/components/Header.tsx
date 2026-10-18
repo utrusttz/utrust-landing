@@ -91,7 +91,7 @@ export default function Header() {
             <a href="#gallery" className="hover:text-[#d46f24] transition-colors">
               {t.header.gallery}
             </a>
-            <a href="#calculator" className="hover:text-[#d46f24] transition-colors">
+            <a href="#where-to-buy" className="hover:text-[#d46f24] transition-colors">
               {t.header.profitCalc}
             </a>
             <a href="#qa" className="hover:text-[#d46f24] transition-colors">

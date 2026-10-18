@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
 import PhotoGallery from "@/components/PhotoGallery";
-import ProfitCalculator from "@/components/ProfitCalculator";
+import WhereToBuy from "@/components/WhereToBuy";
 import QualityAssurance from "@/components/QualityAssurance";
 import B2BOnboarding from "@/components/B2BOnboarding";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -22,7 +22,7 @@ export default function App() {
         <Hero />
         <ComparisonMatrix />
         <PhotoGallery />
-        <ProfitCalculator />
+        <WhereToBuy />
         <QualityAssurance />
         <B2BOnboarding />
       </main>

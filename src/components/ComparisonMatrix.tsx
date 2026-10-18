@@ -167,7 +167,7 @@ export default function ComparisonMatrix() {
               </div>
             </div>
             <a
-              href="#calculator"
+              href="#where-to-buy"
               className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg text-sm transition-colors shrink-0"
             >
               <span>{t.comparison.bannerBtn}</span>
