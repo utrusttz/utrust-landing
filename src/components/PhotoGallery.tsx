@@ -120,7 +120,7 @@ export default function PhotoGallery() {
 
           <h2 className="font-brand font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
             {t.gallery.titlePrefix}{" "}
-            <span className="text-[#d46f24] underline decoration-[#d46f24]/40 decoration-wavy underline-offset-8">
+            <span className="text-[#d46f24]">
               {t.gallery.titleMain}
             </span>
           </h2>

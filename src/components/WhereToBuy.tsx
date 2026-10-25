@@ -26,8 +26,8 @@ export default function WhereToBuy() {
           badge: "Fastest Option",
           title: "Order Directly on WhatsApp",
           desc: "Chat directly with our sales desk on WhatsApp. Browse available front-printed t-shirts and boxer briefs, pay via Lipa Namba, and receive same-day delivery.",
-          action: "Chat on WhatsApp (+255 761644444)",
-          link: "https://wa.me/255761644444?text=Hello%20Utrust!%20I%20want%20to%20order%20ready-made%20clothes.",
+          action: "Chat on WhatsApp (+255 741 273 333)",
+          link: "https://wa.me/255741273333?text=Hello%20Utrust!%20I%20want%20to%20order%20ready-made%20clothes.",
           isExternal: true,
         },
         {
@@ -64,8 +64,8 @@ export default function WhereToBuy() {
           badge: "Haraka Zaidi",
           title: "Agiza Moja kwa Moja WhatsApp",
           desc: "Tuma ujumbe kwenye WhatsApp ya mauzo. Chagua tisheti zenye michoro au boxer briefs, lipa kwa Lipa Namba, na mzigo wako utakufikia siku hiyo hiyo.",
-          action: "Tuma Ujumbe WhatsApp (+255 761644444)",
-          link: "https://wa.me/255761644444?text=Habari%20Utrust!%20Nahitaji%20kuagiza%20nguo%20zenu.",
+          action: "Tuma Ujumbe WhatsApp (+255 741 273 333)",
+          link: "https://wa.me/255741273333?text=Habari%20Utrust!%20Nahitaji%20kuagiza%20nguo%20zenu.",
           isExternal: true,
         },
         {
@@ -102,8 +102,8 @@ export default function WhereToBuy() {
           badge: "最快捷通道",
           title: "WhatsApp 现货极速下单",
           desc: "点击直联卡里亚库销售客服，实时查阅前胸印花T恤与平角内裤现货图册，支持 Lipa Namba 便捷结算，达市内当天送达。",
-          action: "WhatsApp 在线咨询 (+255 761644444)",
-          link: "https://wa.me/255761644444?text=你好Utrust！我想咨询现货成衣与订购。",
+          action: "WhatsApp 咨询零售购买 (+255 741 273 333)",
+          link: "https://wa.me/255741273333?text=你好Utrust！我想咨询现货成衣与订购。",
           isExternal: true,
         },
         {

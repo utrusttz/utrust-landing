@@ -1,6 +1,19 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, ShoppingBag, Store, ChevronRight } from "lucide-react";
+import { X, ShoppingBag, Store, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+
+function WhatsAppIcon({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  );
+}
 
 export default function FloatingWhatsApp() {
   const { language } = useLanguage();
@@ -22,7 +35,7 @@ export default function FloatingWhatsApp() {
       btnTitle: "Chat with Utrust",
       status: "Online • Kariakoo Showroom",
       headline: "How can we help you today?",
-      sub: "Connect directly with our Dar es Salaam team on WhatsApp.",
+      sub: "Connect directly with our Dar es Salaam sales team on WhatsApp.",
       retailTitle: "Buy for Myself (Retail)",
       retailDesc: "Inquire about sizes, retail prices & nearby partner shops.",
       wholesaleTitle: "Wholesale & Distribution Partner",
@@ -58,7 +71,7 @@ export default function FloatingWhatsApp() {
     btnTitle: "Chat with Utrust",
     status: "Online • Kariakoo Showroom",
     headline: "How can we help you today?",
-    sub: "Connect directly with our Dar es Salaam team on WhatsApp.",
+    sub: "Connect directly with our Dar es Salaam sales team on WhatsApp.",
     retailTitle: "Buy for Myself (Retail)",
     retailDesc: "Inquire about sizes, retail prices & nearby partner shops.",
     wholesaleTitle: "Wholesale & Distribution Partner",
@@ -67,7 +80,9 @@ export default function FloatingWhatsApp() {
     wholesaleMsg: encodeURIComponent("Hello Utrust Kariakoo! I want to become a wholesale/retail partner. Please send me your per-dozen wholesale price list."),
   };
 
-  const phoneNumber = "255761644444";
+  // Dedicated Numbers: Retail (+255741273333) vs Wholesale (+255761644444)
+  const retailNumber = "255741273333";
+  const wholesaleNumber = "255761644444";
 
   return (
     <div ref={widgetRef} className="fixed bottom-5 right-5 z-50 flex flex-col items-end">
@@ -75,7 +90,7 @@ export default function FloatingWhatsApp() {
       {isOpen && (
         <div className="mb-3 w-80 sm:w-92 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
           {/* Header */}
-          <div className="bg-[#128C7E] text-white p-4 relative">
+          <div className="bg-[#075E54] text-white p-4 relative">
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-3 right-3 p-1 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
@@ -90,7 +105,7 @@ export default function FloatingWhatsApp() {
               <div>
                 <h4 className="font-bold text-sm tracking-tight leading-tight">Utrust Clothing</h4>
                 <div className="flex items-center gap-1.5 text-[11px] text-emerald-100 mt-0.5">
-                  <span className="h-2 w-2 rounded-full bg-emerald-300 animate-pulse" />
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span>{content.status}</span>
                 </div>
               </div>
@@ -103,9 +118,9 @@ export default function FloatingWhatsApp() {
               {content.headline} {content.sub}
             </p>
 
-            {/* Option 1: Wholesale / Partner (Primary) */}
+            {/* Option 1: Wholesale / Partner (Wholesale Line) */}
             <a
-              href={`https://wa.me/${phoneNumber}?text=${content.wholesaleMsg}`}
+              href={`https://wa.me/${wholesaleNumber}?text=${content.wholesaleMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group block p-3.5 bg-white hover:bg-orange-50/60 rounded-xl border border-slate-200 hover:border-[#d46f24] transition-all shadow-xs"
@@ -128,9 +143,9 @@ export default function FloatingWhatsApp() {
               </div>
             </a>
 
-            {/* Option 2: Retail / End-User */}
+            {/* Option 2: Retail / End-User (Retail Line: +255 741 273 333) */}
             <a
-              href={`https://wa.me/${phoneNumber}?text=${content.retailMsg}`}
+              href={`https://wa.me/${retailNumber}?text=${content.retailMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group block p-3.5 bg-white hover:bg-emerald-50/60 rounded-xl border border-slate-200 hover:border-[#25D366] transition-all shadow-xs"
@@ -154,26 +169,27 @@ export default function FloatingWhatsApp() {
             </a>
           </div>
 
-          {/* Footer note */}
-          <div className="px-4 py-2.5 bg-white border-t border-slate-100 text-[10px] text-slate-400 text-center font-mono">
-            Direct Line: +255 761644444 • Kariakoo, DSM
+          {/* Footer note with both verified lines */}
+          <div className="px-4 py-2.5 bg-white border-t border-slate-100 text-[10px] text-slate-500 flex justify-between items-center font-mono">
+            <span>Retail: +255 741 273 333</span>
+            <span>Wholesale: +255 761 644 444</span>
           </div>
         </div>
       )}
 
-      {/* Floating Main Button */}
+      {/* Floating Main Button with Real Official WhatsApp Icon */}
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="relative group flex items-center gap-2 bg-[#25D366] hover:bg-[#20b859] active:bg-[#1caa52] text-white px-4 py-3 sm:py-3.5 rounded-full shadow-lg shadow-emerald-700/25 hover:shadow-xl hover:shadow-emerald-700/35 transition-all hover:scale-105 cursor-pointer"
-        aria-label="Open WhatsApp conversation"
+        className="relative group flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1caa52] text-white pl-3.5 pr-4 py-3 sm:py-3.5 rounded-full shadow-lg shadow-emerald-700/30 hover:shadow-xl hover:shadow-emerald-700/40 transition-all hover:scale-105 cursor-pointer ring-4 ring-emerald-500/20"
+        aria-label="Open WhatsApp chat with Utrust Clothing"
       >
-        <span className="relative flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
         </span>
-        <MessageCircle className="h-6 w-6 fill-current text-white" />
-        <span className="text-xs font-bold hidden sm:inline-block pr-1">{content.btnTitle}</span>
+        <WhatsAppIcon className="h-6 w-6 text-white drop-shadow-xs" />
+        <span className="text-xs font-bold tracking-tight hidden sm:inline-block">{content.btnTitle}</span>
       </button>
     </div>
   );

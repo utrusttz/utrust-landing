@@ -117,11 +117,19 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 text-orange-400 shrink-0 mt-0.5" />
                 <span>{t.footer.plantAddress}</span>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 text-orange-400 shrink-0" />
-                <a href="tel:+255761644444" className="hover:text-white transition-colors">
-                  +255 761644444
-                </a>
+              <div className="flex flex-col gap-1.5">
+                <div className="flex items-center gap-2.5">
+                  <Phone className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <a href="https://wa.me/255741273333" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    Retail WhatsApp: +255 741 273 333
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Phone className="h-4 w-4 text-orange-400 shrink-0" />
+                  <a href="https://wa.me/255761644444" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    Wholesale B2B: +255 761 644 444
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-orange-400 shrink-0" />

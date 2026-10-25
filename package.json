@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "seo:bing": "node scripts/bing-seo-sync.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.5.2",

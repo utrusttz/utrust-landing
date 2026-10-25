@@ -28,7 +28,7 @@ export default function Hero() {
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-slate-950 tracking-tight leading-[1.12]">
                 {t.hero.headlineStart}{" "}
-                <span className="font-brand font-bold text-[#d46f24] underline decoration-orange-300 decoration-wavy decoration-2 underline-offset-8">
+                <span className="font-brand font-bold text-[#d46f24]">
                   {t.hero.headlineHighlight}
                 </span>{" "}
                 {t.hero.headlineEnd}

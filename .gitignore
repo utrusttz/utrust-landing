@@ -6,3 +6,8 @@ dist/
 .env
 .env.*
 !.env.example
+.wrangler/
+raw_assets/
+output/
+*.tmp
+B2B Marketing Agency/
