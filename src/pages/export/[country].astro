@@ -1,0 +1,163 @@
+---
+// src/pages/export/[country].astro
+// Programmatic B2B Cross-Border Sourcing Corridor Landing Pages
+// Targeting wholesale apparel buyers across Tanzania's 8 neighboring nations.
+import { CORRIDORS, type CountryCorridor } from '../../components/FactorySpecsTable';
+import CountryCorridorApp from '../../components/CountryCorridorApp';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return CORRIDORS.map((c) => ({
+    params: { country: c.slug },
+    props: { corridor: c },
+  }));
+}
+
+interface Props {
+  corridor: CountryCorridor;
+}
+
+const { corridor } = Astro.props;
+const siteUrl = "https://utrust.co.tz";
+const pageUrl = `${siteUrl}/export/${corridor.slug}/`;
+
+const seoTitle = `Import Wholesale T-Shirts & Apparel to ${corridor.country} (${corridor.tariff}) | Utrust Factory`;
+const seoDescription = `Direct factory apparel supply for wholesalers in ${corridor.city}, ${corridor.country}. 180-200 GSM cotton t-shirts, boxer briefs & polo shirts. ${corridor.tariff} via ${corridor.border}. Fast ${corridor.transitTime} transit from Dar es Salaam.`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://utrust.co.tz/#organization",
+      "additionalType": "https://schema.org/Manufacturer",
+      "name": "Utrust Clothing Tanzania Limited",
+      "url": "https://utrust.co.tz/",
+      "logo": "https://utrust.co.tz/logo.png",
+      "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+      "description": "Tanzania's premier factory-direct apparel manufacturer in Kigamboni & Kariakoo, Dar es Salaam. Producing 20,000+ units/day with duty-free export across East & Southern Africa.",
+      "telephone": "+255761644444",
+      "email": "utrustclothingtz@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24804, Lingato Street, Kisarawe 2, Kigamboni",
+        "addressLocality": "Dar es Salaam",
+        "postalCode": "17101",
+        "addressCountry": "TZ"
+      },
+      "department": [
+        {
+          "@type": ["WholesaleStore", "ClothingStore"],
+          "@id": "https://utrust.co.tz/#kariakoo-hub",
+          "name": "Utrust Commercial Showroom & Wholesale Office - Kariakoo",
+          "telephone": "+255761644444",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2nd Floor, Nasra Tower, 21 Kisarawe St",
+            "addressLocality": "Kariakoo, Dar es Salaam",
+            "postalCode": "11101",
+            "addressCountry": "TZ"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/1290912484105453",
+        "https://www.instagram.com/utrustclothingtz/",
+        "https://www.tiktok.com/@utrustcloth"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": `${pageUrl}#service`,
+      "name": `Factory-Direct Apparel Export to ${corridor.country}`,
+      "provider": { "@id": "https://utrust.co.tz/#organization" },
+      "areaServed": {
+        "@type": "Country",
+        "name": corridor.country
+      },
+      "serviceType": "Wholesale Garment Manufacturing & Cross-Border Logistics",
+      "description": `Direct cross-border dispatch of 180-200 GSM Tanzanian cotton t-shirts, boxer briefs, and corporate polo workwear to ${corridor.country} under ${corridor.protocol}.`,
+      "termsOfService": `${corridor.tariff} with official Certificate of Origin provided. Transit via ${corridor.border}.`
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": `How does the duty-free trade exemption work for importing into ${corridor.country}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Because Utrust Clothing Tanzania Limited manufactures all apparel in Dar es Salaam from 100% value-added African cotton, our consignments qualify under the ${corridor.protocol}. We provide an official Certificate of Origin verified by TBS and customs authorities, ensuring ${corridor.tariff}.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `What is the transit time and route from Dar es Salaam to ${corridor.city}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Consignments transit via ${corridor.border}. Typical road freight and courier transit is ${corridor.transitTime}. We coordinate with bonded freight transporters and passenger courier buses with waybill proof.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `What is the minimum order quantity (MOQ) for wholesale buyers in ${corridor.country}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cross-border wholesale buyers can start with just 1 Master Export Carton (3 to 4 dozens per style/size) to test the market, with full support for 20ft and 40ft truckload container contracts."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d46f24" />
+
+    <!-- Primary Corridor SEO -->
+    <title>{seoTitle}</title>
+    <meta name="description" content={seoDescription} />
+    <meta name="keywords" content={`import clothes to ${corridor.country}, wholesale t-shirts ${corridor.city}, ${corridor.country} apparel sourcing, ${corridor.protocol}, SADC clothing export, EAC duty-free clothes, Kariakoo wholesale to ${corridor.country}, Utrust Clothing Tanzania`} />
+    <meta name="author" content="Utrust Clothing Tanzania Limited" />
+    <link rel="canonical" href={pageUrl} />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:site_name" content="Utrust Clothing Tanzania Limited" />
+    <meta property="article:publisher" content="https://www.facebook.com/1290912484105453" />
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={seoDescription} />
+    <meta property="og:image" content={`${siteUrl}/showcase/utrust-product-1.jpg`} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={seoTitle} />
+    <meta name="twitter:description" content={seoDescription} />
+    <meta name="twitter:image" content={`${siteUrl}/showcase/utrust-product-1.jpg`} />
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
+    <CountryCorridorApp corridor={corridor} client:load />
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>乌信服装（Utrust）商业落地与快速去库存执行方案</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+    
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      color: #0f172a;
+      background-color: #ffffff;
+      line-height: 1.55;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-banner {
+      border-bottom: 2px solid #d46f24;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-title span.accent {
+      color: #d46f24;
+    }
+
+    .doc-subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 4px;
+    }
+
+    .meta-badges {
+      text-align: right;
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background-color: #fff7ed;
+      color: #9a3412;
+      border: 1px solid #fed7aa;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      border-left: 3.5px solid #d46f24;
+      padding-left: 8px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      background-color: #f8fafc;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    p {
+      margin: 4px 0 8px 0;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin: 4px 0 8px 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 3px;
+      color: #334155;
+    }
+
+    strong {
+      color: #0f172a;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 8px 0;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 9px 12px;
+    }
+
+    .card.highlight {
+      background: #fff7ed;
+      border-color: #fed7aa;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 12px;
+      color: #0f172a;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-title.accent {
+      color: #9a3412;
+    }
+
+    .flow-chain {
+      background: #f1f5f9;
+      border: 1px dashed #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 12px;
+      color: #1e293b;
+      margin: 8px 0;
+    }
+
+    .flow-chain span.arrow {
+      color: #d46f24;
+      margin: 0 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+      margin: 8px 0;
+      background: #ffffff;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .highlight-price {
+      font-weight: 700;
+      color: #b45309;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .quote-box {
+      border-left: 3px solid #d46f24;
+      background-color: #fff7ed;
+      padding: 6px 12px;
+      font-style: normal;
+      color: #7c2d12;
+      border-radius: 0 6px 6px 0;
+      margin: 6px 0;
+      font-size: 11.5px;
+    }
+
+    .summary-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-top: 12px;
+    }
+
+    .summary-box h3 {
+      margin: 0 0 6px 0;
+      color: #fdba74;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .summary-box ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .summary-box li {
+      color: #e2e8f0;
+      margin-bottom: 3px;
+      font-size: 11.5px;
+    }
+
+    .summary-box li strong {
+      color: #ffffff;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .avoid-break {
+      page-break-inside: avoid;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Banner -->
+  <div class="header-banner">
+    <div>
+      <div class="brand-title">
+        Utrust 乌信服装 <span class="accent">· 商业运营与去库存方案</span>
+      </div>
+      <div class="doc-subtitle">
+        Utrust Clothing Tanzania Limited · 30天市场开拓与大区分销落地总方案
+      </div>
+    </div>
+    <div class="meta-badges">
+      <span class="badge-pill">🇹🇿 坦桑尼亚本土智造</span><br>
+      工厂：吉甘博尼 (Kigamboni) · 展厅：卡里亚库 (Kariakoo)<br>
+      运营周期：2026年第4季度至2027年
+    </div>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="avoid-break">
+    <h2>1. 我们的立足根基与核心实力（当前现实盘点）</h2>
+    <ul>
+      <li><strong>我们不是新厂：</strong> 位于达累斯萨拉姆吉甘博尼（Kigamboni）的自营现代化服装工厂已稳定运转超过两年。</li>
+      <li><strong>扎实的本土工业：</strong> 长期稳定雇佣 <strong>50 余名当地熟练技工</strong>，全套进口多针电脑高速缝纫与平车设备每天饱和生产。</li>
+      <li><strong>仓库现货充足，随时可发：</strong> 目前两大核心主力拳头产品在仓库均有充沛备货，支持当天现货出库：
+        <ol>
+          <li><strong>前胸时尚印花圆领纯棉T恤：</strong> 100%原生精梳纯棉，前胸高清防裂印花，加固双针领口久洗不松垮。</li>
+          <li><strong>高弹透气平角内裤（Boxer Briefs）：</strong> 35mm高弹防卷边提花腰筋，四面弹力棉，专为达市32°C+湿热气候打造。</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="avoid-break">
+    <h2>2. 官方网站已上线的关键布局（线上信用背书）</h2>
+    <p>在启动地推前，我们已完成官方三语网站（<code>utrust-landing.pages.dev</code>）的全面重构，为业务员提供权威官方背书：</p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">🇹🇿 核心品牌定位</div>
+        首页显著主打<strong>“坦桑尼亚本土骄傲智造 · 全新出口级品质”</strong>，强调契合东非本土合身版型与耐洗耐久度，直击二手旧衣（Mitumba）的痛点。
+      </div>
+      <div class="card">
+        <div class="card-title">💰 旧衣对比与省钱计算器</div>
+        直观测算工具：买二手旧衣看似单件10,000先令便宜，但洗两次就变形褪色，一年换3-4次；而Utrust全新纯棉一件穿满整年，<strong>每年为家庭净省多达90,000先令</strong>。
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="avoid-break">
+    <h2>3. 销售模式重大转型：精简的三级分销体系（控风险、抓大客户）</h2>
+    <p>过去两年业务员单兵作战、在卡里亚库挨家挨户敲小档口推销生僻品牌，难度大且效率低。我们全面推行规范的<strong>三级分销架构</strong>：</p>
+    
+    <div class="flow-chain">
+      工厂（吉甘博尼） 
+      <span class="arrow">➔</span> 
+      核心大区总经销商（大批发商） 
+      <span class="arrow">➔</span> 
+      社区零售服装店 / 档口 
+      <span class="arrow">➔</span> 
+      普通终端消费者
+    </div>
+
+    <ul>
+      <li><strong>零坏账、省心省力：</strong> 工厂不再四处追讨300家小店的小额零散货款，全国仅对接<strong>5至8家有实力的大区总代</strong>（达市、姆万扎、阿鲁沙、多多马、姆贝亚）。一律款到发货（Lipa Namba或银行转账），整箱出库，彻底杜绝坏账与追债难题。</li>
+      <li><strong>本地配送由总代自理：</strong> 总代利用自身成熟的皮卡车队与长期地缘客情，向辖区零售档口小批量（3至10打）快速补货，工厂无需承担终端繁琐配送。</li>
+    </ul>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="avoid-break">
+    <h2>4. 社交媒体引流：把终端顾客主动赶进合作档口（拉动式销售）</h2>
+    <p>我们在 TikTok 和 Instagram 矩阵持续投放生动真实的斯瓦希里语短视频（实操肥皂水手洗、暴力拧干拉扯领口证明不松垮、展示吸汗透气性）。</p>
+    <div class="grid-2">
+      <div class="card highlight">
+        <div class="card-title accent">🛍️ 如果是普通散客询问购买：</div>
+        直接回复：“请前往卡里亚库Congo街或Sinza的某某合作服装店购买现货！”——<strong>直接为合作档口送去现成买家</strong>，档口老板白得客流，对我司忠诚度极高。
+      </div>
+      <div class="card highlight">
+        <div class="card-title accent">📦 如果是服装店老板询问批发：</div>
+        立即将其联系方式转交当地总经销商，由总代销售人员当天下午直接送货上门，促成快速翻单。
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="avoid-break">
+    <h2>5. 严格控价机制：各层级利润清晰合理（杜绝价格踩踏）</h2>
+    <p>制定规范的价格保护链条，确保每个层级都有健康的利润空间，坚决保护合作商利益：</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>品类</th>
+          <th>工厂出厂底价 (给大区总代)</th>
+          <th>总代批发供货价 (给零售档口)</th>
+          <th>档口终端建议零售价 (RRP)</th>
+          <th>各级利润空间分析</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>前胸印花圆领纯棉T恤</strong></td>
+          <td class="highlight-price">7,500 TZS</td>
+          <td class="highlight-price">9,000 TZS</td>
+          <td class="highlight-price">12,000 – 13,000 TZS</td>
+          <td>• 总代赚 1,500 TZS/件 (20% 毛利)<br>• 档口赚 3,000–4,000 TZS/件 (33-44%)</td>
+        </tr>
+        <tr>
+          <td><strong>高弹透气平角内裤</strong></td>
+          <td class="highlight-price">4,500 TZS</td>
+          <td class="highlight-price">5,500 TZS</td>
+          <td class="highlight-price">7,500 – 8,000 TZS</td>
+          <td>• 总代赚 1,000 TZS/件 (22% 毛利)<br>• 档口赚 2,000–2,500 TZS/件 (36-45%)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="quote-box">
+      <strong>终端性价比优势：</strong> 普通消费者花 12,000 先令即可买到全新大厂纯棉正品，完全碾压花 10,000 先令买穿不久的残破二手旧衣。
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="avoid-break">
+    <h2>6. 地推团队执行细节：严禁浪费样衣，成本极简化</h2>
+    <p>严格保护工厂全部资产，杜绝无意义的样品赠送与损耗：</p>
+    <ul>
+      <li><strong>不送免费样衣盒：</strong> 坚决不给任何档口白送免费样衣套包，防止资产流失。</li>
+      <li><strong>名片 + 二维码数字化武装：</strong> 统一定制高档商务名片，正面为品牌与销售电话，背面印制<strong>官方网站与WhatsApp电子图册的清晰二维码</strong>，方便档口老板随时扫码看款。</li>
+      <li><strong>单套实物随身摸样：</strong> 每名业务员随身仅带<strong>一件T恤样衣和一条内裤样衣</strong>。进店让老板亲手拉扯腰筋弹性、感受精梳棉扎实克重、细看加固走线。</li>
+      <li><strong>零风险试销保障：</strong> 业务员向老板承诺：
+        <div class="quote-box">
+          “先拿3打起步试销。14天内未拆封的款式或尺码，如果在您的档口走得慢，随时拿回卡里亚库展厅1对1免费调换畅销尺码。”
+        </div>
+        这是海外进口商相隔8000公里绝对无法提供的王牌杀手锏，能彻底打消档口老板压货顾虑。
+      </li>
+    </ul>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="avoid-break">
+    <h2>7. 30天推进路线图：从样板孵化到签约大总代</h2>
+    <ul>
+      <li><strong>第1至3周（卡里亚库展厅样板孵化）：</strong> 以卡里亚库展厅为临时中转站，业务员快速签约前 30 至 40 家零售档口试销3打。线上短视频同步推广，把真实客流引入这些档口。</li>
+      <li><strong>第4周（顺水推舟签大总代）：</strong> 约见卡里亚库排名前两名的大服装批发商来展厅，展示真实销售账本并提出条件：
+        <div class="quote-box">
+          “我们已有40家每周稳定翻单进货的成熟档口。这40家现成客户全部移交给你们供货，今后你们统一以20箱为起订量向我们工厂订货。”
+        </div>
+        批发商见客源现成、风险为零，会立即签约并打款订货。
+      </li>
+      <li><strong>第2至3个月（外地大区复制）：</strong> 达市模式跑顺后，利用成熟的长途大巴客运物流（如Shabiby、Dar Express等），以同样方式开拓<strong>姆万扎（Mwanza）</strong>和<strong>阿鲁沙（Arusha）</strong>的大总代。</li>
+    </ul>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="avoid-break">
+    <div class="summary-box">
+      <h3>8. 方案核心商业价值总结 (Summary of the Plan)</h3>
+      <ul>
+        <li><strong>1. 现货快速变现：</strong> 把仓库沉淀库存迅速转化为健康现金流。</li>
+        <li><strong>2. 零坏账、零账期：</strong> 采用款到发货与 Lipa Namba 结算，财务账目干净清晰。</li>
+        <li><strong>3. 极低投入高产出：</strong> 不盲目烧钱投放昂贵广告，每一分钱直接花在名片印刷、业务员提成和实物触达上。</li>
+        <li><strong>4. 稳固本土制造口碑：</strong> 保持 50 余名本地技工持续饱和开工，将 Utrust 打造为坦桑尼亚首屈一指的本土服饰国民品牌。</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

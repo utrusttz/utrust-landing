@@ -6,6 +6,7 @@ import PhotoGallery from "@/components/PhotoGallery";
 import WhereToBuy from "@/components/WhereToBuy";
 import QualityAssurance from "@/components/QualityAssurance";
 import B2BOnboarding from "@/components/B2BOnboarding";
+import FactorySpecsTable from "@/components/FactorySpecsTable";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function App({ initialLanguage = "en" }: { initialLanguage?: Lang
         <WhereToBuy />
         <QualityAssurance />
         <B2BOnboarding />
+        <FactorySpecsTable />
       </main>
       <FloatingWhatsApp />
       <Footer />

@@ -3,7 +3,6 @@
 // Astro page: renders the Chinese version of Utrust Clothing Tanzania Limited (Canonical /zh/).
 // Dedicated language portal for Chinese management, partners, and export sourcing clients.
 import App from '../../components/App';
-import FactorySpecsTable from '../../components/FactorySpecsTable.astro';
 import '../../styles/global.css';
 
 const siteUrl = "https://utrust.co.tz";
@@ -57,8 +56,5 @@ const siteDescription = "位于坦桑尼亚达累斯萨拉姆基甘博尼（Kiga
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <!-- Single Astro Island: Full React App with initialLanguage="zh" -->
     <App initialLanguage="zh" client:load />
-
-    <!-- Server-Side Pre-rendered Machine-Readable Specification Tables in Chinese -->
-    <FactorySpecsTable lang="zh" />
   </body>
 </html>

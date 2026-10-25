@@ -3,7 +3,6 @@
 // Astro page: renders the full Utrust Clothing Tanzania Limited landing page (English Canonical).
 // Pre-rendered server-side with static semantic tables for LLM/AI search indexing.
 import App from '../components/App';
-import FactorySpecsTable from '../components/FactorySpecsTable.astro';
 import '../styles/global.css';
 
 const siteUrl = "https://utrust.co.tz";
@@ -98,7 +97,8 @@ const structuredData = {
       ],
       "sameAs": [
         "https://www.facebook.com/1290912484105453",
-        "https://www.instagram.com/utrustclothingtz/"
+        "https://www.instagram.com/utrustclothingtz/",
+        "https://www.tiktok.com/@utrustcloth"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -272,8 +272,5 @@ const structuredData = {
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <!-- Single Astro Island: Full React App with initialLanguage="en" -->
     <App initialLanguage="en" client:load />
-
-    <!-- Server-Side Pre-rendered Machine-Readable Specification Tables for AI Search Engines & Crawlers -->
-    <FactorySpecsTable lang="en" />
   </body>
 </html>

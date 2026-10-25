@@ -17,6 +17,14 @@ const TARGET_URLS = [
   'https://utrust.co.tz/',
   'https://utrust.co.tz/sw/',
   'https://utrust.co.tz/zh/',
+  'https://utrust.co.tz/export/zambia/',
+  'https://utrust.co.tz/export/drc/',
+  'https://utrust.co.tz/export/kenya/',
+  'https://utrust.co.tz/export/uganda/',
+  'https://utrust.co.tz/export/rwanda/',
+  'https://utrust.co.tz/export/burundi/',
+  'https://utrust.co.tz/export/malawi/',
+  'https://utrust.co.tz/export/mozambique/',
 ];
 
 async function bingApiPost(method, bodyObj) {

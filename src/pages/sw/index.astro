@@ -3,7 +3,6 @@
 // Astro page: renders the Swahili version of Utrust Clothing Tanzania Limited (Canonical /sw/).
 // Pre-rendered server-side with Swahili SEO metadata, Schema.org, and machine-readable specification tables.
 import App from '../../components/App';
-import FactorySpecsTable from '../../components/FactorySpecsTable.astro';
 import '../../styles/global.css';
 
 const siteUrl = "https://utrust.co.tz";
@@ -89,7 +88,8 @@ const structuredData = {
       ],
       "sameAs": [
         "https://www.facebook.com/1290912484105453",
-        "https://www.instagram.com/utrustclothingtz/"
+        "https://www.instagram.com/utrustclothingtz/",
+        "https://www.tiktok.com/@utrustcloth"
       ]
     }
   ]
@@ -165,8 +165,5 @@ const structuredData = {
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <!-- Single Astro Island: Full React App with initialLanguage="sw" -->
     <App initialLanguage="sw" client:load />
-
-    <!-- Server-Side Pre-rendered Machine-Readable Specification Tables in Swahili -->
-    <FactorySpecsTable lang="sw" />
   </body>
 </html>
