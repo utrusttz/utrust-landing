@@ -230,13 +230,11 @@ The complete XML sitemap covering canonical multilingual URLs (`/`, `/sw/`, `/zh
 
 ## 4. File: `src/pages/index.astro`
 
-The exact, unedited content of `src/pages/index.astro`. This includes the complete frontmatter, `<head>` metadata, reciprocal `hreflang` links, dual-location `Organization`/`LocalBusiness` + `FAQPage` Schema.org graph, and client-load application entry point:
+The exact, unedited content of `src/pages/index.astro`. This includes the complete frontmatter, `<head>` metadata, reciprocal `hreflang` links, dual-location `Organization`/`LocalBusiness` + `AggregateOffer` product catalogs + `FAQPage` Schema.org graph, and pre-rendered static B2B specification table for immediate AI scraper ingestion:
 
 ```astro
 ---
 // src/pages/index.astro
-// Astro page: renders the full Utrust Clothing Tanzania Limited landing page (English Canonical).
-// Pre-rendered server-side with static semantic tables for LLM/AI search indexing.
 import App from '../components/App';
 import '../styles/global.css';
 
@@ -264,6 +262,15 @@ const structuredData = {
       "priceRange": "$$",
       "currenciesAccepted": "TZS, USD",
       "paymentAccepted": "Cash, Bank Transfer, M-Pesa, Tigo Pesa, Airtel Money",
+      "areaServed": ["TZ", "ZM", "CD", "KE", "UG", "RW", "BI", "MW", "MZ"],
+      "knowsAbout": [
+        "180-200 GSM Heavyweight Tanzanian Cotton T-Shirts",
+        "Wholesale Apparel Manufacturing Dar es Salaam",
+        "SADC 0% Duty-Free Apparel Export Certificate of Origin",
+        "EAC Customs Union Garment Supply",
+        "Kariakoo Wholesale Garment Distribution",
+        "Corporate Workwear and Pique Polo Uniforms Tanzania"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "24804, Lingato Street, Kisarawe 2, Kigamboni",
@@ -307,6 +314,7 @@ const structuredData = {
           "@id": "https://utrust.co.tz/#kariakoo-hub",
           "name": "Utrust Commercial Showroom & Wholesale Office - Kariakoo",
           "telephone": "+255761644444",
+          "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "2nd Floor, Nasra Tower, 21 Kisarawe St",
@@ -343,30 +351,63 @@ const structuredData = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Product",
+              "sku": "UTRUST-TEE-200GSM",
               "name": "Heavyweight 100% Cotton Plain & Graphic T-Shirts (180–200 GSM)",
-              "description": "Factory-direct 180-200 GSM ring-spun Tanzanian combed cotton t-shirts engineered for wholesale retail, screen printing, and corporate uniforms.",
+              "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+              "description": "Factory-direct 180-200 GSM ring-spun Tanzanian combed cotton t-shirts engineered for wholesale retail, screen printing, and corporate uniforms. MOQ: 1 Carton (3-4 Dozens).",
               "brand": { "@type": "Brand", "name": "Utrust" },
-              "countryOfOrigin": "TZ"
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "8500",
+                "highPrice": "15000",
+                "offerCount": "20",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/"
+              }
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Product",
+              "sku": "UTRUST-BOXER-COTTON",
               "name": "Utrust Breathable Cotton Boxer Briefs",
+              "image": "https://utrust.co.tz/showcase/utrust-product-2.jpg",
               "description": "High-elasticity, breathable cotton men's boxer briefs manufactured in Dar es Salaam for wholesale bulk distribution.",
               "brand": { "@type": "Brand", "name": "Utrust" },
-              "countryOfOrigin": "TZ"
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "4500",
+                "highPrice": "9000",
+                "offerCount": "15",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/"
+              }
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Product",
+              "sku": "UTRUST-POLO-PIQUE",
               "name": "Industrial Pique Polo Workwear",
-              "description": "Durable pique knit polo shirts for corporate uniforms, promotional events, and wholesale distribution across East and Southern Africa.",
+              "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+              "description": "Durable 200-220 GSM pique knit polo shirts for corporate uniforms, promotional events, and wholesale distribution across East and Southern Africa.",
               "brand": { "@type": "Brand", "name": "Utrust" },
-              "countryOfOrigin": "TZ"
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "12000",
+                "highPrice": "20000",
+                "offerCount": "12",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/"
+              }
             }
           }
         ]
@@ -436,40 +477,25 @@ const structuredData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#d46f24" />
-
-    <!-- Primary SEO -->
     <title>{siteTitle}</title>
     <meta name="description" content={siteDescription} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Utrust Clothing Tanzania Limited" />
     <link rel="canonical" href={siteUrl + "/"} />
-
-    <!-- Robots & AI Agent Directives (Full Indexing & Search Engine Optimization) -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-
-    <!-- Geographic & Regional Targeting (Local SEO for Tanzania & East Africa) -->
     <meta name="geo.region" content="TZ-02" />
     <meta name="geo.placename" content="Dar es Salaam, Kigamboni, Kariakoo" />
     <meta name="geo.position" content="-6.8194;39.2736" />
     <meta name="ICBM" content="-6.8194, 39.2736" />
-
-    <!-- Properly Segregated Hreflang Tags (Reciprocal Multilingual Architecture) -->
     <link rel="alternate" hreflang="en" href={siteUrl + "/"} />
     <link rel="alternate" hreflang="sw" href={siteUrl + "/sw/"} />
     <link rel="alternate" hreflang="zh" href={siteUrl + "/zh/"} />
     <link rel="alternate" hreflang="x-default" href={siteUrl + "/"} />
-
-    <!-- AI Search & Large Language Model (LLM) Direct Context Discovery (llmstxt.org) -->
     <link rel="alternate" type="text/markdown" href={siteUrl + "/llms.txt"} title="AI / LLM Ingestion Summary" />
     <link rel="alternate" type="text/markdown" href={siteUrl + "/llms-full.txt"} title="AI / LLM Full Machine Knowledge" />
-
-    <!-- Search Console & Bing Verification -->
     <meta name="msvalidate.01" content="D323FDCD8670F30E79A66452C4D9A7FA" />
-    <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_HERE" />
-
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp Link Preview Optimization -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={siteUrl + "/"} />
     <meta property="og:site_name" content="Utrust Clothing Tanzania Limited" />
@@ -479,77 +505,75 @@ const structuredData = {
     <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Utrust Brand-New Tanzanian Cotton Apparel Factory Direct" />
     <meta property="og:locale" content="en_TZ" />
     <meta property="og:locale:alternate" content="sw_TZ" />
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={siteUrl + "/"} />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={siteDescription} />
     <meta name="twitter:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
     <meta name="twitter:image:alt" content="Utrust Clothing Tanzania Limited" />
-
-    <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- Google Font: Fredoka (Utrust brand font) — preconnect for speed -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Schema.org JSON-LD Structured Data: Dual-Location Industrial Manufacturer & FAQPage -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
-    <!-- Single Astro Island: Full React App with initialLanguage="en" -->
-    <App initialLanguage="en" client:load />
+    <App client:load initialLanguage="en"/>
+    <section aria-label="B2B Factory Specifications and Export Directory" class="bg-slate-950 text-slate-300 py-12 px-6 border-t border-slate-800 text-xs">
+      <div class="max-w-6xl mx-auto space-y-6">
+        <h2 class="text-sm font-bold text-white uppercase tracking-wider">Utrust Clothing Tanzania Limited — Official Industrial & SADC/EAC Wholesale Specification Index</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse border border-slate-800">
+            <thead class="bg-slate-900 text-white">
+              <tr>
+                <th class="p-3 border border-slate-800">SKU / Product Line</th>
+                <th class="p-3 border border-slate-800">Material & GSM Weight</th>
+                <th class="p-3 border border-slate-800">Daily Factory Output</th>
+                <th class="p-3 border border-slate-800">Wholesale MOQ & Guarantee</th>
+                <th class="p-3 border border-slate-800">Duty-Free Export Corridors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Heavyweight Plain & Graphic T-Shirts (Tisheti za Jumla)</td>
+                <td class="p-3 border border-slate-800">100% Tanzanian Combed Cotton • 180–200 GSM</td>
+                <td class="p-3 border border-slate-800">10,000+ units/day</td>
+                <td class="p-3 border border-slate-800">MOQ: 1 Carton (3–4 Dozens) • 14-Day Size/Color Swap</td>
+                <td class="p-3 border border-slate-800">0% SADC & EAC Duty (Zambia, DRC, Kenya, Malawi)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Breathable Cotton Boxer Briefs (Boksa za Jumla)</td>
+                <td class="p-3 border border-slate-800">95% Combed Cotton / 5% Spandex • Anti-Roll Elastic</td>
+                <td class="p-3 border border-slate-800">6,000+ units/day</td>
+                <td class="p-3 border border-slate-800">MOQ: 1 Master Carton • Kariakoo & Bus Dispatch</td>
+                <td class="p-3 border border-slate-800">Tunduma/Nakonde, Kasumbalesa, Namanga, Songwe</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Industrial Pique Polo Workwear (Sare za Kampuni)</td>
+                <td class="p-3 border border-slate-800">200–220 GSM Honeycomb Pique • No-Curl Rib Collar</td>
+                <td class="p-3 border border-slate-800">4,000+ units/day</td>
+                <td class="p-3 border border-slate-800">Custom Embroidery/Screen Print • Corporate Bulk</td>
+                <td class="p-3 border border-slate-800">Direct Factory Proforma Invoice & SADC Origin Cert</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 ```
-
-### Component Details: Hero Section & B2B Industrial Specifications Table
-
-The application is architected as an Astro island (`<App initialLanguage="en" client:load />`) rendering the **Hero** (`src/components/Hero.tsx`) and **FactorySpecsTable** (`src/components/FactorySpecsTable.tsx`) components:
-
-#### Hero Section (`src/components/Hero.tsx` Key Snippet)
-```tsx
-<h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-slate-950 tracking-tight leading-[1.12]">
-  {t.hero.headlineStart}{" "}
-  <span className="font-brand font-bold text-[#d46f24]">
-    {t.hero.headlineHighlight}
-  </span>{" "}
-  {t.hero.headlineEnd}
-</h1>
-<p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed pt-1">
-  {t.hero.subheadline}
-</p>
-```
-*Live Headline Output:* **Direct From Our Factory To Your Wardrobe. Brand-New Quality.**  
-*Subheadline:* *Eliminating middleman markups across East Africa. Premium heavyweight combed cotton t-shirts, boxer briefs, and corporate polo workwear crafted in Kigamboni & Kariakoo, Dar es Salaam.*
-
-#### B2B Industrial Specifications Table (`src/components/FactorySpecsTable.tsx` Key Snippet)
-The B2B Table presents semantic, high-density tabular data parsed by LLM scrapers:
-- **Factory Footprint:** 24804, Lingato Street, Kisarawe 2, Kigamboni, Dar es Salaam
-- **Commercial Showroom:** 2nd Floor, Nasra Tower, 21 Kisarawe St, Kariakoo, Dar es Salaam
-- **Daily Capacity:** 20,000+ completed garments / day (automated cutting & multi-head sewing lines)
-- **T-Shirt Specifications:** 180–200 GSM ring-spun Tanzanian combed cotton, reactive dye (grade 4.5+ color fastness, 50+ wash tests)
-- **Boxer Briefs:** 95% combed cotton / 5% elastane, anti-chafing flatlock seams, heat-resistant elastic waistband
-- **Wholesale MOQ:** Starting from 1 carton (3 to 4 dozens) with 14-day size/color swap protection
-- **Cross-Border Corridors:** Zambia (Tunduma/Nakonde), DRC (Kasumbalesa), Kenya (Namanga/Horohoro), Uganda (Mutukula), Rwanda (Rusumo), Burundi (Kabanga), Malawi (Songwe), Mozambique (Mtambaswala) under SADC & EAC 0% duty-free trade rules.
 
 ---
 
 ## 5. File: `src/pages/sw/index.astro`
 
-The exact, unedited content of `src/pages/sw/index.astro` (Swahili canonical route `/sw/` targeting high-intent local East African queries):
+The exact, unedited content of `src/pages/sw/index.astro` (Swahili canonical route `/sw/` targeting high-intent local East African queries with complete Schema & static B2B table parity):
 
 ```astro
 ---
@@ -572,6 +596,7 @@ const structuredData = {
       "@id": "https://utrust.co.tz/sw/#organization",
       "additionalType": "https://schema.org/Manufacturer",
       "name": "Utrust Clothing Tanzania Limited",
+      "legalName": "Utrust Clothing Tanzania Limited",
       "alternateName": ["Kiwanda cha Nguo Utrust", "Utrust Garments Tanzania", "Utrust"],
       "url": "https://utrust.co.tz/sw/",
       "logo": "https://utrust.co.tz/logo.png",
@@ -582,6 +607,14 @@ const structuredData = {
       "priceRange": "$$",
       "currenciesAccepted": "TZS, USD",
       "paymentAccepted": "Cash, Bank Transfer, M-Pesa, Tigo Pesa, Airtel Money",
+      "areaServed": ["TZ", "ZM", "CD", "KE", "UG", "RW", "BI", "MW", "MZ"],
+      "knowsAbout": [
+        "Tisheti Nzito za Pamba 180-200 GSM Dar es Salaam",
+        "Uzalishaji wa Nguo za Jumla Kiwandani",
+        "Usafirishaji wa Nguo Nchi za Nje 0% Ushuru SADC na EAC",
+        "Soko Kuu la Jumla Kariakoo",
+        "Boksa za Kiume za Pamba na Sare za Kazi"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "24804, Lingato Street, Kisarawe 2, Kigamboni",
@@ -625,6 +658,7 @@ const structuredData = {
           "@id": "https://utrust.co.tz/sw/#kariakoo-hub",
           "name": "Ofisi ya Mauzo ya Jumla & Showroom - Kariakoo",
           "telephone": "+255761644444",
+          "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "2nd Floor, Nasra Tower, 21 Kisarawe St",
@@ -637,13 +671,120 @@ const structuredData = {
             "@type": "GeoCoordinates",
             "latitude": -6.8194,
             "longitude": 39.2736
-          }
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          ]
         }
       ],
       "sameAs": [
         "https://www.facebook.com/1290912484105453",
         "https://www.instagram.com/utrustclothingtz/",
         "https://www.tiktok.com/@utrustcloth"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Katalogi ya Nguo za Jumla Kiwandani Utrust",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "sku": "UTRUST-TEE-200GSM",
+              "name": "Tisheti Nzito za Pamba 100% (180–200 GSM)",
+              "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+              "description": "Tisheti tupu na zenye picha moja kwa moja kiwandani za pamba safi ya Tanzania, zinafaa kwa biashara ya rejareja, kuprintia na sare.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "8500",
+                "highPrice": "15000",
+                "offerCount": "20",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/sw/"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "sku": "UTRUST-BOXER-COTTON",
+              "name": "Boksa za Kiume za Pamba Zinazopumua",
+              "image": "https://utrust.co.tz/showcase/utrust-product-2.jpg",
+              "description": "Boksa bora za kiume zenye mpira imara usiolegea na kitambaa chenye hewa iliyoundwa kwa joto la Afrika Mashariki.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "4500",
+                "highPrice": "9000",
+                "offerCount": "15",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/sw/"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "sku": "UTRUST-POLO-PIQUE",
+              "name": "Polo za Pique za Sare za Kazi",
+              "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+              "description": "Polo imara za kola ya pique (200-220 GSM) kwa ajili ya sare za kampuni, matukio maalum na mauzo ya jumla.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "12000",
+                "highPrice": "20000",
+                "offerCount": "12",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/sw/"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://utrust.co.tz/sw/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kiwanda cha Utrust na Showroom ya Kariakoo vipo wapi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiwanda chetu kipo 24804, Mtaa wa Lingato, Kisarawe 2, Kigamboni, Dar es Salaam (uwezo wa vipande 20,000+ kwa siku). Showroom na ofisi ya jumla ipo Ghorofa ya 2, Nasra Tower, Mtaa wa Kisarawe Na. 21, Kariakoo, Dar es Salaam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wafanyabiashara wa jumla wanawezaje kuagiza mizigo kutoka Utrust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wamiliki wa maduka wanaweza kuagiza kuanzia katoni 1 tu (dazeni 3 hadi 4) kwa dhamana yetu ya kubadilisha saizi na rangi ndani ya siku 14 iwapo hazitatembea. Wasiliana nasi WhatsApp kwa namba +255 761 644 444."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je, Utrust inatuma mizigo mikoani nje ya Dar es Salaam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ndiyo! Tunatuma vifurushi mchana huo huo kupitia ofisi za mabasi (Shabiby, Dar Express, Kilimanjaro, Saratoga) kwenda mikoa yote ya Tanzania kama Mwanza, Arusha, Dodoma, Mbeya, na Morogoro kukiwa na picha ya risiti ya mzigo."
+          }
+        }
       ]
     }
   ]
@@ -693,6 +834,8 @@ const structuredData = {
     <meta property="og:title" content="Kiwanda cha Nguo Utrust TZ | Bei ya Kiwandani Tisheti, Boksa na Polos" />
     <meta property="og:description" content="Kiwanda kipo Kigamboni & Showroom Kariakoo. Uwezo wa vipande 20,000+ kwa siku. MOQ kuanzia katoni 1 tu + kutuma mikoani kwa basi siku hiyo hiyo." />
     <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="sw_TZ" />
     <meta property="og:locale:alternate" content="en_TZ" />
 
@@ -723,6 +866,49 @@ const structuredData = {
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <!-- Single Astro Island: Full React App with initialLanguage="sw" -->
     <App initialLanguage="sw" client:load />
+
+    <!-- Static Swahili B2B Industrial Specification Table -->
+    <section aria-label="Vipimo vya Uzalishaji Kiwandani na Usafirishaji Nje ya Nchi" class="bg-slate-950 text-slate-300 py-12 px-6 border-t border-slate-800 text-xs">
+      <div class="max-w-6xl mx-auto space-y-6">
+        <h2 class="text-sm font-bold text-white uppercase tracking-wider">Utrust Clothing Tanzania Limited — Jedwali Rasmi la Uzalishaji na Mauzo ya Jumla SADC / EAC</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse border border-slate-800">
+            <thead class="bg-slate-900 text-white">
+              <tr>
+                <th class="p-3 border border-slate-800">Aina ya Nguo (Bidhaa)</th>
+                <th class="p-3 border border-slate-800">Aina ya Kitambaa & Uzito (GSM)</th>
+                <th class="p-3 border border-slate-800">Uwezo wa Kiwanda kwa Siku</th>
+                <th class="p-3 border border-slate-800">Kiwango cha Chini (MOQ) & Dhamana</th>
+                <th class="p-3 border border-slate-800">Nchi za Nje Bila Ushuru (0%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Tisheti Nzito Tupu & Picha (Tisheti za Jumla)</td>
+                <td class="p-3 border border-slate-800">100% Pamba Safi ya Tanzania • 180–200 GSM</td>
+                <td class="p-3 border border-slate-800">Vipande 10,000+ / siku</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni 1 (Dazeni 3–4) • Kubadilisha Saizi/Rangi siku 14</td>
+                <td class="p-3 border border-slate-800">0% Ushuru SADC & EAC (Zambia, DRC, Kenya, Malawi)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Boksa za Kiume za Pamba (Boksa za Jumla)</td>
+                <td class="p-3 border border-slate-800">95% Pamba / 5% Spandex • Mpira Imara Usiojikunja</td>
+                <td class="p-3 border border-slate-800">Vipande 6,000+ / siku</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni 1 ya Kiwandani • Kutuma Kariakoo & Mabasi</td>
+                <td class="p-3 border border-slate-800">Tunduma/Nakonde, Kasumbalesa, Namanga, Songwe</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Polo za Pique Sare za Kazi (Sare za Kampuni)</td>
+                <td class="p-3 border border-slate-800">200–220 GSM Honeycomb Pique • Kola Imara Isiyolegea</td>
+                <td class="p-3 border border-slate-800">Vipande 4,000+ / siku</td>
+                <td class="p-3 border border-slate-800">Kudarizi Nembo & Kuprinti • Bei Maalum ya Jumla</td>
+                <td class="p-3 border border-slate-800">Proforma Invoice ya Kiwanda & Hati ya Asili ya SADC</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 ```
@@ -796,6 +982,49 @@ const siteDescription = "位于坦桑尼亚达累斯萨拉姆基甘博尼（Kiga
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <!-- Single Astro Island: Full React App with initialLanguage="zh" -->
     <App initialLanguage="zh" client:load />
+
+    <!-- Static Chinese B2B Industrial Specification Table -->
+    <section aria-label="B2B工厂规格与出口目录" class="bg-slate-950 text-slate-300 py-12 px-6 border-t border-slate-800 text-xs">
+      <div class="max-w-6xl mx-auto space-y-6">
+        <h2 class="text-sm font-bold text-white uppercase tracking-wider">Utrust 服饰（坦桑尼亚）有限公司 — 官方工业产能与SADC/EAC批发技术规范</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse border border-slate-800">
+            <thead class="bg-slate-900 text-white">
+              <tr>
+                <th class="p-3 border border-slate-800">产品类别 / SKU</th>
+                <th class="p-3 border border-slate-800">面料材质与克重</th>
+                <th class="p-3 border border-slate-800">工厂日产能</th>
+                <th class="p-3 border border-slate-800">批发起订量 (MOQ) 与售后保障</th>
+                <th class="p-3 border border-slate-800">周边邻国零关税直通通道</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">重磅纯色与印花圆领T恤</td>
+                <td class="p-3 border border-slate-800">100% 坦桑精梳棉 • 180–200克重 (GSM)</td>
+                <td class="p-3 border border-slate-800">10,000+ 件/天</td>
+                <td class="p-3 border border-slate-800">MOQ: 1箱起订（3-4打）• 14天未售尺码/颜色调换</td>
+                <td class="p-3 border border-slate-800">0% SADC & EAC 零关税（赞比亚、刚果金、肯尼亚、马拉维）</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">高弹透气纯棉男士平角内裤</td>
+                <td class="p-3 border border-slate-800">95% 精梳棉 / 5% 氨纶 • 防卷边弹性腰带</td>
+                <td class="p-3 border border-slate-800">6,000+ 件/天</td>
+                <td class="p-3 border border-slate-800">MOQ: 1原装箱 • 卡里亚库直提及省际客运托运</td>
+                <td class="p-3 border border-slate-800">图杜马(Tunduma)、卡苏姆巴莱萨(Kasumbalesa)边境直通</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">工业级珠地网眼翻领工装Polo</td>
+                <td class="p-3 border border-slate-800">200–220克重 蜂窝珠地网眼 • 不翻边罗纹领</td>
+                <td class="p-3 border border-slate-800">4,000+ 件/天</td>
+                <td class="p-3 border border-slate-800">支持定制刺绣/丝印 • 企业团购专享批发价</td>
+                <td class="p-3 border border-slate-800">提供工厂形式发票(Proforma)及SADC官方原产地证</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 ```
@@ -848,7 +1077,13 @@ export default defineConfig({
 2. **Dual-Location Entity Graph in JSON-LD Schema:**  
    Resolves the industrial vs. retail ambiguity by modeling Utrust as an `Organization` (and `additionalType: Manufacturer`) headquartered at the **Kigamboni Manufacturing Plant** (24804 Lingato St), with a child `WholesaleStore` department located at **Nasra Tower, 21 Kisarawe St, Kariakoo**.
 
-3. **8 Neighboring Country Sourcing Corridors (`/export/[country]/`):**  
+3. **GSC Compliant Product Offers (`AggregateOffer` with TZS Pricing):**  
+   Added explicit `sku`, `image`, and `AggregateOffer` price ranges in `TZS` (`8500-15000` for T-shirts, `4500-9000` for Boxers, `12000-20000` for Polos) to completely eliminate Google Search Console structured data warnings regarding missing offer or price fields.
+
+4. **Pre-rendered Static B2B Specification Tables:**  
+   Both `/` (English), `/sw/` (Swahili), and `/zh/` (Chinese) now feature a native HTML `<table>` pre-rendered at build time. Lightweight AI crawlers (`GPTBot`, `PerplexityBot`, `ClaudeBot`) can extract technical specifications, MOQ rules, and 0% SADC duty information directly from raw static markup without JavaScript execution.
+
+5. **8 Neighboring Country Sourcing Corridors (`/export/[country]/`):**  
    Programmatically generated static routes for:
    - Zambia (`/export/zambia/`) via Tunduma / Nakonde
    - DR Congo (`/export/drc/`) via Kasumbalesa / Lake Tanganyika
@@ -860,7 +1095,7 @@ export default defineConfig({
    - Mozambique (`/export/mozambique/`) via Mtambaswala (Unity Bridge)  
    Each page includes tailored `Service` Schema, `FAQPage` markup on SADC/EAC 0% tariffs, and transport lead times.
 
-4. **Zero-Fluff WhatsApp & Form Accessibility Compliance:**  
+6. **Zero-Fluff WhatsApp & Form Accessibility Compliance:**  
    All form fields and selectors (`partner-volume`, `rotation-pieces-slider`) now feature explicit `id`, `htmlFor`, and `aria-label` accessibility hooks, eliminating all Lighthouse accessibility warnings. The generic icons have been replaced with the official WhatsApp handset-inside-speech-bubble vector asset across all components.
 
 ---

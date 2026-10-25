@@ -18,6 +18,7 @@ const structuredData = {
       "@id": "https://utrust.co.tz/sw/#organization",
       "additionalType": "https://schema.org/Manufacturer",
       "name": "Utrust Clothing Tanzania Limited",
+      "legalName": "Utrust Clothing Tanzania Limited",
       "alternateName": ["Kiwanda cha Nguo Utrust", "Utrust Garments Tanzania", "Utrust"],
       "url": "https://utrust.co.tz/sw/",
       "logo": "https://utrust.co.tz/logo.png",
@@ -28,6 +29,14 @@ const structuredData = {
       "priceRange": "$$",
       "currenciesAccepted": "TZS, USD",
       "paymentAccepted": "Cash, Bank Transfer, M-Pesa, Tigo Pesa, Airtel Money",
+      "areaServed": ["TZ", "ZM", "CD", "KE", "UG", "RW", "BI", "MW", "MZ"],
+      "knowsAbout": [
+        "Tisheti Nzito za Pamba 180-200 GSM Dar es Salaam",
+        "Uzalishaji wa Nguo za Jumla Kiwandani",
+        "Usafirishaji wa Nguo Nchi za Nje 0% Ushuru SADC na EAC",
+        "Soko Kuu la Jumla Kariakoo",
+        "Boksa za Kiume za Pamba na Sare za Kazi"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "24804, Lingato Street, Kisarawe 2, Kigamboni",
@@ -71,6 +80,7 @@ const structuredData = {
           "@id": "https://utrust.co.tz/sw/#kariakoo-hub",
           "name": "Ofisi ya Mauzo ya Jumla & Showroom - Kariakoo",
           "telephone": "+255761644444",
+          "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "2nd Floor, Nasra Tower, 21 Kisarawe St",
@@ -83,13 +93,120 @@ const structuredData = {
             "@type": "GeoCoordinates",
             "latitude": -6.8194,
             "longitude": 39.2736
-          }
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          ]
         }
       ],
       "sameAs": [
         "https://www.facebook.com/1290912484105453",
         "https://www.instagram.com/utrustclothingtz/",
         "https://www.tiktok.com/@utrustcloth"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Katalogi ya Nguo za Jumla Kiwandani Utrust",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "sku": "UTRUST-TEE-200GSM",
+              "name": "Tisheti Nzito za Pamba 100% (180–200 GSM)",
+              "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+              "description": "Tisheti tupu na zenye picha moja kwa moja kiwandani za pamba safi ya Tanzania, zinafaa kwa biashara ya rejareja, kuprintia na sare.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "8500",
+                "highPrice": "15000",
+                "offerCount": "20",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/sw/"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "sku": "UTRUST-BOXER-COTTON",
+              "name": "Boksa za Kiume za Pamba Zinazopumua",
+              "image": "https://utrust.co.tz/showcase/utrust-product-2.jpg",
+              "description": "Boksa bora za kiume zenye mpira imara usiolegea na kitambaa chenye hewa iliyoundwa kwa joto la Afrika Mashariki.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "4500",
+                "highPrice": "9000",
+                "offerCount": "15",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/sw/"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "sku": "UTRUST-POLO-PIQUE",
+              "name": "Polo za Pique za Sare za Kazi",
+              "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+              "description": "Polo imara za kola ya pique (200-220 GSM) kwa ajili ya sare za kampuni, matukio maalum na mauzo ya jumla.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ",
+              "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "TZS",
+                "lowPrice": "12000",
+                "highPrice": "20000",
+                "offerCount": "12",
+                "availability": "https://schema.org/InStock",
+                "url": "https://utrust.co.tz/sw/"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://utrust.co.tz/sw/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kiwanda cha Utrust na Showroom ya Kariakoo vipo wapi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kiwanda chetu kipo 24804, Mtaa wa Lingato, Kisarawe 2, Kigamboni, Dar es Salaam (uwezo wa vipande 20,000+ kwa siku). Showroom na ofisi ya jumla ipo Ghorofa ya 2, Nasra Tower, Mtaa wa Kisarawe Na. 21, Kariakoo, Dar es Salaam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wafanyabiashara wa jumla wanawezaje kuagiza mizigo kutoka Utrust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wamiliki wa maduka wanaweza kuagiza kuanzia katoni 1 tu (dazeni 3 hadi 4) kwa dhamana yetu ya kubadilisha saizi na rangi ndani ya siku 14 iwapo hazitatembea. Wasiliana nasi WhatsApp kwa namba +255 761 644 444."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je, Utrust inatuma mizigo mikoani nje ya Dar es Salaam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ndiyo! Tunatuma vifurushi mchana huo huo kupitia ofisi za mabasi (Shabiby, Dar Express, Kilimanjaro, Saratoga) kwenda mikoa yote ya Tanzania kama Mwanza, Arusha, Dodoma, Mbeya, na Morogoro kukiwa na picha ya risiti ya mzigo."
+          }
+        }
       ]
     }
   ]
@@ -139,6 +256,8 @@ const structuredData = {
     <meta property="og:title" content="Kiwanda cha Nguo Utrust TZ | Bei ya Kiwandani Tisheti, Boksa na Polos" />
     <meta property="og:description" content="Kiwanda kipo Kigamboni & Showroom Kariakoo. Uwezo wa vipande 20,000+ kwa siku. MOQ kuanzia katoni 1 tu + kutuma mikoani kwa basi siku hiyo hiyo." />
     <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="sw_TZ" />
     <meta property="og:locale:alternate" content="en_TZ" />
 
@@ -169,5 +288,48 @@ const structuredData = {
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <!-- Single Astro Island: Full React App with initialLanguage="sw" -->
     <App initialLanguage="sw" client:load />
+
+    <!-- Static Swahili B2B Industrial Specification Table -->
+    <section aria-label="Vipimo vya Uzalishaji Kiwandani na Usafirishaji Nje ya Nchi" class="bg-slate-950 text-slate-300 py-12 px-6 border-t border-slate-800 text-xs">
+      <div class="max-w-6xl mx-auto space-y-6">
+        <h2 class="text-sm font-bold text-white uppercase tracking-wider">Utrust Clothing Tanzania Limited — Jedwali Rasmi la Uzalishaji na Mauzo ya Jumla SADC / EAC</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse border border-slate-800">
+            <thead class="bg-slate-900 text-white">
+              <tr>
+                <th class="p-3 border border-slate-800">Aina ya Nguo (Bidhaa)</th>
+                <th class="p-3 border border-slate-800">Aina ya Kitambaa & Uzito (GSM)</th>
+                <th class="p-3 border border-slate-800">Uwezo wa Kiwanda kwa Siku</th>
+                <th class="p-3 border border-slate-800">Kiwango cha Chini (MOQ) & Dhamana</th>
+                <th class="p-3 border border-slate-800">Nchi za Nje Bila Ushuru (0%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Tisheti Nzito Tupu & Picha (Tisheti za Jumla)</td>
+                <td class="p-3 border border-slate-800">100% Pamba Safi ya Tanzania • 180–200 GSM</td>
+                <td class="p-3 border border-slate-800">Vipande 10,000+ / siku</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni 1 (Dazeni 3–4) • Kubadilisha Saizi/Rangi siku 14</td>
+                <td class="p-3 border border-slate-800">0% Ushuru SADC & EAC (Zambia, DRC, Kenya, Malawi)</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Boksa za Kiume za Pamba (Boksa za Jumla)</td>
+                <td class="p-3 border border-slate-800">95% Pamba / 5% Spandex • Mpira Imara Usiojikunja</td>
+                <td class="p-3 border border-slate-800">Vipande 6,000+ / siku</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni 1 ya Kiwandani • Kutuma Kariakoo & Mabasi</td>
+                <td class="p-3 border border-slate-800">Tunduma/Nakonde, Kasumbalesa, Namanga, Songwe</td>
+              </tr>
+              <tr>
+                <td class="p-3 border border-slate-800 font-semibold text-white">Polo za Pique Sare za Kazi (Sare za Kampuni)</td>
+                <td class="p-3 border border-slate-800">200–220 GSM Honeycomb Pique • Kola Imara Isiyolegea</td>
+                <td class="p-3 border border-slate-800">Vipande 4,000+ / siku</td>
+                <td class="p-3 border border-slate-800">Kudarizi Nembo & Kuprinti • Bei Maalum ya Jumla</td>
+                <td class="p-3 border border-slate-800">Proforma Invoice ya Kiwanda & Hati ya Asili ya SADC</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
