@@ -42,7 +42,7 @@ export default function WhereToBuy() {
         },
       ],
       wholesaleBannerTitle: "Do you own a clothing shop or wholesale stall?",
-      wholesaleBannerSub: "Get factory-direct wholesale carton prices, starting from just 3 dozens with our 14-day size swap guarantee.",
+      wholesaleBannerSub: "Get factory-direct wholesale carton prices, starting from just 1 carton (120 packs of 3 pcs = 360 pcs) with our 14-day size swap guarantee.",
       wholesaleBannerBtn: "Become a Partner Stockist →",
     },
     sw: {
@@ -80,7 +80,7 @@ export default function WhereToBuy() {
         },
       ],
       wholesaleBannerTitle: "Je, unamiliki duka la nguo au meza ya biashara?",
-      wholesaleBannerSub: "Pata bei ya jumla ya kiwandani, kuanzia dazeni 3 tu na dhamana ya kubadilisha size na rangi ndani ya siku 14.",
+      wholesaleBannerSub: "Pata bei ya jumla ya kiwandani, kuanzia katoni/box 1 tu (packs 120 zenye pcs 3 = jumla pcs 360) na dhamana ya kubadilisha size na rangi ndani ya siku 14.",
       wholesaleBannerBtn: "Kuwa Wakala / Muuzaji wa Jumla →",
     },
     zh: {
@@ -118,7 +118,7 @@ export default function WhereToBuy() {
         },
       ],
       wholesaleBannerTitle: "如果您是服装精品店主或批发档口老板：",
-      wholesaleBannerSub: "享受一手出厂批发底价，3打开启试销，并享14天内未开封款式/尺码1对1免费调换保障。",
+      wholesaleBannerSub: "享受一手出厂批发底价，1箱起订（每箱120包，每包3件，整箱共360件），并享14天内未开封款式/尺码1对1免费调换保障。",
       wholesaleBannerBtn: "进入分销批发与档口专区 →",
     },
   };

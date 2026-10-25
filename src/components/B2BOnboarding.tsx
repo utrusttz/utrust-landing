@@ -13,7 +13,7 @@ export default function B2BOnboarding() {
     email: "",
     company: "",
     phone: "",
-    volume: "3-dozens",
+    volume: "1-carton",
     interests: [] as string[],
     notes: "",
   });
@@ -78,7 +78,7 @@ export default function B2BOnboarding() {
       email: "",
       company: "",
       phone: "",
-      volume: "3-dozens",
+      volume: "1-carton",
       interests: [],
       notes: "",
     });

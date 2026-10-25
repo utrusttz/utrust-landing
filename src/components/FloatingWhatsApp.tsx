@@ -27,9 +27,9 @@ export default function FloatingWhatsApp() {
       retailTitle: "Buy for Myself (Retail)",
       retailDesc: "Inquire about sizes, retail prices & nearby partner shops.",
       wholesaleTitle: "Wholesale & Distribution Partner",
-      wholesaleDesc: "Request per-dozen price book, 14-day swap program & sample kit.",
+      wholesaleDesc: "Request carton wholesale price list (120 packs of 3 pcs), 14-day swap program & sample kit.",
       retailMsg: encodeURIComponent("Hello Utrust Tanzania! I am interested in buying your clothes for myself. Where can I buy or see retail prices?"),
-      wholesaleMsg: encodeURIComponent("Hello Utrust Kariakoo! I want to become a wholesale/retail partner. Please send me your per-dozen wholesale price list."),
+      wholesaleMsg: encodeURIComponent("Hello Utrust Kariakoo! I want to become a wholesale/retail partner. Please send me your carton wholesale price list (120 packs of 3 pcs = 360 pcs)."),
     },
     sw: {
       btnTitle: "Ongea Nasi WhatsApp",
@@ -39,9 +39,9 @@ export default function FloatingWhatsApp() {
       retailTitle: "Ninataka Kununua (Rejareja)",
       retailDesc: "Ulizia saizi, bei ya rejareja na maduka yaliyo karibu nawe.",
       wholesaleTitle: "Kuwa Wakala / Muuzaji wa Jumla",
-      wholesaleDesc: "Pata orodha ya bei za dazeni, mpango wa kubadilisha saizi na sampuli.",
+      wholesaleDesc: "Pata bei za katoni (packs 120 zenye pcs 3 = pcs 360), mpango wa kubadilisha saizi na sampuli.",
       retailMsg: encodeURIComponent("Habari Utrust Tanzania! Ninavutiwa na nguo zenu na ninataka kununua. Naweza kupata wapi dukani Dar es Salaam?"),
-      wholesaleMsg: encodeURIComponent("Habari Utrust Kariakoo! Ninataka kuwa wakala wa jumla/rejareja. Tafadhali nitumie orodha ya bei za dazeni."),
+      wholesaleMsg: encodeURIComponent("Habari Utrust Kariakoo! Ninataka kuwa wakala wa jumla/rejareja. Tafadhali nitumie orodha ya bei za jumla za katoni (packs 120 zenye pcs 3)."),
     },
     zh: {
       btnTitle: "WhatsApp 即时咨询",
@@ -51,9 +51,9 @@ export default function FloatingWhatsApp() {
       retailTitle: "个人购买 / 零售咨询",
       retailDesc: "了解零售款式、尺码推荐及达市就近合作销售门店。",
       wholesaleTitle: "成为批发/零售分销伙伴",
-      wholesaleDesc: "索取每打出厂批发底价表、14天对调政策与实物样品盒。",
+      wholesaleDesc: "索取整箱出厂批发底价表（每箱120包/360件）、14天对调政策与实物样品盒。",
       retailMsg: encodeURIComponent("您好 Utrust 坦桑尼亚！我想个人购买体验你们的成衣，请问达市哪里可以买到？"),
-      wholesaleMsg: encodeURIComponent("您好 Utrust 卡里亚库展厅！我想了解档口/门店批发合作，请发送每打出厂批发底价表。"),
+      wholesaleMsg: encodeURIComponent("您好 Utrust 卡里亚库展厅！我想了解档口/门店批发合作，请发送原厂整箱批发底价表（每箱120包/360件）。"),
     },
   }[language] || {
     btnTitle: "Chat with Utrust",
@@ -63,9 +63,9 @@ export default function FloatingWhatsApp() {
     retailTitle: "Buy for Myself (Retail)",
     retailDesc: "Inquire about sizes, retail prices & nearby partner shops.",
     wholesaleTitle: "Wholesale & Distribution Partner",
-    wholesaleDesc: "Request per-dozen price book, 14-day swap program & sample kit.",
+    wholesaleDesc: "Request carton wholesale price list (120 packs of 3 pcs), 14-day swap program & sample kit.",
     retailMsg: encodeURIComponent("Hello Utrust Tanzania! I am interested in buying your clothes for myself. Where can I buy or see retail prices?"),
-    wholesaleMsg: encodeURIComponent("Hello Utrust Kariakoo! I want to become a wholesale/retail partner. Please send me your per-dozen wholesale price list."),
+    wholesaleMsg: encodeURIComponent("Hello Utrust Kariakoo! I want to become a wholesale/retail partner. Please send me your carton wholesale price list (120 packs of 3 pcs = 360 pcs)."),
   };
 
   // Dedicated Numbers: Retail (+255741273333) vs Wholesale (+255761644444)

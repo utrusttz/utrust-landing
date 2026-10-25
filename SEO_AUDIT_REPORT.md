@@ -354,7 +354,7 @@ const structuredData = {
               "sku": "UTRUST-TEE-200GSM",
               "name": "Heavyweight 100% Cotton Plain & Graphic T-Shirts (180–200 GSM)",
               "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
-              "description": "Factory-direct 180-200 GSM ring-spun Tanzanian combed cotton t-shirts engineered for wholesale retail, screen printing, and corporate uniforms. MOQ: 1 Carton (3-4 Dozens).",
+              "description": "Factory-direct 180-200 GSM ring-spun Tanzanian combed cotton t-shirts engineered for wholesale retail, screen printing, and corporate uniforms. MOQ: 1 Carton / Box (120 Packs of 3 pcs = 360 pcs total).",
               "brand": { "@type": "Brand", "name": "Utrust" },
               "countryOfOrigin": "TZ",
               "offers": {
@@ -430,7 +430,7 @@ const structuredData = {
           "name": "How can wholesale buyers and shop owners order from Utrust?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wholesale shop owners and boutique retailers can order factory-direct cartons starting from 1 carton (3 to 4 dozens) with our 14-day unsold size and color swap guarantee. Contact our dedicated Wholesale & Export desk at +255 761 644 444 on WhatsApp."
+            "text": "Wholesale shop owners and boutique retailers can order factory-direct cartons starting from 1 carton/box (120 packs of 3 pcs = 360 pcs total) with our 14-day unsold size and color swap guarantee. Contact our dedicated Wholesale & Export desk at +255 761 644 444 on WhatsApp."
           }
         },
         {
@@ -543,21 +543,21 @@ const structuredData = {
                 <td class="p-3 border border-slate-800 font-semibold text-white">Heavyweight Plain & Graphic T-Shirts (Tisheti za Jumla)</td>
                 <td class="p-3 border border-slate-800">100% Tanzanian Combed Cotton • 180–200 GSM</td>
                 <td class="p-3 border border-slate-800">10,000+ units/day</td>
-                <td class="p-3 border border-slate-800">MOQ: 1 Carton (3–4 Dozens) • 14-Day Size/Color Swap</td>
+                <td class="p-3 border border-slate-800">MOQ: 1 Carton / Box (120 Packs of 3 Pcs = 360 Pcs) • 14-Day Size/Color Swap</td>
                 <td class="p-3 border border-slate-800">0% SADC & EAC Duty (Zambia, DRC, Kenya, Malawi)</td>
               </tr>
               <tr>
                 <td class="p-3 border border-slate-800 font-semibold text-white">Breathable Cotton Boxer Briefs (Boksa za Jumla)</td>
                 <td class="p-3 border border-slate-800">95% Combed Cotton / 5% Spandex • Anti-Roll Elastic</td>
                 <td class="p-3 border border-slate-800">6,000+ units/day</td>
-                <td class="p-3 border border-slate-800">MOQ: 1 Master Carton • Kariakoo & Bus Dispatch</td>
+                <td class="p-3 border border-slate-800">MOQ: 1 Carton / Box (120 Packs of 3 Pcs = 360 Pcs) • Kariakoo & Bus Dispatch</td>
                 <td class="p-3 border border-slate-800">Tunduma/Nakonde, Kasumbalesa, Namanga, Songwe</td>
               </tr>
               <tr>
                 <td class="p-3 border border-slate-800 font-semibold text-white">Industrial Pique Polo Workwear (Sare za Kampuni)</td>
                 <td class="p-3 border border-slate-800">200–220 GSM Honeycomb Pique • No-Curl Rib Collar</td>
                 <td class="p-3 border border-slate-800">4,000+ units/day</td>
-                <td class="p-3 border border-slate-800">Custom Embroidery/Screen Print • Corporate Bulk</td>
+                <td class="p-3 border border-slate-800">MOQ: 1 Carton / Box (120 Packs of 3 Pcs = 360 Pcs) • Direct Factory Proforma & SADC Cert</td>
                 <td class="p-3 border border-slate-800">Direct Factory Proforma Invoice & SADC Origin Cert</td>
               </tr>
             </tbody>
@@ -774,7 +774,7 @@ const structuredData = {
           "name": "Wafanyabiashara wa jumla wanawezaje kuagiza mizigo kutoka Utrust?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wamiliki wa maduka wanaweza kuagiza kuanzia katoni 1 tu (dazeni 3 hadi 4) kwa dhamana yetu ya kubadilisha saizi na rangi ndani ya siku 14 iwapo hazitatembea. Wasiliana nasi WhatsApp kwa namba +255 761 644 444."
+            "text": "Wamiliki wa maduka wanaweza kuagiza kuanzia katoni/box 1 tu (packs 120 zenye pcs 3 kila moja = jumla pcs 360) kwa dhamana yetu ya kubadilisha saizi na rangi ndani ya siku 14 iwapo hazitatembea. Wasiliana nasi WhatsApp kwa namba +255 761 644 444."
           }
         },
         {
@@ -832,7 +832,7 @@ const structuredData = {
     <meta property="og:site_name" content="Utrust Clothing Tanzania Limited" />
     <meta property="article:publisher" content="https://www.facebook.com/1290912484105453" />
     <meta property="og:title" content="Kiwanda cha Nguo Utrust TZ | Bei ya Kiwandani Tisheti, Boksa na Polos" />
-    <meta property="og:description" content="Kiwanda kipo Kigamboni & Showroom Kariakoo. Uwezo wa vipande 20,000+ kwa siku. MOQ kuanzia katoni 1 tu + kutuma mikoani kwa basi siku hiyo hiyo." />
+    <meta property="og:description" content="Kiwanda kipo Kigamboni & Showroom Kariakoo. Uwezo wa vipande 20,000+ kwa siku. MOQ kuanzia katoni/box 1 tu (packs 120 zenye pcs 3 = jumla pcs 360) + kutuma mikoani kwa basi siku hiyo hiyo." />
     <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -887,21 +887,21 @@ const structuredData = {
                 <td class="p-3 border border-slate-800 font-semibold text-white">Tisheti Nzito Tupu & Picha (Tisheti za Jumla)</td>
                 <td class="p-3 border border-slate-800">100% Pamba Safi ya Tanzania • 180–200 GSM</td>
                 <td class="p-3 border border-slate-800">Vipande 10,000+ / siku</td>
-                <td class="p-3 border border-slate-800">MOQ: Katoni 1 (Dazeni 3–4) • Kubadilisha Saizi/Rangi siku 14</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni / Box 1 (Packs 120 zenye Pcs 3 = Pcs 360 Jumla) • Kubadilisha Saizi/Rangi siku 14</td>
                 <td class="p-3 border border-slate-800">0% Ushuru SADC & EAC (Zambia, DRC, Kenya, Malawi)</td>
               </tr>
               <tr>
                 <td class="p-3 border border-slate-800 font-semibold text-white">Boksa za Kiume za Pamba (Boksa za Jumla)</td>
                 <td class="p-3 border border-slate-800">95% Pamba / 5% Spandex • Mpira Imara Usiojikunja</td>
                 <td class="p-3 border border-slate-800">Vipande 6,000+ / siku</td>
-                <td class="p-3 border border-slate-800">MOQ: Katoni 1 ya Kiwandani • Kutuma Kariakoo & Mabasi</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni / Box 1 (Packs 120 zenye Pcs 3 = Pcs 360 Jumla) • Kutuma Kariakoo & Mabasi</td>
                 <td class="p-3 border border-slate-800">Tunduma/Nakonde, Kasumbalesa, Namanga, Songwe</td>
               </tr>
               <tr>
                 <td class="p-3 border border-slate-800 font-semibold text-white">Polo za Pique Sare za Kazi (Sare za Kampuni)</td>
                 <td class="p-3 border border-slate-800">200–220 GSM Honeycomb Pique • Kola Imara Isiyolegea</td>
                 <td class="p-3 border border-slate-800">Vipande 4,000+ / siku</td>
-                <td class="p-3 border border-slate-800">Kudarizi Nembo & Kuprinti • Bei Maalum ya Jumla</td>
+                <td class="p-3 border border-slate-800">MOQ: Katoni / Box 1 (Packs 120 zenye Pcs 3 = Pcs 360 Jumla) • Proforma Invoice & SADC Cert</td>
                 <td class="p-3 border border-slate-800">Proforma Invoice ya Kiwanda & Hati ya Asili ya SADC</td>
               </tr>
             </tbody>
@@ -1003,21 +1003,21 @@ const siteDescription = "位于坦桑尼亚达累斯萨拉姆基甘博尼（Kiga
                 <td class="p-3 border border-slate-800 font-semibold text-white">重磅纯色与印花圆领T恤</td>
                 <td class="p-3 border border-slate-800">100% 坦桑精梳棉 • 180–200克重 (GSM)</td>
                 <td class="p-3 border border-slate-800">10,000+ 件/天</td>
-                <td class="p-3 border border-slate-800">MOQ: 1箱起订（3-4打）• 14天未售尺码/颜色调换</td>
+                <td class="p-3 border border-slate-800">MOQ: 1箱起订（每箱120包，每包3件，整箱共360件）• 14天未售尺码/颜色调换</td>
                 <td class="p-3 border border-slate-800">0% SADC & EAC 零关税（赞比亚、刚果金、肯尼亚、马拉维）</td>
               </tr>
               <tr>
                 <td class="p-3 border border-slate-800 font-semibold text-white">高弹透气纯棉男士平角内裤</td>
                 <td class="p-3 border border-slate-800">95% 精梳棉 / 5% 氨纶 • 防卷边弹性腰带</td>
                 <td class="p-3 border border-slate-800">6,000+ 件/天</td>
-                <td class="p-3 border border-slate-800">MOQ: 1原装箱 • 卡里亚库直提及省际客运托运</td>
+                <td class="p-3 border border-slate-800">MOQ: 1箱起订（每箱120包，每包3件，整箱共360件）• 卡里亚库直提及客运代发</td>
                 <td class="p-3 border border-slate-800">图杜马(Tunduma)、卡苏姆巴莱萨(Kasumbalesa)边境直通</td>
               </tr>
               <tr>
                 <td class="p-3 border border-slate-800 font-semibold text-white">工业级珠地网眼翻领工装Polo</td>
                 <td class="p-3 border border-slate-800">200–220克重 蜂窝珠地网眼 • 不翻边罗纹领</td>
                 <td class="p-3 border border-slate-800">4,000+ 件/天</td>
-                <td class="p-3 border border-slate-800">支持定制刺绣/丝印 • 企业团购专享批发价</td>
+                <td class="p-3 border border-slate-800">MOQ: 1箱起订（每箱120包，每包3件，整箱共360件）• 支持定制刺绣/丝印</td>
                 <td class="p-3 border border-slate-800">提供工厂形式发票(Proforma)及SADC官方原产地证</td>
               </tr>
             </tbody>

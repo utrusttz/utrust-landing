@@ -63,8 +63,8 @@ export default function CountryCorridorApp({ corridor }: { corridor: CountryCorr
               </div>
               <div className="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
                 <div className="text-[11px] font-mono uppercase text-slate-400">Wholesale MOQ</div>
-                <div className="text-lg sm:text-xl font-bold text-[#d46f24] mt-1">1 Master Carton</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">3 to 4 Dozens</div>
+                <div className="text-lg sm:text-xl font-bold text-[#d46f24] mt-1">1 Master Carton / Box</div>
+                <div className="text-[11px] text-slate-500 mt-0.5">120 Packs of 3 Pcs (360 Pcs Total)</div>
               </div>
             </div>
 
@@ -128,9 +128,9 @@ export default function CountryCorridorApp({ corridor }: { corridor: CountryCorr
                 <div className="h-10 w-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-lg mb-4">
                   📦
                 </div>
-                <h3 className="text-base font-bold text-slate-950 mb-2">Low Minimum Order (1 Carton)</h3>
+                <h3 className="text-base font-bold text-slate-950 mb-2">Low Minimum Order (1 Carton / Box)</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Test your local boutique or stall demand without risking tens of thousands of dollars. Wholesale pricing starts at just 1 carton (3 to 4 dozens).
+                  Test your local boutique or stall demand without risking tens of thousands of dollars. Wholesale pricing starts at just 1 carton (120 packs of 3 pcs = 360 pcs total).
                 </p>
               </div>
 

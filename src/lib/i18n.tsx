@@ -432,16 +432,16 @@ export const translations: Record<Language, Translations> = {
       advantagesTitle: "3 Partner Guarantees for Kariakoo & Regional Retailers",
       perks: [
         {
-          title: "Low 3-Dozen Trial Pack & Showroom Price Shield:",
-          desc: "Start with just 36 pcs across basics, activewear, and underwear. Our Kariakoo showroom is strictly for wholesale dispatch—we never undercut your retail price to walk-in consumers.",
+          title: "Low 1-Carton Trial Order & Showroom Price Shield:",
+          desc: "Start with just 1 carton / box (120 packs of 3 pcs = 360 pcs total) across basics, activewear, and underwear. Our Kariakoo showroom is strictly for wholesale dispatch—we never undercut your retail price to walk-in consumers.",
         },
         {
           title: "14-Day Fast-Mover Size & Color Swap Guarantee:",
-          desc: "Zero deadstock risk. If certain sizes or colors move slower in your neighborhood, swap unopened dozens 1-for-1 directly at our Kariakoo showroom.",
+          desc: "Zero deadstock risk. If certain sizes or colors move slower in your neighborhood, swap unopened packs or cartons 1-for-1 directly at our Kariakoo showroom.",
         },
         {
           title: "Free Duka Merchandising Kit & Same-Day Bus Dispatch:",
-          desc: "Orders of 5+ dozens receive a free hanging display rack and weather-resistant storefront stockist sticker. Orders paid by 2:00 PM are dispatched same-day to Mbezi Luis / Kariakoo bus offices (Shabiby, Saratoga, Dar Express, Kilimanjaro).",
+          desc: "Orders of 2+ cartons receive a free hanging display rack and weather-resistant storefront stockist sticker. Orders paid by 2:00 PM are dispatched same-day to Mbezi Luis / Kariakoo bus offices (Shabiby, Saratoga, Dar Express, Kilimanjaro).",
         },
         {
           title: "Direct Lipa Namba & WhatsApp Ordering:",
@@ -453,7 +453,7 @@ export const translations: Record<Language, Translations> = {
         "Chat with our Kariakoo showroom sales manager for instant carton pricing, stock availability, and immediate shop delivery.",
       whatsAppBtn: "Chat on WhatsApp (+255 761644444)",
       formTitle: "Partner Registration & Wholesale Catalog",
-      formSub: "Submit your shop details to receive our official Per-Dozen Wholesale Price List and qualify for the 14-Day Size Swap Program.",
+      formSub: "Submit your shop details to receive our official Factory-Direct Wholesale Price List (120 packs of 3 pcs/carton) and qualify for the 14-Day Size Swap Program.",
       nameLabel: "Full Name *",
       namePlaceholder: "e.g. Juma Rashid",
       emailLabel: "Email (Optional)",
@@ -464,10 +464,10 @@ export const translations: Record<Language, Translations> = {
       phonePlaceholder: "+255 7XX XXX XXX",
       volumeLabel: "Initial Order Tier *",
       volumeOptions: [
-        { val: "3-dozens", label: "3 Dozens / 36 pcs (Starter Trial Mix Pack)" },
-        { val: "5-10-dozens", label: "5 – 10 Dozens (Retail Shop + Free Display Rack)" },
-        { val: "20-50-dozens", label: "20 – 50 Dozens (Wholesale Stockist Tier)" },
-        { val: "50-plus-dozens", label: "50+ Dozens / Master Carton (Regional Distributor)" },
+        { val: "1-carton", label: "1 Carton / Box (120 Packs of 3 pcs = 360 pcs MOQ)" },
+        { val: "2-5-cartons", label: "2 – 5 Cartons (Retail Shop / Boutique Tier)" },
+        { val: "10-25-cartons", label: "10 – 25 Cartons (Wholesale Stockist Tier)" },
+        { val: "50-plus-cartons", label: "50+ Cartons / Container (Regional Distributor & Export)" },
       ],
       interestLabel: "Product Interests (Select all that apply)",
       interestOptions: [
@@ -871,16 +871,16 @@ export const translations: Record<Language, Translations> = {
       advantagesTitle: "Dhamana 3 Muhimu kwa Wafanyabiashara wa Nguo",
       perks: [
         {
-          title: "Kianzio cha Dazeni 3 tu & Ulinzi Mkali wa Bei:",
-          desc: "Anza na vipande 36 tu (mchanganyiko wa tisheti, nguo za ndani na za mazoezi). Showroom yetu ya Kariakoo inauza jumla tu—hatutashusha bei kwa mteja mmoja mmoja ili kulinda faida ya duka lako.",
+          title: "Kianzio cha Katoni 1 tu & Ulinzi Mkali wa Bei:",
+          desc: "Anza na katoni/box 1 tu (packs 120 zenye pcs 3 = jumla pcs 360). Showroom yetu ya Kariakoo inauza jumla tu—hatutashusha bei kwa mteja mmoja mmoja ili kulinda faida ya duka lako.",
         },
         {
           title: "Dhamana ya Siku 14 ya Kubadilisha Size na Rangi:",
-          desc: "Hakuna mzigo unaolala (deadstock). Kama saizi au rangi fulani inachelewa kutoka dukani kwako, leta dazeni ambazo hazijafunguliwa ofisini Kariakoo na uzibadilishe 1-kwa-1.",
+          desc: "Hakuna mzigo unaolala (deadstock). Kama saizi au rangi fulani inachelewa kutoka dukani kwako, leta packs au katoni ambazo hazijafunguliwa ofisini Kariakoo na uzibadilishe 1-kwa-1.",
         },
         {
           title: "Vifaa vya Duka Bure & Kusafirisha Basi Siku Hiyo Hiyo:",
-          desc: "Oda ya dazeni 5+ inapewa stendi ya kutundikia nguo na kibandiko rasmi cha duka 'Wakala wa UTRUST'. Oda zinazolipiwa kabla ya saa 8:00 mchana zinasafirishwa siku hiyo hiyo kupitia mabasi ya Mbezi Luis (Shabiby, Saratoga, Dar Express n.k).",
+          desc: "Oda ya katoni 2+ inapewa stendi ya kutundikia nguo na kibandiko rasmi cha duka 'Wakala wa UTRUST'. Oda zinazolipiwa kabla ya saa 8:00 mchana zinasafirishwa siku hiyo hiyo kupitia mabasi ya Mbezi Luis (Shabiby, Saratoga, Dar Express n.k).",
         },
         {
           title: "Malipo ya Lipa Namba & WhatsApp Moja kwa Moja:",
@@ -889,10 +889,10 @@ export const translations: Record<Language, Translations> = {
       ],
       preferWhatsApp: "Mawasiliano ya Haraka WhatsApp Kariakoo",
       whatsAppDesc:
-        "Ongea moja kwa moja na msimamizi wetu wa mauzo Kariakoo kupitia WhatsApp kwa bei za sasa za dazeni na uletewe mzigo dukani kwako.",
+        "Ongea moja kwa moja na msimamizi wetu wa mauzo Kariakoo kupitia WhatsApp kwa bei za sasa za katoni na uletewe mzigo dukani kwako.",
       whatsAppBtn: "Wasiliana WhatsApp (+255 761644444)",
       formTitle: "Fomu ya Kujiunga Kama Wakala / Muuzaji",
-      formSub: "Jaza taarifa zako fupi ili upate Orodha Rasmi ya Bei za Dazeni na ufaidike na Mpango wa Kubadilisha Saizi.",
+      formSub: "Jaza taarifa zako fupi ili upate Orodha Rasmi ya Bei za Kiwandani (packs 120 zenye pcs 3/katoni) na ufaidike na Mpango wa Kubadilisha Saizi.",
       nameLabel: "Jina Kamili *",
       namePlaceholder: "mfano: Juma Rashid",
       emailLabel: "Barua Pepe (Si lazima)",
@@ -903,10 +903,10 @@ export const translations: Record<Language, Translations> = {
       phonePlaceholder: "+255 7XX XXX XXX",
       volumeLabel: "Kiwango cha Kuanzia *",
       volumeOptions: [
-        { val: "3-dozens", label: "Dazeni 3 / Vipande 36 (Kifurushi cha Kuanzia Kujaribu)" },
-        { val: "5-10-dozens", label: "Dazeni 5 – 10 (Duka la Rejareja + Stendi ya Nguo Bure)" },
-        { val: "20-50-dozens", label: "Dazeni 20 – 50 (Wakala wa Jumla)" },
-        { val: "50-plus-dozens", label: "Dazeni 50+ / Marobota Kamili (Msambazaji Mkuu wa Mkoa)" },
+        { val: "1-carton", label: "Katoni/Box 1 (Packs 120 × Pcs 3 = Pcs 360 MOQ)" },
+        { val: "2-5-cartons", label: "Katoni 2 – 5 (Maduka ya Rejareja / Boutique)" },
+        { val: "10-25-cartons", label: "Katoni 10 – 25 (Wafanyabiashara wa Jumla)" },
+        { val: "50-plus-cartons", label: "Katoni 50+ / Kontena (Wasambazaji Wakuu & Export)" },
       ],
       interestLabel: "Aina ya Nguo Unazohitaji (Chagua zinazokufaa)",
       interestOptions: [
@@ -1310,16 +1310,16 @@ export const translations: Record<Language, Translations> = {
       advantagesTitle: "保障卡里亚库与零售档口利益的 3 大核心政策",
       perks: [
         {
-          title: "3 打起步试销装 & 展厅控价保护：",
-          desc: "仅需 3 打（36 件）即可启动试销。卡里亚库展厅严格专供批发与提货，绝不向零售散客低价零售，坚决维护合作档口利润空间。",
+          title: "1 箱起订低门槛试销 & 展厅控价保护：",
+          desc: "仅需 1 原厂箱（每箱 120 包，每包 3 件，整箱共 360 件）即可启动试销。卡里亚库展厅严格专供批发与提货，绝不向零售散客低价零售，坚决维护合作档口利润空间。",
         },
         {
           title: "14 天畅销款尺码/颜色免费对调保障：",
-          desc: "彻底消除滞销与库存死货风险。若某些尺码或颜色在您门店动销较慢，未开封整打衣物 14 天内可在卡里亚库展厅 1:1 免费调换。",
+          desc: "彻底消除滞销与库存死货风险。若某些尺码或颜色在您门店动销较慢，未开封独立包装或整箱 14 天内可在卡里亚库展厅 1:1 免费调换。",
         },
         {
           title: "赠送陈列展架与门头贴纸 & 当天客运班车发货：",
-          desc: "订购 5 打以上赠送品牌陈列挂架与官方授权店防水门头贴纸。下午 2 点前通过 Lipa Namba 付款订单，当天直达 Mbezi Luis 各大客运班车（Shabiby、Saratoga、Dar Express 等），微信/WhatsApp 实时发送托运单据。",
+          desc: "订购 2 箱以上赠送品牌陈列挂架与官方授权店防水门头贴纸。下午 2 点前通过 Lipa Namba 付款订单，当天直达 Mbezi Luis 各大客运班车（Shabiby、Saratoga、Dar Express 等），微信/WhatsApp 实时发送托运单据。",
         },
         {
           title: "现款现货透明出厂价 & WhatsApp 即时跟进：",
@@ -1328,10 +1328,10 @@ export const translations: Record<Language, Translations> = {
       ],
       preferWhatsApp: "卡里亚库批发销售热线 WhatsApp",
       whatsAppDesc:
-        "直接联系卡里亚库展厅销售主管，即时获取每打批发底价表、现货库存并安排送货到档口。",
+        "直接联系卡里亚库展厅销售主管，即时获取原厂整箱批发底价表、现货库存并安排送货到档口。",
       whatsAppBtn: "通过 WhatsApp 直接咨询 (+255 761644444)",
       formTitle: "合作商登记与批发价格表索取",
-      formSub: "提交您的门店信息，我们将立即发送官方每打批发价格表并安排样品体验。",
+      formSub: "提交您的门店信息，我们将立即发送官方原厂批发底价表（每箱120包/360件）并安排样品体验。",
       nameLabel: "联系人全名 *",
       namePlaceholder: "例如：Juma Rashid / 王先生",
       emailLabel: "邮箱（选填）",
@@ -1342,10 +1342,10 @@ export const translations: Record<Language, Translations> = {
       phonePlaceholder: "+255 7XX XXX XXX",
       volumeLabel: "首批订购规模 *",
       volumeOptions: [
-        { val: "3-dozens", label: "3 打 / 36 件（新手低门槛试销混装包）" },
-        { val: "5-10-dozens", label: "5 – 10 打（零售精品店 + 赠送陈列架）" },
-        { val: "20-50-dozens", label: "20 – 50 打（卡里亚库核心批发商）" },
-        { val: "50-plus-dozens", label: "50+ 打 / 原厂大箱（区域总经销/外地大客商）" },
+        { val: "1-carton", label: "1 箱起订（每箱120包，每包3件，整箱共360件）" },
+        { val: "2-5-cartons", label: "2 – 5 箱（零售精品店进货档）" },
+        { val: "10-25-cartons", label: "10 – 25 箱（卡里亚库核心批发商档）" },
+        { val: "50-plus-cartons", label: "50+ 箱 / 整柜直发（跨国贸易及区域总代理）" },
       ],
       interestLabel: "意向采购品类（可多选）",
       interestOptions: [

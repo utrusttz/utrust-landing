@@ -220,10 +220,10 @@ export default function FactorySpecsTable() {
                   </td>
                   <td className="p-4 sm:p-4.5 text-slate-600">
                     {isSw
-                      ? "Katoni za Jumla Kiwandani • Tayari kwa Kuweka Madukani"
+                      ? "Katoni 1 ya Kiwandani (Packs 120 × Pcs 3 = Pcs 360) • Tayari kwa Kuweka Madukani"
                       : isZh
-                      ? "出口标准箱装 • 档口独立陈列包装"
-                      : "Master Wholesale Cartons • Pre-Packaged Retail Display Packs"}
+                      ? "1箱起订（每箱120包，每包3件，共360件）• 档口独立零售包装"
+                      : "Master Cartons (120 Packs of 3 Pcs = 360 Pcs Total) • Pre-Packaged Retail Packs"}
                   </td>
                 </tr>
                 <tr className="hover:bg-slate-50/70 transition-colors">

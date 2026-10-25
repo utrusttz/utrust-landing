@@ -61,9 +61,9 @@ export default function CapacityViewer() {
       },
       packaging: {
         value: "Export Master Cartons",
-        headline: "50 Pcs / Sub-Bundle • 10 Bundles / Master Carton",
+        headline: "120 Retail Packs / Master Carton • 3 Pcs / Pack (360 Pcs Total)",
         detail:
-          "Every single garment is individually steam-pressed, folded, and sealed in protective poly-sleeves. Packaged in 5-ply corrugated heavy-duty cartons designed for rough cross-country African transport.",
+          "Every single garment is individually steam-pressed, folded, and sealed in 3-piece retail display packs (120 packs per master carton = 360 pcs total). Packaged in 5-ply corrugated heavy-duty cartons designed for rough cross-country African transport.",
         applications: [
           "Individual transparent retail moisture-proof sleeves",
           "Pre-sorted by size & color ratio for easy distribution",
@@ -131,9 +131,9 @@ export default function CapacityViewer() {
       },
       packaging: {
         value: "Katoni Maalum za Kusafirisha",
-        headline: "Vipande 50 kwa Kifurushi • Vifurushi 10 kwa Katoni Kuu",
+        headline: "Packs 120 kwa Katoni Kuu • Pcs 3 kwa Kila Pack (Pcs 360 Jumla)",
         detail:
-          "Kila vazi linapigwa pasi ya mvuke, kukunjwa na kufungwa kwenye mfuko wa nailoni usiopitisha unyevu. Huwekwa kwenye katoni imara za safu 5 zilizotengenezwa kuhimili safari ndefu za barabara za Afrika.",
+          "Kila vazi linapigwa pasi ya mvuke, kukunjwa na kufungwa kwenye vifurushi vya rejareja vya vipande 3 (packs 120 kwa katoni kuu = jumla vipande 360). Huwekwa kwenye katoni imara za safu 5 zilizotengenezwa kuhimili safari ndefu za barabara za Afrika.",
         applications: [
           "Mifuko ya nailoni inayozuia unyevu kwa kila nguo",
           "Kupangwa vizuri kwa saizi na rangi kurahisisha ugawaji",
@@ -201,9 +201,9 @@ export default function CapacityViewer() {
       },
       packaging: {
         value: "外销标准出口加强箱",
-        headline: "每包 50 件独立捆扎 • 每箱 10 包 / 500 件标准箱",
+        headline: "每箱 120 独立零售包 • 每包 3 件 / 整箱 360 件标准装",
         detail:
-          "每件成衣均经过专业工业蒸汽定型、规整折叠并装入防潮零售透明袋。外包装采用五层重型加强瓦楞纸箱，专为东非区域跨国长途颠簸陆运环境设计。",
+          "每件成衣均经过专业工业蒸汽定型、规整折叠并装入3件装零售透明袋（整箱共120包=360件）。外包装采用五层重型加强瓦楞纸箱，专为东非区域跨国长途颠簸陆运环境设计。",
         applications: [
           "独立加厚防潮高透零售封口袋包装",
           "严格按尺码及颜色配比分装，到货即可快速铺货",
