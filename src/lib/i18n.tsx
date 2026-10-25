@@ -172,6 +172,9 @@ export interface Translations {
     successTitle: string;
     successDesc: string;
     resetBtn: string;
+    showroomDispatch: string;
+    swapGuarantee: string;
+    whatsAppPreFill: string;
   };
   gallery: {
     badge: string;
@@ -451,11 +454,11 @@ export const translations: Record<Language, Translations> = {
       whatsAppBtn: "Chat on WhatsApp (+255 761644444)",
       formTitle: "Partner Registration & Wholesale Catalog",
       formSub: "Submit your shop details to receive our official Per-Dozen Wholesale Price List and qualify for the 14-Day Size Swap Program.",
-      nameLabel: "Full Name / Jina Kamili *",
+      nameLabel: "Full Name *",
       namePlaceholder: "e.g. Juma Rashid",
       emailLabel: "Email (Optional)",
       emailPlaceholder: "juma@store.co.tz",
-      companyLabel: "Shop / Business Name (Jina la Duka/Biashara) *",
+      companyLabel: "Shop / Business Name *",
       companyPlaceholder: "e.g. Kariakoo Fashion Hub / Sinza Boutique",
       phoneLabel: "Phone / WhatsApp Number *",
       phonePlaceholder: "+255 7XX XXX XXX",
@@ -480,6 +483,9 @@ export const translations: Record<Language, Translations> = {
       successDesc:
         "Our Kariakoo sales representative will contact you via WhatsApp within 2 hours with our official Wholesale Price List and arrange your sample kit.",
       resetBtn: "Submit Another Application",
+      showroomDispatch: "Kariakoo Showroom Dispatch",
+      swapGuarantee: "14-Day Size/Color Swap",
+      whatsAppPreFill: "Hello Utrust Clothing Kariakoo, I am interested in becoming a wholesale partner and receiving the price catalog.",
     },
     gallery: {
       badge: "REAL FACTORY PRODUCTION RUNS",
@@ -916,6 +922,9 @@ export const translations: Record<Language, Translations> = {
       successDesc:
         "Mwakilishi wetu wa mauzo Kariakoo atawasiliana nawe kupitia WhatsApp ndani ya saa 2 kukutumia bei za jumla na kukuletea sampuli.",
       resetBtn: "Tuma Maombi Mengine",
+      showroomDispatch: "Mzigo Kutoka Showroom Kariakoo",
+      swapGuarantee: "Kubadilisha Saizi/Rangi Siku 14",
+      whatsAppPreFill: "Habari Utrust Kariakoo, Ninahitaji kujiunga kama muuzaji wa jumla na kuomba orodha ya bei za dazeni.",
     },
     gallery: {
       badge: "UZALISHAJI HALISI WA KIWANDANI",
@@ -1089,7 +1098,7 @@ export const translations: Record<Language, Translations> = {
   zh: {
     common: {
       companyName: "Utrust Clothing Tanzania Limited",
-      tagline: "Clothing Tanzania Limited",
+      tagline: "坦桑尼亚本土自营现代化制衣工厂",
       tzs: "TZS (坦桑尼亚先令)",
       darEsSalaam: "坦桑尼亚 · 达累斯萨拉姆",
       units: "件",
@@ -1327,8 +1336,8 @@ export const translations: Record<Language, Translations> = {
       namePlaceholder: "例如：Juma Rashid / 王先生",
       emailLabel: "邮箱（选填）",
       emailPlaceholder: "info@yourstore.co.tz",
-      companyLabel: "门店/档口名称 (Shop / Stall Name) *",
-      companyPlaceholder: "例如：Kariakoo Congo Street 档口 / Sinza Boutique",
+      companyLabel: "门店/档口或企业全称 *",
+      companyPlaceholder: "例如：卡里亚库 Congo 街档口 / 精品服装店",
       phoneLabel: "联系电话 / WhatsApp 号码 *",
       phonePlaceholder: "+255 7XX XXX XXX",
       volumeLabel: "首批订购规模 *",
@@ -1340,7 +1349,7 @@ export const translations: Record<Language, Translations> = {
       ],
       interestLabel: "意向采购品类（可多选）",
       interestOptions: [
-        "精梳纯棉圆领/基础款 Tisheti",
+        "精梳纯棉圆领及基础款 T 恤",
         "提花加固高弹腰筋男士平角内裤 (Boxer Briefs)",
         "高透气微孔运动短裤 (Athletic Mesh)",
         "热带度假风与街头印花系列 (Tropical & Graphic Prints)",
@@ -1352,6 +1361,9 @@ export const translations: Record<Language, Translations> = {
       successDesc:
         "卡里亚库展厅销售主管将在 2 小时内通过 WhatsApp 发送完整批发底价表并安排样品配送。",
       resetBtn: "提交另一份申请",
+      showroomDispatch: "卡里亚库展厅现货直发",
+      swapGuarantee: "14天未开封整打免费对调",
+      whatsAppPreFill: "您好 Utrust 卡里亚库展厅，我想了解服装批发合作并索取每打出厂批发价格表。",
     },
     gallery: {
       badge: "真实自营现代化工厂量产实拍",
@@ -1515,7 +1527,7 @@ export const translations: Record<Language, Translations> = {
       navTitle: "网站导航",
       complianceTitle: "合规与出口认证",
       plantTitle: "达累斯萨拉姆生产基地",
-      plantAddress: "Plot 42/B, Industrial Area, Dar es Salaam, Tanzania",
+      plantAddress: "坦桑尼亚达累斯萨拉姆吉甘博尼工业区 Lingato 街 24804 号",
       rights: "版权所有，保留一切权利。",
       badgeEnterprise: "B2B 规模化工业成衣制造",
       badgeZeroWaste: "杜绝二手碎布损耗",

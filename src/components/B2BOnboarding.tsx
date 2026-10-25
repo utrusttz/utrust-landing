@@ -1,8 +1,9 @@
 
 import { useState } from "react";
-import { Send, MessageCircle, CheckCircle2, AlertCircle, Building2, MapPin, ShieldCheck, RefreshCw, ChevronDown } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Building2, MapPin, ShieldCheck, RefreshCw, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import CapacityViewer from "@/components/CapacityViewer";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function B2BOnboarding() {
   const { t, language } = useLanguage();
@@ -137,12 +138,12 @@ export default function B2BOnboarding() {
                   {t.onboarding.whatsAppDesc}
                 </p>
                 <a
-                  href="https://wa.me/255761644444?text=Hello%20Utrust%20Clothing%20Kariakoo%2C%20I%20am%20interested%20in%20becoming%20a%20wholesale%2Fretail%20partner%20and%20receiving%20the%20price%20catalog."
+                  href={`https://wa.me/255761644444?text=${encodeURIComponent(t.onboarding.whatsAppPreFill)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20b859] active:bg-[#1caa52] text-white px-5 py-3 rounded-xl font-bold text-sm transition-all shadow-sm"
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4 fill-white" />
                   <span>{t.onboarding.whatsAppBtn}</span>
                 </a>
               </div>
@@ -151,12 +152,12 @@ export default function B2BOnboarding() {
             {/* Quick Contact Micro Info */}
             <div className="grid grid-cols-2 gap-3 text-xs text-slate-600">
               <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[#d46f24]" />
-                <span>Kariakoo Showroom Dispatch</span>
+                <MapPin className="h-4 w-4 text-[#d46f24] shrink-0" />
+                <span>{t.onboarding.showroomDispatch}</span>
               </div>
               <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-center gap-2">
-                <RefreshCw className="h-4 w-4 text-[#d46f24]" />
-                <span>14-Day Size/Color Swap</span>
+                <RefreshCw className="h-4 w-4 text-[#d46f24] shrink-0" />
+                <span>{t.onboarding.swapGuarantee}</span>
               </div>
             </div>
           </div>

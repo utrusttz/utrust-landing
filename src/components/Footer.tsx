@@ -1,10 +1,11 @@
 
 
-import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12">
@@ -45,7 +46,7 @@ export default function Footer() {
             {/* Official Social Media Channels */}
             <div className="pt-2">
               <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">
-                Official Social Channels
+                {language === "sw" ? "Mitandao Rasmi ya Kijamii" : language === "zh" ? "官方社交媒体频道" : "Official Social Channels"}
               </div>
               <div className="flex flex-wrap items-center gap-2.5">
                 <a
@@ -135,19 +136,19 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-orange-400 shrink-0" />
-                <span>ISO 9001:2024 Quality Certified</span>
+                <span>{language === "sw" ? "Ubora Uliothibitishwa ISO 9001:2024" : language === "zh" ? "ISO 9001:2024 国际质量管理体系认证" : "ISO 9001:2024 Quality Certified"}</span>
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-orange-400 shrink-0" />
-                <span>OEKO-TEX® Standard 100 Class I</span>
+                <span>{language === "sw" ? "OEKO-TEX® Standard 100 Salama kwa Ngozi" : language === "zh" ? "OEKO-TEX® Standard 100 亲肤环保认证" : "OEKO-TEX® Standard 100 Class I"}</span>
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-orange-400 shrink-0" />
-                <span>EAC Rules of Origin Duty-Free</span>
+                <span>{language === "sw" ? "Bila Ushuru Sheria za Asili za EAC" : language === "zh" ? "东非共市 (EAC) 原产地零关税规则" : "EAC Rules of Origin Duty-Free"}</span>
               </li>
               <li className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-orange-400 shrink-0" />
-                <span>Tanzania Bureau of Standards (TBS)</span>
+                <span>{language === "sw" ? "Shirika la Viwango Tanzania (TBS)" : language === "zh" ? "坦桑尼亚国家标准局 (TBS) 认证" : "Tanzania Bureau of Standards (TBS)"}</span>
               </li>
             </ul>
           </div>
@@ -155,34 +156,38 @@ export default function Footer() {
           {/* Col 4: Contact & Factory (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-white">
-              Factory & Showroom
+              {language === "sw" ? "Kiwanda & Showroom" : language === "zh" ? "工厂与商业展厅" : "Factory & Showroom"}
             </div>
             <div className="space-y-3 text-xs text-slate-400">
               <div className="flex items-start gap-2.5">
                 <MapPin className="h-4 w-4 text-orange-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-white font-semibold">Showroom & Office:</span><br />
+                  <span className="text-white font-semibold">
+                    {language === "sw" ? "Showroom & Ofisi:" : language === "zh" ? "商业展厅与批发中心：" : "Showroom & Office:"}
+                  </span><br />
                   2nd Floor, Nasra Tower, 21 Kisarawe St, Kariakoo, Dar es Salaam
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-white font-semibold">Manufacturing Plant:</span><br />
+                  <span className="text-white font-semibold">
+                    {language === "sw" ? "Kiwanda cha Uzalishaji:" : language === "zh" ? "自营现代化生产厂区：" : "Manufacturing Plant:"}
+                  </span><br />
                   24804, Lingato Street, Kisarawe 2, Kigamboni, Dar Es Salaam
                 </div>
               </div>
               <div className="flex flex-col gap-1.5 pt-1 border-t border-slate-800/60">
                 <div className="flex items-center gap-2.5">
-                  <Phone className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <WhatsAppIcon className="h-4 w-4 fill-emerald-400 shrink-0" />
                   <a href="https://wa.me/255741273333" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    Retail WhatsApp: +255 741 273 333
+                    {language === "sw" ? "WhatsApp ya Rejareja: +255 741 273 333" : language === "zh" ? "零售咨询 WhatsApp: +255 741 273 333" : "Retail WhatsApp: +255 741 273 333"}
                   </a>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Phone className="h-4 w-4 text-orange-400 shrink-0" />
+                  <WhatsAppIcon className="h-4 w-4 fill-orange-400 shrink-0" />
                   <a href="https://wa.me/255761644444" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    Wholesale & Export: +255 761 644 444
+                    {language === "sw" ? "Jumla na Mauzo ya Nje: +255 761 644 444" : language === "zh" ? "大宗批发与出口: +255 761 644 444" : "Wholesale & Export: +255 761 644 444"}
                   </a>
                 </div>
               </div>
@@ -201,7 +206,13 @@ export default function Footer() {
         <div className="py-6 border-b border-slate-800/80 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs">
           <div className="flex items-center gap-2 text-slate-300 font-mono uppercase tracking-wider font-bold shrink-0">
             <span className="text-emerald-400">🌍</span>
-            <span>Regional SADC & EAC 0% Duty-Free Corridors:</span>
+            <span>
+              {language === "sw"
+                ? "Njia za Kikanda SADC & EAC Zisizo na Ushuru (0%):"
+                : language === "zh"
+                ? "东非及南部非洲 SADC & EAC 零关税出海走廊："
+                : "Regional SADC & EAC 0% Duty-Free Corridors:"}
+            </span>
           </div>
           <div className="flex flex-wrap items-center gap-x-3.5 gap-y-2 text-slate-400">
             <a href="/export/zambia/" className="hover:text-orange-400 transition-colors font-medium">🇿🇲 Zambia (Lusaka)</a>

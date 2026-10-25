@@ -1,5 +1,6 @@
 import React from "react";
 import { useLanguage } from "@/lib/i18n";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export interface CountryCorridor {
   slug: string;
@@ -136,7 +137,7 @@ export default function FactorySpecsTable() {
         <div className="mb-14">
           <div className="max-w-3xl mb-6">
             <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-950 border border-orange-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-              <span>🏭 B2B Industrial Specifications</span>
+              <span>{isSw ? "🏭 Vipimo vya Viwandani (B2B Specifications)" : isZh ? "🏭 B2B 工业生产与技术参数" : "🏭 B2B Industrial Specifications"}</span>
             </div>
             <h2 id="specs-heading" className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
               {isSw
@@ -260,7 +261,7 @@ export default function FactorySpecsTable() {
         <div>
           <div className="max-w-3xl mb-6">
             <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-950 border border-emerald-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-              <span>🌍 SADC & EAC Regional Export Hub</span>
+              <span>{isSw ? "🌍 Kituo cha Mauzo ya Nje SADC & EAC" : isZh ? "🌍 SADC & EAC 区域免税出海走廊" : "🌍 SADC & EAC Regional Export Hub"}</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
               {isSw
@@ -332,7 +333,7 @@ export default function FactorySpecsTable() {
                         href={`/export/${c.slug}/`}
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#d46f24] text-slate-700 hover:text-white font-semibold text-xs transition-all shadow-2xs"
                       >
-                        <span>View {c.country}</span>
+                        <span>{isSw ? `Tazama ${c.country}` : isZh ? `查看 ${c.country} 专页` : `View ${c.country}`}</span>
                         <span aria-hidden="true">&rarr;</span>
                       </a>
                     </td>
@@ -345,17 +346,26 @@ export default function FactorySpecsTable() {
           {/* Action Callout */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-orange-50/80 rounded-2xl border border-orange-200/80">
             <div className="text-xs sm:text-sm text-slate-700 font-medium">
-              <span className="font-bold text-slate-950">Showroom & Office:</span> 2nd Floor, Nasra Tower, 21 Kisarawe St, Kariakoo, Dar es Salaam <br />
-              <span className="font-bold text-slate-950">Factory Plant:</span> 24804, Lingato Street, Kisarawe 2, Kigamboni, Dar Es Salaam
+              <span className="font-bold text-slate-950">
+                {isSw ? "Showroom & Ofisi:" : isZh ? "商业展厅与批发中心：" : "Showroom & Office:"}
+              </span>{" "}
+              2nd Floor, Nasra Tower, 21 Kisarawe St, Kariakoo, Dar es Salaam <br />
+              <span className="font-bold text-slate-950">
+                {isSw ? "Kiwanda cha Uzalishaji:" : isZh ? "自营现代化生产厂区：" : "Factory Plant:"}
+              </span>{" "}
+              24804, Lingato Street, Kisarawe 2, Kigamboni, Dar Es Salaam
             </div>
             <div className="flex items-center gap-3 w-full sm:w-auto">
               <a
                 href="https://wa.me/255761644444?text=Habari%20Utrust!%20Naomba%20katalogi%20na%20bei%20za%20jumla%20(Wholesale%20RFQ)."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#d46f24] hover:bg-[#b85816] text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-sm whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b859] active:bg-[#1caa52] text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-sm whitespace-nowrap"
               >
-                <span>Inquire Wholesale Catalog (+255 761 644 444)</span>
+                <WhatsAppIcon className="h-4 w-4 fill-white shrink-0" />
+                <span>
+                  {isSw ? "Ulizia Bei za Jumla (+255 761 644 444)" : isZh ? "索取每打批发底价表 (+255 761 644 444)" : "Inquire Wholesale Catalog (+255 761 644 444)"}
+                </span>
               </a>
             </div>
           </div>

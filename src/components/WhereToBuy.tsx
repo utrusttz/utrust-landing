@@ -1,6 +1,7 @@
 
-import { MapPin, MessageCircle, Truck, Store, ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
+import { MapPin, Truck, Store, ArrowRight, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function WhereToBuy() {
   const { language } = useLanguage();
@@ -22,7 +23,7 @@ export default function WhereToBuy() {
           link: "#partner",
         },
         {
-          icon: MessageCircle,
+          icon: WhatsAppIcon,
           badge: "Fastest Option",
           title: "Order Directly on WhatsApp",
           desc: "Chat directly with our sales desk on WhatsApp. Browse available front-printed t-shirts and boxer briefs, pay via Lipa Namba, and receive same-day delivery.",
@@ -60,7 +61,7 @@ export default function WhereToBuy() {
           link: "#partner",
         },
         {
-          icon: MessageCircle,
+          icon: WhatsAppIcon,
           badge: "Haraka Zaidi",
           title: "Agiza Moja kwa Moja WhatsApp",
           desc: "Tuma ujumbe kwenye WhatsApp ya mauzo. Chagua tisheti zenye michoro au boxer briefs, lipa kwa Lipa Namba, na mzigo wako utakufikia siku hiyo hiyo.",
@@ -98,7 +99,7 @@ export default function WhereToBuy() {
           link: "#partner",
         },
         {
-          icon: MessageCircle,
+          icon: WhatsAppIcon,
           badge: "最快捷通道",
           title: "WhatsApp 现货极速下单",
           desc: "点击直联卡里亚库销售客服，实时查阅前胸印花T恤与平角内裤现货图册，支持 Lipa Namba 便捷结算，达市内当天送达。",
@@ -153,7 +154,7 @@ export default function WhereToBuy() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-orange-50 rounded-xl text-[#d46f24]">
+                    <div className={`p-3 rounded-xl ${Icon === WhatsAppIcon ? "bg-emerald-50 text-[#25D366]" : "bg-orange-50 text-[#d46f24]"}`}>
                       <Icon className="h-6 w-6" />
                     </div>
                     <span className="text-[11px] font-bold text-orange-900 bg-orange-100/60 px-2.5 py-1 rounded-full border border-orange-200/60">
@@ -168,8 +169,9 @@ export default function WhereToBuy() {
                   href={card.link}
                   target={card.isExternal ? "_blank" : undefined}
                   rel={card.isExternal ? "noopener noreferrer" : undefined}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white font-semibold py-3 px-4 rounded-xl text-xs sm:text-sm transition-colors shadow-xs"
+                  className={`w-full inline-flex items-center justify-center gap-2 ${Icon === WhatsAppIcon ? "bg-[#25D366] hover:bg-[#20b859] active:bg-[#1caa52] text-white" : "bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white"} font-semibold py-3 px-4 rounded-xl text-xs sm:text-sm transition-colors shadow-xs`}
                 >
+                  {Icon === WhatsAppIcon && <WhatsAppIcon className="h-4 w-4 fill-white shrink-0" />}
                   <span>{card.action}</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </a>
@@ -183,7 +185,13 @@ export default function WhereToBuy() {
           <div className="space-y-1.5 text-center md:text-left">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#d46f24] uppercase tracking-wider font-mono">
               <ShieldCheck className="h-4 w-4" />
-              <span>Kariakoo Wholesale & Partner Portal</span>
+              <span>
+                {language === "sw"
+                  ? "Tovuti ya Jumla & Mawakala Kariakoo"
+                  : language === "zh"
+                  ? "卡里亚库批发中心与合作商通道"
+                  : "Kariakoo Wholesale & Partner Portal"}
+              </span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
               {t.wholesaleBannerTitle}
@@ -210,10 +218,18 @@ export default function WhereToBuy() {
             </div>
             <div>
               <div className="text-sm font-bold text-slate-900">
-                Watch Live Factory Production & New Apparel Drops
+                {language === "sw"
+                  ? "Tazama Moja kwa Moja Kiwandani & Nguo Mpya Zinazotoka"
+                  : language === "zh"
+                  ? "观看现代化成衣工厂实况生产与全新现货上市"
+                  : "Watch Live Factory Production & New Apparel Drops"}
               </div>
               <div className="text-xs text-slate-500">
-                Follow @utrustclothingtz on Facebook and Instagram for daily cutting, sewing, and stock updates.
+                {language === "sw"
+                  ? "Fuata @utrustclothingtz na TikTok @utrustcloth kwa sasisho za kila siku za kushona na mizigo mipya."
+                  : language === "zh"
+                  ? "关注官方社交账号 Facebook、Instagram 及 TikTok (@utrustcloth)，实时获取裁剪、车缝及每日现货出厂动态。"
+                  : "Follow @utrustclothingtz on Facebook and Instagram for daily cutting, sewing, and stock updates."}
               </div>
             </div>
           </div>
@@ -227,7 +243,7 @@ export default function WhereToBuy() {
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
-              <span>Facebook Page</span>
+              <span>{language === "sw" ? "Ukurasa wa Facebook" : language === "zh" ? "Facebook 官方主页" : "Facebook Page"}</span>
             </a>
             <a
               href="https://www.instagram.com/utrustclothingtz/"

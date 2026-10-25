@@ -119,7 +119,13 @@ export default function ProductShowcaseCarousel() {
         <div className="absolute top-3 inset-x-3 z-20 flex items-center justify-between gap-2">
           <div className="inline-flex items-center gap-1.5 bg-slate-900/80 backdrop-blur-md border border-white/20 text-white px-3 py-1 rounded-full text-[11px] font-bold shadow-md">
             <Sparkles className="h-3 w-3 text-orange-400" />
-            <span>UTRUST: EVERYDAY COMFORT</span>
+            <span>
+              {language === "sw"
+                ? "UTRUST: FARAJA YA KILA SIKU"
+                : language === "zh"
+                ? "UTRUST 极致日常舒适"
+                : "UTRUST: EVERYDAY COMFORT"}
+            </span>
           </div>
 
           <div className="inline-flex items-center gap-1.5 bg-[#d46f24] text-white px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-md">
