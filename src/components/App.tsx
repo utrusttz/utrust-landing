@@ -1,4 +1,4 @@
-import { LanguageProvider } from "@/lib/i18n";
+import { LanguageProvider, type Language } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
@@ -11,12 +11,12 @@ import Footer from "@/components/Footer";
 
 /**
  * Full-page React app wrapped in LanguageProvider.
- * Mounted as a single Astro island with client:load so the language context
+ * Mounted as an Astro island with client:load so the language context
  * flows to every child component — no prop drilling across the island boundary.
  */
-export default function App() {
+export default function App({ initialLanguage = "en" }: { initialLanguage?: Language }) {
   return (
-    <LanguageProvider>
+    <LanguageProvider defaultLanguage={initialLanguage}>
       <Header />
       <main>
         <Hero />

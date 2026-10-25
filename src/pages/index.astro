@@ -1,15 +1,198 @@
 ---
 // src/pages/index.astro
-// Astro page: renders the full Utrust Clothing Tanzania Limited landing page.
-// The entire React tree is mounted as a single island (client:load) so the
-// LanguageProvider context is shared across all child components.
+// Astro page: renders the full Utrust Clothing Tanzania Limited landing page (English Canonical).
+// Pre-rendered server-side with static semantic tables for LLM/AI search indexing.
 import App from '../components/App';
+import FactorySpecsTable from '../components/FactorySpecsTable.astro';
 import '../styles/global.css';
 
 const siteUrl = "https://utrust.co.tz";
-const siteTitle = "Utrust Clothing Tanzania Limited | Factory-Direct Garment Manufacturer Dar es Salaam";
-const siteDescription = "Tanzania's premier apparel manufacturer based in Kigamboni, Dar es Salaam. Producing brand-new export-quality cotton t-shirts, comfort boxer briefs, and bulk custom garments. Wholesale hub in Kariakoo and fast upcountry delivery across East Africa.";
-const keywords = "Utrust, Utrust Clothing Tanzania, Tanzania garment factory, clothing manufacturer Dar es Salaam, Kariakoo wholesale t-shirts, boxer briefs Tanzania, Kigamboni apparel factory, East Africa textile, cotton t-shirts Dar es Salaam, Mitumba alternative Tanzania, factory direct clothes, Made in Tanzania garments";
+const siteTitle = "Utrust Clothing Tanzania | Factory-Direct Wholesale T-Shirts, Boxers & Polos (Dar es Salaam)";
+const siteDescription = "Tanzania's premier factory-direct apparel manufacturer in Kigamboni & Kariakoo, Dar es Salaam. 20,000+ units/day of 180-200 GSM cotton t-shirts, boxer briefs & polo workwear with 0% SADC & EAC duty-free export to Zambia, DRC, Kenya, and Malawi.";
+const keywords = "Utrust, Utrust Clothing Tanzania, Tanzania garment factory, clothing manufacturer Dar es Salaam, Kariakoo wholesale t-shirts, boxer briefs Tanzania, Kigamboni apparel factory, East Africa textile, cotton t-shirts Dar es Salaam, tisheti za jumla, boksa za jumla, SADC duty-free clothes Zambia, Made in Tanzania garments";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://utrust.co.tz/#organization",
+      "additionalType": "https://schema.org/Manufacturer",
+      "name": "Utrust Clothing Tanzania Limited",
+      "legalName": "Utrust Clothing Tanzania Limited",
+      "alternateName": ["Utrust", "Utrust Garments Tanzania", "Kiwanda cha Nguo Utrust", "Utrust Clothing"],
+      "url": "https://utrust.co.tz/",
+      "logo": "https://utrust.co.tz/logo.png",
+      "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+      "description": "Tanzania's premier factory-direct apparel manufacturer in Kigamboni and Kariakoo, Dar es Salaam. Producing 20,000+ units daily of 180-200 GSM heavyweight cotton t-shirts, breathable boxer briefs, and pique polo workwear with 0% SADC and EAC duty-free export.",
+      "email": "utrustclothingtz@gmail.com",
+      "telephone": "+255761644444",
+      "priceRange": "$$",
+      "currenciesAccepted": "TZS, USD",
+      "paymentAccepted": "Cash, Bank Transfer, M-Pesa, Tigo Pesa, Airtel Money",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24804, Lingato Street, Kisarawe 2, Kigamboni",
+        "addressLocality": "Dar es Salaam",
+        "addressRegion": "Dar es Salaam",
+        "postalCode": "17101",
+        "addressCountry": "TZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.8295,
+        "longitude": 39.3150
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+255-761-644-444",
+          "contactType": "wholesale and export sales",
+          "areaServed": ["TZ", "ZM", "CD", "KE", "UG", "RW", "BI", "MW", "MZ"],
+          "availableLanguage": ["English", "Swahili", "Chinese"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+255-741-273-333",
+          "contactType": "customer service and retail",
+          "areaServed": "TZ",
+          "availableLanguage": ["English", "Swahili"]
+        }
+      ],
+      "department": [
+        {
+          "@type": ["WholesaleStore", "ClothingStore"],
+          "@id": "https://utrust.co.tz/#kariakoo-hub",
+          "name": "Utrust Commercial Showroom & Wholesale Office - Kariakoo",
+          "telephone": "+255761644444",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2nd Floor, Nasra Tower, 21 Kisarawe St",
+            "addressLocality": "Kariakoo, Dar es Salaam",
+            "addressRegion": "Dar es Salaam",
+            "postalCode": "11101",
+            "addressCountry": "TZ"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -6.8194,
+            "longitude": 39.2736
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/1290912484105453",
+        "https://www.instagram.com/utrustclothingtz/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Utrust Factory-Direct Wholesale Apparel Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Heavyweight 100% Cotton Plain & Graphic T-Shirts (180–200 GSM)",
+              "description": "Factory-direct 180-200 GSM ring-spun Tanzanian combed cotton t-shirts engineered for wholesale retail, screen printing, and corporate uniforms.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Utrust Breathable Cotton Boxer Briefs",
+              "description": "High-elasticity, breathable cotton men's boxer briefs manufactured in Dar es Salaam for wholesale bulk distribution.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Industrial Pique Polo Workwear",
+              "description": "Durable pique knit polo shirts for corporate uniforms, promotional events, and wholesale distribution across East and Southern Africa.",
+              "brand": { "@type": "Brand", "name": "Utrust" },
+              "countryOfOrigin": "TZ"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://utrust.co.tz/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the Utrust Clothing factory and Kariakoo showroom located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our modern manufacturing plant is located at 24804, Lingato Street, Kisarawe 2, Kigamboni, Dar es Salaam (producing 20,000+ units daily). Our commercial wholesale showroom and sales office is located on the 2nd Floor, Nasra Tower, 21 Kisarawe St, Kariakoo, Dar es Salaam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can wholesale buyers and shop owners order from Utrust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wholesale shop owners and boutique retailers can order factory-direct cartons starting from 1 carton (3 to 4 dozens) with our 14-day unsold size and color swap guarantee. Contact our dedicated Wholesale & Export desk at +255 761 644 444 on WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can retail customers buy Utrust clothes in Dar es Salaam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For personal or retail purchases, contact our retail sales hotline on WhatsApp at +255 741 273 333. We offer same-day delivery across Dar es Salaam (Sinza, Mwenge, Kinondoni, City Centre) with Lipa Namba payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Utrust ship to regions outside Dar es Salaam (upcountry)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We provide same-afternoon parcel dispatch to major bus courier offices (Shabiby, Dar Express, Kilimanjaro, Saratoga) for delivery across all regions of Tanzania including Mwanza, Arusha, Dodoma, Mbeya, and Morogoro, complete with waybill photo proof."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Utrust export duty-free to Zambia, DRC, and neighboring countries under SADC & EAC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All apparel manufactured by Utrust Clothing Tanzania Limited qualifies for 0% import duty under the SADC Trade Protocol (for Zambia, DRC, Malawi, Mozambique) and the EAC Customs Union (for Kenya, Uganda, Rwanda, Burundi). We provide official Certificates of Origin for rapid border clearance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Utrust a better choice than Mitumba (second-hand clothes)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike random, unwashed second-hand Mitumba bales that have worn fabrics, Utrust garments are 100% brand-new, crafted from breathable combed cotton, wash-tested 50+ times with zero color bleed and non-sag elastic collars tailored for the East African climate."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
@@ -33,34 +216,33 @@ const keywords = "Utrust, Utrust Clothing Tanzania, Tanzania garment factory, cl
 
     <!-- Geographic & Regional Targeting (Local SEO for Tanzania & East Africa) -->
     <meta name="geo.region" content="TZ-02" />
-    <meta name="geo.placename" content="Dar es Salaam, Kigamboni" />
-    <meta name="geo.position" content="-6.8163;39.2894" />
-    <meta name="ICBM" content="-6.8163, 39.2894" />
+    <meta name="geo.placename" content="Dar es Salaam, Kigamboni, Kariakoo" />
+    <meta name="geo.position" content="-6.8194;39.2736" />
+    <meta name="ICBM" content="-6.8194, 39.2736" />
 
-    <!-- Multilingual Hreflang Tags (International & Local Search Coverage) -->
+    <!-- Properly Segregated Hreflang Tags (Reciprocal Multilingual Architecture) -->
     <link rel="alternate" hreflang="en" href={siteUrl + "/"} />
-    <link rel="alternate" hreflang="sw" href={siteUrl + "/"} />
-    <link rel="alternate" hreflang="zh" href={siteUrl + "/"} />
+    <link rel="alternate" hreflang="sw" href={siteUrl + "/sw/"} />
+    <link rel="alternate" hreflang="zh" href={siteUrl + "/zh/"} />
     <link rel="alternate" hreflang="x-default" href={siteUrl + "/"} />
 
     <!-- Search Console & Bing Verification -->
     <meta name="msvalidate.01" content="D323FDCD8670F30E79A66452C4D9A7FA" />
     <meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_HERE" />
 
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp Link Preview Optimization -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={siteUrl + "/"} />
     <meta property="og:site_name" content="Utrust Clothing Tanzania Limited" />
     <meta property="article:publisher" content="https://www.facebook.com/1290912484105453" />
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={siteDescription} />
+    <meta property="og:title" content="Utrust Clothing Factory TZ | 200 GSM T-Shirts, Boxers & Polos (Bei ya Kiwandani)" />
+    <meta property="og:description" content="Kigamboni Factory & Kariakoo Hub. 20,000+ units/day capacity. Wholesale MOQ from 1 carton + 0% SADC Duty-Free export to Zambia, DRC & Malawi." />
     <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Utrust Brand-New Tanzanian Cotton Apparel" />
+    <meta property="og:image:alt" content="Utrust Brand-New Tanzanian Cotton Apparel Factory Direct" />
     <meta property="og:locale" content="en_TZ" />
     <meta property="og:locale:alternate" content="sw_TZ" />
-    <meta property="og:locale:alternate" content="zh_CN" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -84,123 +266,14 @@ const keywords = "Utrust, Utrust Clothing Tanzania, Tanzania garment factory, cl
       rel="stylesheet"
     />
 
-    <!-- Schema.org JSON-LD Structured Data: Organization, LocalBusiness & FAQPage -->
-    <!-- Consumed by Google Search, SearchGPT, Perplexity, Claude, and Gemini AI search summaries -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": ["Organization", "ClothingStore", "LocalBusiness"],
-            "@id": "https://utrust.co.tz/#organization",
-            "name": "Utrust Clothing Tanzania Limited",
-            "legalName": "Utrust Clothing Tanzania Limited",
-            "alternateName": ["Utrust", "Utrust Garments", "Utrust Tanzania", "Utrust Clothing"],
-            "url": "https://utrust.co.tz/",
-            "logo": "https://utrust.co.tz/logo.png",
-            "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
-            "description": "Tanzania's premier apparel manufacturer based in Kigamboni, Dar es Salaam. Producing brand-new export-quality cotton t-shirts, comfort boxer briefs, and bulk custom garments. Wholesale hub in Kariakoo and fast upcountry delivery across East Africa.",
-            "telephone": "+255741273333",
-            "email": "utrustclothingtz@gmail.com",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "2nd Floor, Nasra Tower",
-              "addressLocality": "Dar es Salaam",
-              "postalCode": "11101",
-              "addressCountry": "TZ"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": -6.8163,
-              "longitude": 39.2894
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "08:00",
-                "closes": "18:00"
-              }
-            ],
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "+255741273333",
-                "contactType": "sales",
-                "areaServed": ["TZ", "KE", "UG", "RW", "BI", "CD"],
-                "availableLanguage": ["en", "sw", "zh"]
-              },
-              {
-                "@type": "ContactPoint",
-                "telephone": "+255761644444",
-                "contactType": "wholesale",
-                "areaServed": ["TZ", "KE", "UG", "RW", "BI", "CD"],
-                "availableLanguage": ["en", "sw", "zh"]
-              }
-            ],
-            "priceRange": "$$",
-            "currenciesAccepted": "TZS, USD",
-            "sameAs": [
-              "https://www.facebook.com/1290912484105453",
-              "https://www.instagram.com/utrustclothingtz/"
-            ]
-          },
-          {
-            "@type": "FAQPage",
-            "@id": "https://utrust.co.tz/#faq",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Where is the Utrust Clothing factory located in Tanzania?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The Utrust garment manufacturing plant has operated in Kigamboni, Dar es Salaam for over 2 years, employing 50+ local Tanzanian craftsmen with modern precision machinery. We also operate a commercial showroom in Kariakoo for B2B wholesale buyers."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How can I order Utrust t-shirts and boxer briefs retail in Dar es Salaam?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "For personal or retail purchases, chat directly with our retail WhatsApp sales desk at +255 741 273 333. We offer same-day delivery across Dar es Salaam (Sinza, Mwenge, Kinondoni, City Centre) with Lipa Namba payment."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What are the wholesale carton prices and minimum order quantities (MOQ)?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "For wholesale shop owners and stall distributors, our factory-direct wholesale pricing starts from just 1 carton (3 to 4 dozens), backed by our 14-day unsold size and color swap program. Contact our B2B wholesale line at +255 761 644 444."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Utrust ship to regions outside Dar es Salaam (upcountry)?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes! We provide same-afternoon parcel dispatch to major bus courier offices (Shabiby, Dar Express, Kilimanjaro, Saratoga) for delivery across all regions of Tanzania including Mwanza, Arusha, Dodoma, Mbeya, and Morogoro, complete with waybill photo proof."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Why is Utrust a better choice than Mitumba (second-hand clothes)?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Unlike random, unwashed second-hand Mitumba bales that have worn fabrics, Utrust garments are 100% brand-new, crafted from breathable combed cotton, wash-tested 50+ times with zero color bleed and non-sag elastic collars tailored for the East African climate."
-                }
-              }
-            ]
-          }
-        ]
-      }
-    </script>
+    <!-- Schema.org JSON-LD Structured Data: Dual-Location Industrial Manufacturer & FAQPage -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
-    <!--
-      Single Astro Island with client:load.
-      All React state (language switcher, calculators, forms, carousel)
-      is managed inside this island, keeping the HTML shell 0KB JS.
-    -->
-    <App client:load />
+    <!-- Single Astro Island: Full React App with initialLanguage="en" -->
+    <App initialLanguage="en" client:load />
+
+    <!-- Server-Side Pre-rendered Machine-Readable Specification Tables for AI Search Engines & Crawlers -->
+    <FactorySpecsTable lang="en" />
   </body>
 </html>

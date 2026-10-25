@@ -1,0 +1,64 @@
+---
+// src/pages/zh/index.astro
+// Astro page: renders the Chinese version of Utrust Clothing Tanzania Limited (Canonical /zh/).
+// Dedicated language portal for Chinese management, partners, and export sourcing clients.
+import App from '../../components/App';
+import FactorySpecsTable from '../../components/FactorySpecsTable.astro';
+import '../../styles/global.css';
+
+const siteUrl = "https://utrust.co.tz";
+const siteTitle = "Utrust 服饰（坦桑尼亚）有限公司 | 达累斯萨拉姆源头成衣制造厂";
+const siteDescription = "位于坦桑尼亚达累斯萨拉姆基甘博尼（Kigamboni）的现代化成衣制造工厂，卡里亚库商业中心设有现货批发展厅。日产20,000+件180-200克纯棉T恤、透气男士内裤及翻领工装Polo，享SADC及EAC南部非洲与东非免关税直通。";
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d46f24" />
+
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta name="author" content="Utrust Clothing Tanzania Limited" />
+    <link rel="canonical" href={siteUrl + "/zh/"} />
+
+    <!-- Robots Directives -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Properly Segregated Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href={siteUrl + "/"} />
+    <link rel="alternate" hreflang="sw" href={siteUrl + "/sw/"} />
+    <link rel="alternate" hreflang="zh" href={siteUrl + "/zh/"} />
+    <link rel="alternate" hreflang="x-default" href={siteUrl + "/"} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl + "/zh/"} />
+    <meta property="og:site_name" content="Utrust Clothing Tanzania Limited" />
+    <meta property="og:title" content="Utrust 服饰（坦桑尼亚）工厂 | 纯棉T恤、内裤、Polo衫一手出厂现货" />
+    <meta property="og:description" content="基甘博尼工厂与卡里亚库展厅，日产20,000+件，支持大宗批发与周边邻国免税出口。" />
+    <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Font: Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
+    <!-- Single Astro Island: Full React App with initialLanguage="zh" -->
+    <App initialLanguage="zh" client:load />
+
+    <!-- Server-Side Pre-rendered Machine-Readable Specification Tables in Chinese -->
+    <FactorySpecsTable lang="zh" />
+  </body>
+</html>

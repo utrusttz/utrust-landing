@@ -5,14 +5,15 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- English Primary Canonical -->
   <url>
     <loc>https://utrust.co.tz/</loc>
     <lastmod>2026-10-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://utrust.co.tz/" />
-    <xhtml:link rel="alternate" hreflang="sw" href="https://utrust.co.tz/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://utrust.co.tz/" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://utrust.co.tz/sw/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://utrust.co.tz/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://utrust.co.tz/" />
     <image:image>
       <image:loc>https://utrust.co.tz/showcase/utrust-product-1.jpg</image:loc>
@@ -24,6 +25,40 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
       <image:title>Utrust Premium Breathable Boxer Briefs</image:title>
       <image:caption>Everyday comfort underwear crafted for tropical East African heat</image:caption>
     </image:image>
+  </url>
+
+  <!-- Swahili Regional Canonical (Tanzania & East Africa) -->
+  <url>
+    <loc>https://utrust.co.tz/sw/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://utrust.co.tz/" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://utrust.co.tz/sw/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://utrust.co.tz/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://utrust.co.tz/" />
+    <image:image>
+      <image:loc>https://utrust.co.tz/showcase/utrust-product-1.jpg</image:loc>
+      <image:title>Tisheti Mpya za Pamba Kiwanda cha Utrust Tanzania</image:title>
+      <image:caption>Tisheti nzito za pamba safi 180-200 GSM zilizotengenezwa Kigamboni Dar es Salaam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://utrust.co.tz/showcase/utrust-product-2.jpg</image:loc>
+      <image:title>Boksa za Kiume za Pamba Utrust</image:title>
+      <image:caption>Boksa imara za pamba zenye mpira mzuri usiolegea kwa bei ya jumla</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Chinese Portal Canonical (Management & Regional Sourcing Partners) -->
+  <url>
+    <loc>https://utrust.co.tz/zh/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://utrust.co.tz/" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://utrust.co.tz/sw/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://utrust.co.tz/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://utrust.co.tz/" />
   </url>
 </urlset>
 `;

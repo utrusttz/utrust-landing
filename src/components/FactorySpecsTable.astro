@@ -1,0 +1,294 @@
+---
+// src/components/FactorySpecsTable.astro
+// Machine-readable static semantic specification tables for Search Engines & AI Crawlers (SearchGPT, Perplexity, Gemini, Claude).
+// Pre-rendered server-side by Astro — 0KB client JS overhead.
+interface Props {
+  lang?: "en" | "sw" | "zh";
+}
+
+const { lang = "en" } = Astro.props;
+
+const content = {
+  en: {
+    specsTitle: "Utrust Clothing Tanzania — Factory Production & Wholesale Specifications",
+    specsSubtitle: "Direct manufacturing parameters from our Kigamboni plant (20,000+ units/day) and Kariakoo commercial hub.",
+    thProduct: "Product Line",
+    thFabric: "Fabric & GSM Specification",
+    thCapacity: "Daily Output",
+    thTerms: "Wholesale & Transit Terms",
+    tshirtName: "Plain & Graphic Cotton T-Shirts (Tisheti za Jumla)",
+    tshirtFabric: "100% Tanzanian Combed Cotton • 180–200 GSM Ring-Spun",
+    tshirtCap: "10,000+ pcs/day",
+    tshirtTerms: "Kariakoo Showroom Pickup • Upcountry Bus Parcel • 0% SADC/EAC Duty-Free",
+    boxerName: "Breathable Boxer Briefs (Boksa za Jumla)",
+    boxerFabric: "95% Combed Cotton / 5% Elastane • High-Durability Anti-Sag Band",
+    boxerCap: "6,000+ pcs/day",
+    boxerTerms: "Master Wholesale Cartons • Pre-Packaged Retail Display Packs",
+    poloName: "Pique Polo Workwear (Sare za Kampuni)",
+    poloFabric: "200–220 GSM Honeycomb Pique • Color-Fast & Anti-Pilling",
+    poloCap: "4,000+ pcs/day",
+    poloTerms: "Custom Corporate Embroidery • Screen Print • Bulk Solid Blanks",
+    corridorTitle: "East & Southern Africa Cross-Border Sourcing Corridors",
+    corridorSubtitle: "Fast, bonded road & regional logistics connecting Dar es Salaam directly to neighboring markets.",
+    thCountry: "Destination Country",
+    thCorridor: "Transit Corridor & Border Hub",
+    thTradeRegime: "Trade Protocol & Tariff",
+    thTransitTime: "Typical Transit Time",
+    ctaWholesale: "Inquire Wholesale Catalog (+255 761 644 444)",
+    ctaRetail: "Retail Orders (+255 741 273 333)"
+  },
+  sw: {
+    specsTitle: "Utrust Clothing Tanzania — Vipimo vya Uzalishaji Kiwandani & Bei za Jumla",
+    specsSubtitle: "Uwezo halisi wa kiwanda chetu cha Kigamboni (vipande 20,000+ kwa siku) na ofisi ya Kariakoo.",
+    thProduct: "Aina ya Nguo",
+    thFabric: "Aina ya Kitambaa & Uzito (GSM)",
+    thCapacity: "Uzalishaji kwa Siku",
+    thTerms: "Masharti ya Jumla & Usafirishaji",
+    tshirtName: "Tisheti Tupu & Zenye Michoro (Tisheti za Jumla)",
+    tshirtFabric: "100% Pamba Safi ya Tanzania • 180–200 GSM Ring-Spun",
+    tshirtCap: "Vipande 10,000+ kwa siku",
+    tshirtTerms: "Kuchukua Kariakoo Showroom • Kutumiwa Mikoani kwa Mabasi • 0% Ushuru SADC/EAC",
+    boxerName: "Boksa za Kiume za Pamba (Boksa za Jumla)",
+    boxerFabric: "95% Pamba / 5% Elastane • Mpira Imara Usiolegea",
+    boxerCap: "Vipande 6,000+ kwa siku",
+    boxerTerms: "Katoni za Jumla Kiwandani • Tayari kwa Kuweka Madukani",
+    poloName: "Tisheti za Kola / Sare za Kazi (Polo Workwear)",
+    poloFabric: "200–220 GSM Pique Knit • Haichuji Rangi wala Kulegea Kola",
+    poloCap: "Vipande 4,000+ kwa siku",
+    poloTerms: "Nembo za Kampuni (Embroidery) • Screen Print • Rangi Mbalimbali",
+    corridorTitle: "Njia za Usafirishaji Nchi Jirani (East & Southern Africa)",
+    corridorSubtitle: "Usafirishaji wa haraka na salama kutoka Dar es Salaam kwenda nchi zote jirani za Tanzania.",
+    thCountry: "Nchi Inayoenda",
+    thCorridor: "Mpaka & Njia ya Usafiri",
+    thTradeRegime: "Mkataba wa Biashara & Ushuru",
+    thTransitTime: "Muda wa Kufika",
+    ctaWholesale: "Pata Katalogi ya Jumla (+255 761 644 444)",
+    ctaRetail: "Agiza Rejareja (+255 741 273 333)"
+  },
+  zh: {
+    specsTitle: "Utrust 服饰（坦桑尼亚）有限公司 — 工厂产能与批发技术规范",
+    specsSubtitle: "基甘博尼现代化成衣工厂（日产 20,000+ 件）与卡里亚库商业中心一手一手现货参数。",
+    thProduct: "产品系列",
+    thFabric: "面料与克重规格 (GSM)",
+    thCapacity: "每日产能",
+    thTerms: "批发与跨境物流条款",
+    tshirtName: "纯棉纯色空白与印花 T恤 (Tisheti za Jumla)",
+    tshirtFabric: "100% 坦桑尼亚优质精梳棉 • 180–200 GSM 精梳紧密纺",
+    tshirtCap: "10,000+ 件 / 天",
+    tshirtTerms: "卡里亚库档口提货 • 省级客运大巴代发 • SADC/EAC 0% 关税直通",
+    tshirtCap: "10,000+ 件 / 天",
+    boxerName: "高弹透气男士纯棉平角内裤 (Boxer Briefs)",
+    boxerFabric: "95% 纯棉 / 5% 氨纶 • 进口耐磨高弹宽边腰带",
+    boxerCap: "6,000+ 件 / 天",
+    boxerTerms: "出口标准箱装 • 档口独立陈列包装",
+    poloName: "商务工装珠地网眼翻领 POLO 衫",
+    poloFabric: "200–220 GSM 蜂巢珠地网眼 • 领口不卷边、耐洗不褪色",
+    poloCap: "4,000+ 件 / 天",
+    poloTerms: "支持企业刺绣/丝印定制 • 提供现货空白底衫",
+    corridorTitle: "坦桑尼亚周边八大邻国跨境采购与直达陆运走廊",
+    corridorSubtitle: "立足达累斯萨拉姆港口与公路枢纽，辐射东非与南部非洲共同体。",
+    thCountry: "目的国及核心城市",
+    thCorridor: "通关口岸与干线走廊",
+    thTradeRegime: "自贸协定与关税政策",
+    thTransitTime: "常规汽运时效",
+    ctaWholesale: "咨询一手批发底价 (+255 761 644 444)",
+    ctaRetail: "样品及零售咨询 (+255 741 273 333)"
+  }
+};
+
+const t = content[lang] || content.en;
+
+const corridors = [
+  {
+    country: "Zambia 🇿🇲 (Lusaka, Ndola, Kitwe)",
+    border: "Tunduma / Nakonde Border Post (TAZARA corridor)",
+    protocol: "SADC Protocol — 0% Import Duty (Certificate of Origin provided)",
+    time: "2 – 3 Days"
+  },
+  {
+    country: "DRC 🇨🇩 (Lubumbashi, Goma, Bukavu)",
+    border: "Kasumbalesa Border / Lake Tanganyika (Kigoma-Kalemie)",
+    protocol: "SADC Trade Regime — Preferential duty-free customs clearance",
+    time: "3 – 5 Days"
+  },
+  {
+    country: "Kenya 🇰🇪 (Nairobi, Mombasa)",
+    border: "Namanga / Horohoro Border Posts (Northern Corridor)",
+    protocol: "EAC Customs Union — 0% Import Duty with EAC Rules of Origin",
+    time: "1 – 2 Days"
+  },
+  {
+    country: "Uganda 🇺🇬 (Kampala, Jinja)",
+    border: "Mutukula Border Post (Central Corridor)",
+    protocol: "EAC Customs Union — 0% Duty-Free Tariff on Tanzanian manufactured apparel",
+    time: "2 – 3 Days"
+  },
+  {
+    country: "Rwanda 🇷🇼 (Kigali)",
+    border: "Rusumo Border Post (Central Corridor)",
+    protocol: "EAC Single Customs Territory — Rapid clearance with EAC Origin Certificate",
+    time: "2 – 3 Days"
+  },
+  {
+    country: "Burundi 🇧🇮 (Bujumbura)",
+    border: "Kabanga / Manyovu Border Posts",
+    protocol: "EAC Common Market — Zero tariff on value-added Tanzanian garments",
+    time: "2 – 3 Days"
+  },
+  {
+    country: "Malawi 🇲🇼 (Lilongwe, Blantyre)",
+    border: "Kasumulu / Songwe Border Post (Southern Highlands Corridor)",
+    protocol: "SADC Trade Protocol — Duty-free direct import status",
+    time: "2 – 4 Days"
+  },
+  {
+    country: "Mozambique 🇲🇿 (Pemba, Maputo)",
+    border: "Mtambaswala Border (Unity Bridge across Ruvuma)",
+    protocol: "SADC Trade Protocol — Preferential bilateral trade access",
+    time: "3 – 5 Days"
+  }
+];
+---
+
+<section id="factory-specs" aria-labelledby="specs-heading" class="py-16 bg-slate-50 border-t border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Table 1: Factory Production Specifications -->
+    <div class="mb-14">
+      <div class="max-w-3xl mb-6">
+        <div class="inline-flex items-center gap-2 bg-orange-100 text-orange-950 border border-orange-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+          <span>🏭 B2B Industrial Specifications</span>
+        </div>
+        <h2 id="specs-heading" class="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+          {t.specsTitle}
+        </h2>
+        <p class="mt-2 text-sm text-slate-600">
+          {t.specsSubtitle}
+        </p>
+      </div>
+
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-xs">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-mono uppercase text-[11px] tracking-wider">
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800">{t.thProduct}</th>
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800">{t.thFabric}</th>
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800 whitespace-nowrap">{t.thCapacity}</th>
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800">{t.thTerms}</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/70 transition-colors">
+              <td class="p-4 sm:p-4.5 font-bold text-slate-950">
+                {t.tshirtName}
+              </td>
+              <td class="p-4 sm:p-4.5">
+                {t.tshirtFabric}
+              </td>
+              <td class="p-4 sm:p-4.5 font-mono font-semibold text-[#d46f24] whitespace-nowrap">
+                {t.tshirtCap}
+              </td>
+              <td class="p-4 sm:p-4.5 text-slate-600">
+                {t.tshirtTerms}
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/70 transition-colors">
+              <td class="p-4 sm:p-4.5 font-bold text-slate-950">
+                {t.boxerName}
+              </td>
+              <td class="p-4 sm:p-4.5">
+                {t.boxerFabric}
+              </td>
+              <td class="p-4 sm:p-4.5 font-mono font-semibold text-[#d46f24] whitespace-nowrap">
+                {t.boxerCap}
+              </td>
+              <td class="p-4 sm:p-4.5 text-slate-600">
+                {t.boxerTerms}
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/70 transition-colors">
+              <td class="p-4 sm:p-4.5 font-bold text-slate-950">
+                {t.poloName}
+              </td>
+              <td class="p-4 sm:p-4.5">
+                {t.poloFabric}
+              </td>
+              <td class="p-4 sm:p-4.5 font-mono font-semibold text-[#d46f24] whitespace-nowrap">
+                {t.poloCap}
+              </td>
+              <td class="p-4 sm:p-4.5 text-slate-600">
+                {t.poloTerms}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Table 2: Cross-Border Sourcing Corridors -->
+    <div>
+      <div class="max-w-3xl mb-6">
+        <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-950 border border-emerald-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+          <span>🌍 SADC & EAC Regional Export Hub</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
+          {t.corridorTitle}
+        </h3>
+        <p class="mt-2 text-sm text-slate-600">
+          {t.corridorSubtitle}
+        </p>
+      </div>
+
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-xs mb-8">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-mono uppercase text-[11px] tracking-wider">
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800">{t.thCountry}</th>
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800">{t.thCorridor}</th>
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800">{t.thTradeRegime}</th>
+              <th scope="col" class="p-4 sm:p-4.5 border-b border-slate-800 whitespace-nowrap">{t.thTransitTime}</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            {corridors.map((c) => (
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="p-4 sm:p-4.5 font-bold text-slate-950 whitespace-nowrap">
+                  {c.country}
+                </td>
+                <td class="p-4 sm:p-4.5 text-slate-600">
+                  {c.border}
+                </td>
+                <td class="p-4 sm:p-4.5 text-slate-700">
+                  {c.protocol}
+                </td>
+                <td class="p-4 sm:p-4.5 font-mono font-semibold text-emerald-700 whitespace-nowrap">
+                  {c.time}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-orange-50/80 rounded-2xl border border-orange-200/80">
+        <div class="text-xs sm:text-sm text-slate-700 font-medium">
+          <span class="font-bold text-slate-950">Showroom & Office:</span> 2nd Floor, Nasra Tower, 21 Kisarawe St, Kariakoo, Dar es Salaam <br />
+          <span class="font-bold text-slate-950">Factory Plant:</span> 24804, Lingato Street, Kisarawe 2, Kigamboni, Dar Es Salaam
+        </div>
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <a
+            href="https://wa.me/255761644444?text=Habari%20Utrust!%20Naomba%20katalogi%20na%20bei%20za%20jumla%20(Wholesale%20RFQ)."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#d46f24] hover:bg-[#b85816] text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-sm whitespace-nowrap"
+          >
+            <span>{t.ctaWholesale}</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

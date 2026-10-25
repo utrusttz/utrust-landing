@@ -15,6 +15,8 @@ const SITEMAP_FEEDS = [
 
 const TARGET_URLS = [
   'https://utrust.co.tz/',
+  'https://utrust.co.tz/sw/',
+  'https://utrust.co.tz/zh/',
 ];
 
 async function bingApiPost(method, bodyObj) {

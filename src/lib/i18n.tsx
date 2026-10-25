@@ -1531,10 +1531,22 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
+export function LanguageProvider({
+  children,
+  defaultLanguage,
+}: {
+  children: React.ReactNode;
+  defaultLanguage?: Language;
+}) {
   const [language, setLanguageState] = useState<Language>(() => {
+    if (defaultLanguage) {
+      return defaultLanguage;
+    }
     if (typeof window !== "undefined") {
       try {
+        const pathname = window.location.pathname;
+        if (pathname === "/sw" || pathname.startsWith("/sw/")) return "sw";
+        if (pathname === "/zh" || pathname.startsWith("/zh/")) return "zh";
         const params = new URLSearchParams(window.location.search);
         const urlLang = params.get("lang") as Language;
         if (urlLang && (urlLang === "en" || urlLang === "sw" || urlLang === "zh")) {

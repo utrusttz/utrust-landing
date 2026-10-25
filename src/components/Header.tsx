@@ -165,8 +165,14 @@ export default function Header() {
                       onClick={() => {
                         setLanguage(item.code);
                         setLangOpen(false);
+                        if (typeof window !== "undefined") {
+                          const target = item.code === "en" ? "/" : `/${item.code}/`;
+                          if (window.location.pathname !== target && window.location.pathname !== target.slice(0, -1)) {
+                            window.location.href = target;
+                          }
+                        }
                       }}
-                      className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold transition-colors text-left ${
+                      className={`w-full flex items-center justify-between px-3 py-2 text-xs font-semibold transition-colors text-left cursor-pointer ${
                         language === item.code
                           ? "bg-orange-50 text-orange-900 font-bold"
                           : "text-slate-700 hover:bg-slate-50"

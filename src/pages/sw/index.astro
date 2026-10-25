@@ -1,0 +1,172 @@
+---
+// src/pages/sw/index.astro
+// Astro page: renders the Swahili version of Utrust Clothing Tanzania Limited (Canonical /sw/).
+// Pre-rendered server-side with Swahili SEO metadata, Schema.org, and machine-readable specification tables.
+import App from '../../components/App';
+import FactorySpecsTable from '../../components/FactorySpecsTable.astro';
+import '../../styles/global.css';
+
+const siteUrl = "https://utrust.co.tz";
+const siteTitle = "Kiwanda cha Nguo Utrust Tanzania | Bei ya Jumla Tisheti, Boksa na Polos (Dar es Salaam)";
+const siteDescription = "Nunua nguo moja kwa moja kiwandani Kigamboni na Kariakoo, Dar es Salaam. Uzalishaji wa tisheti nzito za pamba 180-200 GSM, boksa za kiume, na sare za kazi. Usafirishaji wa haraka mikoani kwa mabasi na ushuru wa 0% SADC & EAC.";
+const keywords = "kiwanda cha nguo Dar es Salaam, tisheti za jumla Kariakoo, boksa za jumla kiwandani, sare za kazi Dar es Salaam, pamba ya Tanzania, nguo mpya za kiwandani, Utrust Clothing Tanzania, tisheti tupu za kuprintia, bei ya jumla nguo";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://utrust.co.tz/sw/#organization",
+      "additionalType": "https://schema.org/Manufacturer",
+      "name": "Utrust Clothing Tanzania Limited",
+      "alternateName": ["Kiwanda cha Nguo Utrust", "Utrust Garments Tanzania", "Utrust"],
+      "url": "https://utrust.co.tz/sw/",
+      "logo": "https://utrust.co.tz/logo.png",
+      "image": "https://utrust.co.tz/showcase/utrust-product-1.jpg",
+      "description": "Kiwanda kikuu cha kutengeneza nguo bora za pamba Dar es Salaam (Kigamboni & Kariakoo). Uzalishaji wa nguo elfu 20+ kila siku: Tisheti nzito za pamba (180-200 GSM), boksa za kiume zenye pumzi, na polo za kazi.",
+      "email": "utrustclothingtz@gmail.com",
+      "telephone": "+255761644444",
+      "priceRange": "$$",
+      "currenciesAccepted": "TZS, USD",
+      "paymentAccepted": "Cash, Bank Transfer, M-Pesa, Tigo Pesa, Airtel Money",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24804, Lingato Street, Kisarawe 2, Kigamboni",
+        "addressLocality": "Dar es Salaam",
+        "addressRegion": "Dar es Salaam",
+        "postalCode": "17101",
+        "addressCountry": "TZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.8295,
+        "longitude": 39.3150
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+255-761-644-444",
+          "contactType": "wholesale and export sales",
+          "areaServed": ["TZ", "ZM", "CD", "KE", "UG", "RW", "BI", "MW", "MZ"],
+          "availableLanguage": ["English", "Swahili", "Chinese"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+255-741-273-333",
+          "contactType": "customer service and retail",
+          "areaServed": "TZ",
+          "availableLanguage": ["English", "Swahili"]
+        }
+      ],
+      "department": [
+        {
+          "@type": ["WholesaleStore", "ClothingStore"],
+          "@id": "https://utrust.co.tz/sw/#kariakoo-hub",
+          "name": "Ofisi ya Mauzo ya Jumla & Showroom - Kariakoo",
+          "telephone": "+255761644444",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2nd Floor, Nasra Tower, 21 Kisarawe St",
+            "addressLocality": "Kariakoo, Dar es Salaam",
+            "addressRegion": "Dar es Salaam",
+            "postalCode": "11101",
+            "addressCountry": "TZ"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -6.8194,
+            "longitude": 39.2736
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/1290912484105453",
+        "https://www.instagram.com/utrustclothingtz/"
+      ]
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="sw" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d46f24" />
+
+    <!-- Primary Swahili SEO -->
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Utrust Clothing Tanzania Limited" />
+    <link rel="canonical" href={siteUrl + "/sw/"} />
+
+    <!-- Robots & AI Agent Directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Geographic & Regional Targeting -->
+    <meta name="geo.region" content="TZ-02" />
+    <meta name="geo.placename" content="Dar es Salaam, Kigamboni, Kariakoo" />
+    <meta name="geo.position" content="-6.8194;39.2736" />
+    <meta name="ICBM" content="-6.8194, 39.2736" />
+
+    <!-- Properly Segregated Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href={siteUrl + "/"} />
+    <link rel="alternate" hreflang="sw" href={siteUrl + "/sw/"} />
+    <link rel="alternate" hreflang="zh" href={siteUrl + "/zh/"} />
+    <link rel="alternate" hreflang="x-default" href={siteUrl + "/"} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl + "/sw/"} />
+    <meta property="og:site_name" content="Utrust Clothing Tanzania Limited" />
+    <meta property="article:publisher" content="https://www.facebook.com/1290912484105453" />
+    <meta property="og:title" content="Kiwanda cha Nguo Utrust TZ | Bei ya Kiwandani Tisheti, Boksa na Polos" />
+    <meta property="og:description" content="Kiwanda kipo Kigamboni & Showroom Kariakoo. Uwezo wa vipande 20,000+ kwa siku. MOQ kuanzia katoni 1 tu + kutuma mikoani kwa basi siku hiyo hiyo." />
+    <meta property="og:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
+    <meta property="og:locale" content="sw_TZ" />
+    <meta property="og:locale:alternate" content="en_TZ" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={siteUrl + "/sw/"} />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={siteUrl + "/showcase/utrust-product-1.jpg"} />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Font: Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
+    <!-- Single Astro Island: Full React App with initialLanguage="sw" -->
+    <App initialLanguage="sw" client:load />
+
+    <!-- Server-Side Pre-rendered Machine-Readable Specification Tables in Swahili -->
+    <FactorySpecsTable lang="sw" />
+  </body>
+</html>
