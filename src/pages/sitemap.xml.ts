@@ -98,6 +98,20 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- AI Agents & LLM Knowledge Endpoints (llmstxt.org) -->
+  <url>
+    <loc>https://utrust.co.tz/llms.txt</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://utrust.co.tz/llms-full.txt</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
 `;
 

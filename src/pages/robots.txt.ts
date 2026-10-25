@@ -59,6 +59,10 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# AI Agent Discovery & LLM Context Files (https://llmstxt.org/)
+# llms.txt: https://utrust.co.tz/llms.txt
+# llms-full.txt: https://utrust.co.tz/llms-full.txt
+
 # Sitemap & Host
 Sitemap: https://utrust.co.tz/sitemap.xml
 Host: https://utrust.co.tz

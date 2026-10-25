@@ -58,6 +58,12 @@ export default function ProfitCalculator() {
             </div>
 
             <input
+              id="rotation-pieces-slider"
+              name="rotationPieces"
+              aria-label={t.calculator.sliderLabel}
+              aria-valuemin={2}
+              aria-valuemax={10}
+              aria-valuenow={pieces}
               type="range"
               min="2"
               max="10"

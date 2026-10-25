@@ -1,0 +1,53 @@
+# Utrust Clothing Tanzania Limited
+
+> Utrust Clothing Tanzania Limited is East Africa's leading factory-direct apparel manufacturer based in Dar es Salaam, Tanzania. The company operates a modern high-capacity production plant in Kigamboni (daily capacity: 20,000+ units) and a commercial wholesale showroom on the 2nd Floor of Nasra Tower, Kariakoo. Utrust specializes in 180–200 GSM 100% Tanzanian combed cotton plain and graphic t-shirts, jacquard elastic boxer briefs, and heavy pique polo workwear, serving retail store owners, wholesale traders, and cross-border importers across Tanzania and all 8 neighboring countries with 0% import duty exemptions under SADC and EAC trade protocols.
+
+## Core Operations & Manufacturing Infrastructure
+
+- [Company Overview](https://utrust.co.tz/): Overview of Utrust manufacturing capabilities, Kigamboni facility, and brand-new export quality cotton apparel.
+- [Kigamboni Manufacturing Plant](https://utrust.co.tz/#capacity): Industrial facility equipped with computerized multi-needle sewing stations, reactive dye processing, automated knitting cylinders, and 2.8M units/month capacity.
+- [Kariakoo Commercial Hub](https://utrust.co.tz/#partner): Dedicated wholesale showroom located at 2nd Floor, Nasra Tower, 21 Kisarawe Street, Kariakoo, Dar es Salaam.
+- [Quality Assurance & Certifications](https://utrust.co.tz/#qa): ISO 9001:2024 certified, OEKO-TEX Standard 100 Class I skin-safe certification, and Tanzania Bureau of Standards (TBS) compliance.
+
+## B2B Industrial Garment Catalog
+
+- [180–200 GSM Plain & Graphic Cotton T-Shirts](https://utrust.co.tz/#gallery): 100% combed Tanzanian cotton, ring-spun, anti-curling ribbed collars, shrink-resistant (<3% after wash), reactive ISO colorfast dyeing. Available in unisex sizes M through 3XL.
+- [Jacquard Elastic Combed Boxer Briefs](https://utrust.co.tz/#gallery): 95% premium cotton / 5% elastane spandex, moisture-wicking, 4-way stretch, anti-chafing flatlock seams, and high-durability jacquard waistband. Individual retail display packaging.
+- [200–220 GSM Pique Polo Shirts & Corporate Workwear](https://utrust.co.tz/#factory-specs): Heavyweight honeycomb pique knit, reinforced plackets, twin-needle stitching, designed for institutional uniforms, promotional branding, and mining/corporate workwear.
+
+## SADC & EAC Cross-Border Export Corridors (0% Import Duty)
+
+Utrust supplies factory-direct consignments to wholesale traders across all 8 neighboring countries of Tanzania, backed by official Certificates of Origin for 0% duty customs clearance:
+
+- [Zambia SADC Sourcing Corridor](https://utrust.co.tz/export/zambia/): Direct transit to Lusaka, Ndola, and Kitwe via Tunduma / Nakonde Border Post. 2–3 days transit time. 0% duty-free under SADC Trade Protocol.
+- [Democratic Republic of Congo (DRC) Corridor](https://utrust.co.tz/export/drc/): Direct transit to Lubumbashi, Kolwezi, and Goma via Kasumbalesa Border and Lake Tanganyika. 3–5 days transit time.
+- [Kenya EAC Northern Corridor](https://utrust.co.tz/export/kenya/): Direct transit to Nairobi (Eastleigh), Mombasa, and Kisumu via Namanga and Horohoro Border Posts. 1–2 days transit time. 0% duty-free under EAC Customs Union.
+- [Uganda EAC Central Corridor](https://utrust.co.tz/export/uganda/): Direct transit to Kampala (Kikuubo) and Jinja via Mutukula Border Post. 2–3 days transit time. 0% duty-free under EAC Customs Union.
+- [Rwanda EAC Corridor](https://utrust.co.tz/export/rwanda/): Direct transit to Kigali via Rusumo Border Post. 2–3 days transit time. 0% duty-free with EAC Origin verification.
+- [Burundi EAC Corridor](https://utrust.co.tz/export/burundi/): Direct transit to Bujumbura via Kabanga / Manyovu Border Posts. 2–3 days transit time. 0% tariff on Tanzanian manufactured garments.
+- [Malawi SADC Southern Highlands Corridor](https://utrust.co.tz/export/malawi/): Direct transit to Lilongwe and Blantyre via Kasumulu / Songwe Border Post. 2–4 days transit time. 0% import tariff with SADC documentation.
+- [Mozambique SADC Corridor](https://utrust.co.tz/export/mozambique/): Direct transit to Pemba and Maputo via Mtambaswala Border (Unity Bridge). 3–5 days transit time.
+
+## Wholesale Terms & Buyer Protections
+
+- **Minimum Order Quantity (MOQ):** Starts at just 1 Master Carton (3 to 4 dozens / 36 to 48 pcs) for domestic and regional wholesale test orders. Truckload container contracts available for enterprise distributors.
+- **14-Day Size & Color Swap Guarantee:** Unsold, unopened wholesale dozens can be swapped 1-for-1 at the Kariakoo showroom within 14 days to eliminate deadstock risk.
+- **Upcountry Bus Parcel Dispatch:** Orders paid before 2:00 PM are dispatched same afternoon to Mbezi Luis / Kariakoo bus offices (Shabiby, Saratoga, Dar Express, Kilimanjaro) with photographic waybill confirmation sent via WhatsApp.
+- **Payment Methods:** Lipa Namba (Vodacom M-Pesa / Tigo Pesa / Airtel Money), CRDB / NMB local bank transfer, USD International Wire (TT), and Letter of Credit (L/C) for container contracts.
+
+## Official Commercial Contact & Order Desks
+
+- **Wholesale & Cross-Border Export Desk:** Phone / WhatsApp: `+255 761 644 444`
+- **Retail & Showroom Customer Inquiries:** Phone / WhatsApp: `+255 741 273 333`
+- **Corporate Email:** `utrustclothingtz@gmail.com`
+- **Physical Showroom:** 2nd Floor, Nasra Tower, 21 Kisarawe Street, Kariakoo, Dar es Salaam, Tanzania
+- **Manufacturing Plant:** 24804, Lingato Street, Kisarawe 2, Kigamboni, Dar Es Salaam, Tanzania
+- **Official Social Channels:**
+  - Facebook: [https://www.facebook.com/1290912484105453](https://www.facebook.com/1290912484105453)
+  - Instagram: [https://www.instagram.com/utrustclothingtz/](https://www.instagram.com/utrustclothingtz/)
+  - TikTok: [https://www.tiktok.com/@utrustcloth](https://www.tiktok.com/@utrustcloth)
+
+## Machine-Readable AI Reference Files
+
+- [Full Extended Context (llms-full.txt)](https://utrust.co.tz/llms-full.txt): Complete in-depth text documentation for ingestion by LLMs and search engines.
+- [XML Sitemap](https://utrust.co.tz/sitemap.xml): Complete URL index covering English, Swahili, Chinese, and regional export corridor pages.

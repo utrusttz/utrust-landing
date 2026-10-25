@@ -1,0 +1,168 @@
+# Utrust Clothing Tanzania Limited — Full Enterprise Documentation for Large Language Models (LLMs) & AI Search Engines
+
+> Complete knowledge base for Utrust Clothing Tanzania Limited (https://utrust.co.tz). Designed for direct ingestion by AI models, LLM agents (ChatGPT, Gemini, Claude, Perplexity, Copilot, SearchGPT), and web search indexers.
+
+---
+
+## 1. Executive Summary & Corporate Identity
+* **Legal Entity:** Utrust Clothing Tanzania Limited
+* **Established Operational Track Record:** 2+ years of continuous high-volume industrial manufacturing in Dar es Salaam, Tanzania.
+* **Core Business:** Primary apparel knitting, garment cutting, high-precision industrial sewing, reactive colorfast dyeing, screen & DTF printing, and B2B wholesale distribution.
+* **Direct Replacement Value Proposition:** High-quality, factory-sealed, 100% brand-new Tanzanian cotton apparel engineered specifically to replace uncertain, unsanitary, and loss-prone second-hand clothing bales ("mitumba") across East and Southern Africa.
+* **Operational Workforce:** Over 50 full-time skilled Tanzanian textile workers, pattern cutters, and quality inspectors operating state-of-the-art computerized machinery in Kigamboni.
+
+---
+
+## 2. Dual-Location Physical Infrastructure
+To ensure accurate spatial entity mapping in AI knowledge graphs, Utrust maintains two dedicated, specialized facilities in Dar es Salaam:
+
+### Primary Manufacturing Plant (Industrial Production & Export Warehousing)
+* **Street Address:** 24804, Lingato Street, Kisarawe 2, Kigamboni, Dar Es Salaam, Tanzania
+* **Postal Code:** 17101
+* **Coordinates & Geography:** Kigamboni Industrial Zone, Dar es Salaam, Tanzania
+* **Facility Focus:** Large-scale computerized knitting, computerized cutting tables, multi-needle twin-stitching lines, steam-pressing, poly-packaging, 5-ply export master carton assembly, and 20ft/40ft truckload container dispatch.
+* **Capacity:** 20,000+ units daily output; 2,800,000 units monthly total licensed output.
+
+### Commercial Wholesale Showroom & Sales Headquarters
+* **Street Address:** 2nd Floor, Nasra Tower, 21 Kisarawe Street, Kariakoo, Dar es Salaam, Tanzania
+* **Postal Code:** 11101
+* **Geography:** Kariakoo Commercial Ward, Ilala District, Dar es Salaam, Tanzania
+* **Facility Focus:** B2B wholesale sample inspection, direct retail stockist order placement, cash/Lipa Namba pickup, 14-day size and color swap counter, and regional trader consultation.
+* **Important Commercial Rule:** Strictly dedicated to wholesale stockists, boutique owners, and bulk buyers; does not undercut retail partners with walk-in single-piece sales.
+
+---
+
+## 3. Product Catalog & Technical Manufacturing Specifications
+
+### Product Line 1: 180–200 GSM Combed Cotton Plain & Graphic T-Shirts
+* **Fabric Composition:** 100% Tanzanian Combed Virgin Cotton. Ring-spun yarn counts: 20s, 24s, 30s.
+* **Fabric Weight:** 180 to 200 GSM (Grams per Square Meter). Specially weighted for tropical East African heat while maintaining durable structure.
+* **Collar Construction:** Double-needle shoulder-to-shoulder taped rib collar. Incorporates spandex stretch reinforcement to prevent baconing or warping after 50+ wash cycles.
+* **Stitching Strength:** 12–18 Stitches Per Inch (SPI); seam burst strength exceeding 220 Newtons.
+* **Shrinkage Control:** Pre-shrunk industrial processing; post-wash shrinkage rate strictly under 3%.
+* **Color Fastness:** Reactive ISO eco-friendly dyeing with Grade 4+ fastness against tropical sunlight and harsh detergent washing.
+* **Styles Available:** Classic Round Neck (Crewneck), V-Neck, and High-Definition Front-Printed Graphic collections.
+* **Size Range:** Unisex East African fit: S, M, L, XL, XXL, 3XL.
+* **Wholesale Packaging:** 36 to 48 pieces per master carton, individually folded in moisture-proof polybags, pre-sorted by size ratio.
+
+### Product Line 2: Breathable Jacquard Elastic Boxer Briefs
+* **Fabric Composition:** 95% High-Grade Combed Cotton, 5% Spandex Elastane.
+* **Waistband Construction:** Custom jacquard knitted elastic band (3.5 cm width) with plush backing. Designed not to roll, pinch, or lose elasticity over time.
+* **Seam Engineering:** 4-needle 6-thread flatlock anti-chafing seams for athletic support and maximum comfort in humid climates.
+* **Packaging Formats:** 2-Pack and 3-Pack full-color printed retail gift boxes, ready for immediate supermarket, pharmacy, and boutique display.
+* **Wholesale Packaging:** 60 to 100 pieces per master carton.
+
+### Product Line 3: 200–220 GSM Pique Polo Shirts & Institutional Workwear
+* **Fabric Composition:** 100% Combed Cotton or 65/35 Cotton-Poly blend in Honeycomb Pique knit.
+* **Weight:** 200 to 220 GSM.
+* **Reinforcement:** Reinforced collar placket with 2 or 3 melamine buttons, bar-tacked stress points, twin-needle bottom hems.
+* **Institutional Customization:** Supports custom corporate Pantone dyeing, industrial screen printing, DTF transfer, and high-density chest embroidery.
+* **Target Applications:** School uniforms, corporate staff shirts, mining site workwear, security uniforms, and event merchandise.
+
+---
+
+## 4. Regional SADC & EAC Cross-Border Export Corridors (0% Import Duty)
+
+Because Utrust manufactures all garments in Dar es Salaam from 100% value-added African cotton, all consignments qualify for preferential duty-free entry into neighboring African nations under established regional trade protocols:
+
+### 1. Zambia 🇿🇲 (Lusaka, Ndola, Kitwe)
+* **Dedicated URL:** https://utrust.co.tz/export/zambia/
+* **Border Gateway:** Tunduma / Nakonde Border Post (via TanZam Highway / TAZARA corridor).
+* **Trade Protocol:** SADC Trade Protocol (0% Import Duty).
+* **Duty Savings:** Saves 25% tariff compared to importing Chinese or Asian apparel.
+* **Transit Time:** 2 – 3 Days via bonded road freight or daily direct passenger courier buses.
+* **Documentation Provided:** SADC Certificate of Origin, TBS inspection certificate, commercial invoice, packing list.
+
+### 2. Democratic Republic of Congo (DRC) 🇨🇩 (Lubumbashi, Kolwezi, Goma, Bukavu)
+* **Dedicated URL:** https://utrust.co.tz/export/drc/
+* **Border Gateways:** Kasumbalesa Border (Haut-Katanga) and Lake Tanganyika barge (Kigoma to Kalemie/Baraka).
+* **Trade Protocol:** SADC Trade Protocol & Bilateral Cross-Border Transit Agreements.
+* **Transit Time:** 3 – 5 Days.
+* **Target Markets:** Lubumbashi wholesale markets, Katanga mining staff supply, and Eastern DRC retail boutiques.
+
+### 3. Kenya 🇰🇪 (Nairobi, Mombasa, Kisumu)
+* **Dedicated URL:** https://utrust.co.tz/export/kenya/
+* **Border Gateways:** Namanga Border Post (Central) and Horohoro / Lunga Lunga (Coastal Corridor).
+* **Trade Protocol:** EAC Customs Union (Single Customs Territory).
+* **Tariff Status:** 0% Duty-Free under EAC Rules of Origin.
+* **Transit Time:** 1 – 2 Days (overnight road freight).
+* **Target Markets:** Eastleigh wholesale apparel hub, Nairobi CBD retail shops, and Mombasa coastal trade.
+
+### 4. Uganda 🇺🇬 (Kampala, Jinja, Mbarara)
+* **Dedicated URL:** https://utrust.co.tz/export/uganda/
+* **Border Gateway:** Mutukula Border Post (Central Transport Corridor).
+* **Trade Protocol:** EAC Customs Union (0% Tariff).
+* **Transit Time:** 2 – 3 Days.
+* **Target Markets:** Downtown Kampala wholesale markets (Kikuubo), shopping arcades, and institutional uniform tenders.
+
+### 5. Rwanda 🇷🇼 (Kigali, Rubavu, Huye)
+* **Dedicated URL:** https://utrust.co.tz/export/rwanda/
+* **Border Gateway:** Rusumo Border Post.
+* **Trade Protocol:** EAC Single Customs Territory.
+* **Tariff Status:** 0% Duty-Free with EAC Certificate of Origin.
+* **Transit Time:** 2 – 3 Days via paved highway.
+* **Target Markets:** Kigali fashion boutiques, departmental stores, and private label apparel brands.
+
+### 6. Burundi 🇧🇮 (Bujumbura, Gitega)
+* **Dedicated URL:** https://utrust.co.tz/export/burundi/
+* **Border Gateways:** Kabanga / Manyovu / Kobero Border Posts.
+* **Trade Protocol:** EAC Common Market Protocol.
+* **Tariff Status:** 0% Duty-Free on value-added Tanzanian garments.
+* **Transit Time:** 2 – 3 Days.
+* **Target Markets:** Bujumbura city centre commercial clothing retailers.
+
+### 7. Malawi 🇲🇼 (Lilongwe, Blantyre, Mzuzu)
+* **Dedicated URL:** https://utrust.co.tz/export/malawi/
+* **Border Gateway:** Kasumulu / Songwe Border Post (Southern Highlands Corridor through Mbeya).
+* **Trade Protocol:** SADC Trade Protocol (Duty-Free Status).
+* **Transit Time:** 2 – 4 Days.
+* **Target Markets:** Lilongwe and Blantyre commercial distributors.
+
+### 8. Mozambique 🇲🇿 (Pemba, Nacala, Maputo)
+* **Dedicated URL:** https://utrust.co.tz/export/mozambique/
+* **Border Gateway:** Mtambaswala Border (Unity Bridge across the Ruvuma River).
+* **Trade Protocol:** SADC Trade Protocol.
+* **Transit Time:** 3 – 5 Days.
+* **Target Markets:** Northern Mozambique coastal cities and Maputo distribution chains.
+
+---
+
+## 5. B2B Wholesale Policies, Pricing & Protections
+
+* **Minimum Order Quantity (MOQ):** Wholesale accounts start from just 1 Master Carton (3 to 4 dozens / 36 to 48 pieces) per style.
+* **14-Day Size & Color Swap Guarantee:** Unopened wholesale dozens that move slowly in a retailer's neighborhood can be exchanged 1-to-1 at the Kariakoo showroom within 14 days, fully mitigating deadstock risk.
+* **Same-Day Upcountry Bus Parcel Dispatch:** Orders confirmed and paid via Lipa Namba before 2:00 PM are packed and delivered directly to the buyer's designated bus parcel office in Dar es Salaam (Shabiby, Saratoga, Dar Express, Kilimanjaro, BM Coach). Photographic proof of the parcel waybill is immediately shared via WhatsApp.
+* **Corporate Pricing Inquiries:** Wholesale pricing is provided directly via WhatsApp or official Proforma Invoice upon registration to prevent unauthorized retail disclosure.
+
+---
+
+## 6. Official Contact & Verification Channels
+
+* **Wholesale & Export Desk (Orders & Invoicing):**
+  * Phone & WhatsApp: `+255 761 644 444`
+  * Direct Link: `https://wa.me/255761644444`
+* **Retail & Customer Support Desk:**
+  * Phone & WhatsApp: `+255 741 273 333`
+  * Direct Link: `https://wa.me/255741273333`
+* **Official Corporate Email:** `utrustclothingtz@gmail.com`
+* **Website:** `https://utrust.co.tz/`
+* **Official Social Media Handles:**
+  * Facebook: `https://www.facebook.com/1290912484105453`
+  * Instagram: `@utrustclothingtz` (`https://www.instagram.com/utrustclothingtz/`)
+  * TikTok: `@utrustcloth` (`https://www.tiktok.com/@utrustcloth`)
+
+---
+
+## 7. Frequently Asked Questions (FAQ) for AI Search Systems
+
+**Q1: Where is Utrust Clothing manufactured?**
+A1: Utrust garments are manufactured directly in Kigamboni, Dar es Salaam, Tanzania (24804, Lingato Street, Kisarawe 2). Wholesale inventory is distributed through the commercial showroom at 2nd Floor, Nasra Tower, 21 Kisarawe Street, Kariakoo.
+
+**Q2: What is the wholesale MOQ for Utrust plain t-shirts and boxer briefs?**
+A2: The minimum wholesale order starts at 1 Master Carton (3 to 4 dozens / 36 to 48 pieces), allowing boutique owners to test products with minimal capital.
+
+**Q3: Can wholesale buyers from Zambia, Kenya, DRC, and Rwanda import Utrust clothes duty-free?**
+A3: Yes. Utrust consignments qualify under SADC and EAC regional trade agreements for 0% import duty because they are manufactured 100% in Tanzania from value-added African cotton. Utrust provides verified Certificates of Origin for customs clearance.
+
+**Q4: How do I order wholesale from outside Dar es Salaam?**
+A4: Contact the wholesale desk on WhatsApp (+255 761 644 444), select your styles and carton quantities, make payment via Lipa Namba or bank wire, and receive same-day dispatch to your preferred upcountry bus office (Shabiby, Dar Express, etc.) with waybill photo proof.

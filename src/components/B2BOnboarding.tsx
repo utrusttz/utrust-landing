@@ -198,11 +198,14 @@ export default function B2BOnboarding() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
+                    <label htmlFor="partner-name" className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
                       {t.onboarding.nameLabel}
                     </label>
                     <input
+                      id="partner-name"
                       name="name"
+                      aria-label={t.onboarding.nameLabel}
+                      autoComplete="name"
                       placeholder={t.onboarding.namePlaceholder}
                       value={form.name}
                       onChange={handleChange}
@@ -219,12 +222,15 @@ export default function B2BOnboarding() {
                   </div>
 
                   <div>
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
+                    <label htmlFor="partner-email" className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
                       {t.onboarding.emailLabel}
                     </label>
                     <input
+                      id="partner-email"
                       name="email"
                       type="email"
+                      aria-label={t.onboarding.emailLabel}
+                      autoComplete="email"
                       placeholder={t.onboarding.emailPlaceholder}
                       value={form.email}
                       onChange={handleChange}
@@ -243,11 +249,14 @@ export default function B2BOnboarding() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
+                    <label htmlFor="partner-company" className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
                       {t.onboarding.companyLabel}
                     </label>
                     <input
+                      id="partner-company"
                       name="company"
+                      aria-label={t.onboarding.companyLabel}
+                      autoComplete="organization"
                       placeholder={t.onboarding.companyPlaceholder}
                       value={form.company}
                       onChange={handleChange}
@@ -264,11 +273,14 @@ export default function B2BOnboarding() {
                   </div>
 
                   <div>
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
+                    <label htmlFor="partner-phone" className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
                       {t.onboarding.phoneLabel}
                     </label>
                     <input
+                      id="partner-phone"
                       name="phone"
+                      aria-label={t.onboarding.phoneLabel}
+                      autoComplete="tel"
                       placeholder={t.onboarding.phonePlaceholder}
                       value={form.phone}
                       onChange={handleChange}
@@ -287,11 +299,13 @@ export default function B2BOnboarding() {
 
                 {/* Monthly Volume */}
                 <div>
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
+                  <label htmlFor="partner-volume" className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
                     {t.onboarding.volumeLabel}
                   </label>
                   <select
+                    id="partner-volume"
                     name="volume"
+                    aria-label={t.onboarding.volumeLabel}
                     value={form.volume}
                     onChange={handleChange}
                     className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#d46f24] focus:ring-3 focus:ring-orange-500/15 transition-all"
@@ -316,6 +330,8 @@ export default function B2BOnboarding() {
                         <button
                           type="button"
                           key={idx}
+                          aria-pressed={isSelected}
+                          aria-label={`Select ${item}`}
                           onClick={() => handleInterestToggle(item)}
                           className={`text-left text-xs p-3 rounded-xl border transition-all flex items-center gap-2.5 cursor-pointer ${
                             isSelected
@@ -339,11 +355,13 @@ export default function B2BOnboarding() {
 
                 {/* Notes */}
                 <div>
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
+                  <label htmlFor="partner-notes" className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5 font-mono">
                     {t.onboarding.notesLabel}
                   </label>
                   <textarea
+                    id="partner-notes"
                     name="notes"
+                    aria-label={t.onboarding.notesLabel}
                     rows={3}
                     placeholder={t.onboarding.notesPlaceholder}
                     value={form.notes}

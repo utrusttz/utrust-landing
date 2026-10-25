@@ -25,6 +25,8 @@ const TARGET_URLS = [
   'https://utrust.co.tz/export/burundi/',
   'https://utrust.co.tz/export/malawi/',
   'https://utrust.co.tz/export/mozambique/',
+  'https://utrust.co.tz/llms.txt',
+  'https://utrust.co.tz/llms-full.txt',
 ];
 
 async function bingApiPost(method, bodyObj) {
