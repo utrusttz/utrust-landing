@@ -1,6 +1,7 @@
 import { LanguageProvider, type Language } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
 import PhotoGallery from "@/components/PhotoGallery";
 import WhereToBuy from "@/components/WhereToBuy";
@@ -21,6 +22,7 @@ export default function App({ initialLanguage = "en" }: { initialLanguage?: Lang
       <Header />
       <main>
         <Hero />
+        <AboutUs />
         <ComparisonMatrix />
         <PhotoGallery />
         <WhereToBuy />

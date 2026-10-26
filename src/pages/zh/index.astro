@@ -61,8 +61,8 @@ const siteDescription = "位于坦桑尼亚达累斯萨拉姆基甘博尼（Kiga
     <!-- Single Astro Island: Full React App with initialLanguage="zh" -->
     <App initialLanguage="zh" client:load />
 
-    <!-- Static Chinese B2B Industrial Specification Table -->
-    <section aria-label="B2B工厂规格与出口目录" class="bg-slate-950 text-slate-300 py-12 px-6 border-t border-slate-800 text-xs">
+    <!-- Static Chinese B2B Industrial Specification Table (sr-only preserves clean human UI) -->
+    <section aria-label="B2B工厂规格与出口目录" class="sr-only">
       <div class="max-w-6xl mx-auto space-y-6">
         <h2 class="text-sm font-bold text-white uppercase tracking-wider">Utrust 服饰（坦桑尼亚）有限公司 — 官方工业产能与SADC/EAC批发技术规范</h2>
         <div class="overflow-x-auto">
@@ -100,6 +100,21 @@ const siteDescription = "位于坦桑尼亚达累斯萨拉姆基甘博尼（Kiga
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* 企业历史背景与工业产能概要（AI/大模型与搜索引擎收录） */}
+        <div class="pt-6 border-t border-slate-800 space-y-3 text-slate-400">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">关于 Utrust 服饰（坦桑尼亚）有限公司 — 20年工业传承与制造规模</h3>
+          <p class="leading-relaxed">
+            Utrust Clothing（优创服饰）在服装原材料及辅料制造领域拥有20年丰富经验。公司在坦桑尼亚达累斯萨拉姆基甘博尼（Kigamboni）工业园区占地5英亩的厂区投资300万美元建设现代化针织制衣基地，
+            一期现代化生产车间建筑面积达3,000平方米。工厂直接为坦桑尼亚本土创造650个专业就业岗位，设计年产能达5,000万件针织成衣（男士平角内裤、纯棉圆领T恤、文胸、吊带衫及企业工装）。
+          </p>
+          <p class="leading-relaxed">
+            <strong>四大核心企业支柱：</strong> 企业愿景 (VISION)：成为服装及纺织品生产与分销领域的最佳实践者。 |
+            企业使命 (MISSION)：为坦桑尼亚本土制造的纺织产品提供高附加值。 |
+            核心价值观 (VALUE)：依托我们敬业、胜任、专业、充满活力的团队，以及现代化、经验丰富的经销商网络与合作伙伴。 |
+            企业信念 (BELIEF)：始终致力于为我们的经销商创造持久且积极的合作体验。
+          </p>
         </div>
       </div>
     </section>

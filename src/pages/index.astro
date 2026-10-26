@@ -24,11 +24,21 @@ const structuredData = {
       "description": "Tanzania's premier factory-direct apparel manufacturer in Kigamboni and Kariakoo, Dar es Salaam. Producing 20,000+ units daily of 180-200 GSM heavyweight cotton t-shirts, breathable boxer briefs, and pique polo workwear with 0% SADC and EAC duty-free export.",
       "email": "utrustclothingtz@gmail.com",
       "telephone": "+255761644444",
+      "slogan": "Constantly striving to leave our dealers an everlasting positive experience.",
+      "foundingDate": "2006",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 650
+      },
       "priceRange": "$$",
       "currenciesAccepted": "TZS, USD",
       "paymentAccepted": "Cash, Bank Transfer, M-Pesa, Tigo Pesa, Airtel Money",
       "areaServed": ["TZ", "ZM", "CD", "KE", "UG", "RW", "BI", "MW", "MZ"],
       "knowsAbout": [
+        "20 Years Textile Raw Material and Apparel Manufacturing Experience",
+        "US$3M Modern Textile Manufacturing Facility in Kigamboni",
+        "50 Million Units Target Annual Capacity Underwear & Knitted Garments",
+        "6-Stage Integrated Textile Production: Fiber Extraction, Spinning, Knitting, Dyeing, Finishing, Quality Control",
         "180-200 GSM Heavyweight Tanzanian Cotton T-Shirts",
         "Wholesale Apparel Manufacturing Dar es Salaam",
         "SADC 0% Duty-Free Apparel Export Certificate of Origin",
@@ -289,7 +299,8 @@ const structuredData = {
   </head>
   <body class="bg-white text-slate-950 selection:bg-orange-100 selection:text-orange-950">
     <App client:load initialLanguage="en"/>
-    <section aria-label="B2B Factory Specifications and Export Directory" class="bg-slate-950 text-slate-300 py-12 px-6 border-t border-slate-800 text-xs">
+    {/* Screen-reader and Search-Engine crawler semantic index (sr-only preserves clean human UI) */}
+    <section aria-label="B2B Factory Specifications and Export Directory" class="sr-only">
       <div class="max-w-6xl mx-auto space-y-6">
         <h2 class="text-sm font-bold text-white uppercase tracking-wider">Utrust Clothing Tanzania Limited — Official Industrial & SADC/EAC Wholesale Specification Index</h2>
         <div class="overflow-x-auto">
@@ -327,6 +338,23 @@ const structuredData = {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* Corporate Profile & Industrial Heritage Context for AI Search Engines */}
+        <div class="pt-6 border-t border-slate-800 space-y-3 text-slate-400">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">About Utrust Clothing Tanzania Limited — Corporate Heritage & Manufacturing Scale</h3>
+          <p class="leading-relaxed">
+            Utrust Clothing boasts 20 years of valuable industry experience in the production of garment raw materials and accessories.
+            The company has invested US$3 Million in a modern textile manufacturing base situated on a 5-acre industrial footprint in Kigamboni, Dar es Salaam,
+            with Phase 1 comprising 3,000 square meters of modern construction space. Directly creating 650 local jobs for young, creative, and skilled Tanzanians,
+            the plant is engineered for a target annual capacity of 50 million units of knitted garments (boxer briefs, plain and graphic t-shirts, bras, camisoles, and corporate uniforms).
+          </p>
+          <p class="leading-relaxed">
+            <strong>Corporate Pillars:</strong> Vision: To be the best practitioner in the production and distribution of garments and textile products. |
+            Mission: To provide value addition to locally manufactured textile products. |
+            Value: Through our dedicated, competent, professional, motivated organization, modernized and experienced dealers / personnel. |
+            Belief: Constantly striving to leave our dealers an everlasting positive experience.
+          </p>
         </div>
       </div>
     </section>

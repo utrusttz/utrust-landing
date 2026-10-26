@@ -22,6 +22,7 @@ export interface Translations {
   header: {
     announcementDirect: string;
     announcementTransit: string;
+    aboutUs: string;
     mitumbaVsUtrust: string;
     gallery: string;
     factorySpecs: string;
@@ -57,6 +58,59 @@ export interface Translations {
     availableUnitsLabel: string;
     quarterlyAdvisory: string;
     reserveButton: string;
+  };
+  about: {
+    badge: string;
+    titlePrefix: string;
+    titleMain: string;
+    subtitle: string;
+    stats: Array<{
+      value: string;
+      label: string;
+      detail: string;
+    }>;
+    pillarsTitle: string;
+    pillarsSubtitle: string;
+    vision: {
+      tag: string;
+      title: string;
+      statement: string;
+      desc: string;
+    };
+    mission: {
+      tag: string;
+      title: string;
+      statement: string;
+      desc: string;
+    };
+    value: {
+      tag: string;
+      title: string;
+      statement: string;
+      desc: string;
+    };
+    belief: {
+      tag: string;
+      title: string;
+      statement: string;
+      desc: string;
+    };
+    processBadge: string;
+    processTitle: string;
+    processSubtitle: string;
+    processSteps: Array<{
+      step: string;
+      name: string;
+      headline: string;
+      description: string;
+      specs: string[];
+    }>;
+    dealerBannerTitle: string;
+    dealerBannerSub: string;
+    dealerBannerQuote: string;
+    dealerBannerBtn: string;
+    galleryBadge: string;
+    galleryTitle: string;
   };
   comparison: {
     badge: string;
@@ -236,6 +290,7 @@ export const translations: Record<Language, Translations> = {
     header: {
       announcementDirect: "Direct from Dar es Salaam Factory",
       announcementTransit: "EAC Duty-Free Transit Certified",
+      aboutUs: "About Us",
       mitumbaVsUtrust: "Mitumba vs Utrust",
       gallery: "Our Collection",
       factorySpecs: "Factory Specs",
@@ -272,6 +327,129 @@ export const translations: Record<Language, Translations> = {
       availableUnitsLabel: "Available: 620k units",
       quarterlyAdvisory: "Kariakoo Showroom Dispatch: Ready-made wholesale cartons available for same-day delivery or upcountry bus dispatch.",
       reserveButton: "Explore Partner Program",
+    },
+    about: {
+      badge: "🏭 20 YEARS HERITAGE • US$3M MANUFACTURING BASE",
+      titlePrefix: "Made in Tanzania.",
+      titleMain: "Engineered for East Africa & Global Export.",
+      subtitle:
+        "Utrust Clothing boasts 20 years of valuable industry experience in garment raw materials and accessories. Operating a modern US$3M textile manufacturing base on a 5-acre industrial footprint in Kigamboni, Dar es Salaam, we directly employ 650 local craftsmen and technicians with a targeted annual capacity of 50 million units.",
+      stats: [
+        {
+          value: "20+",
+          label: "Years Manufacturing Experience",
+          detail: "Two decades mastering garment raw materials and modern textile production",
+        },
+        {
+          value: "US$3M",
+          label: "Initial Capital Investment",
+          detail: "State-of-the-art cutting, knitting, dyeing, and sewing technology",
+        },
+        {
+          value: "5 Acres",
+          label: "Kigamboni Industrial Site",
+          detail: "Phase 1: 3,000 m² of modern eco-conscious production floor space",
+        },
+        {
+          value: "650",
+          label: "Direct Local Jobs Created",
+          detail: "Empowering young, creative, and highly skilled Tanzanian professionals",
+        },
+        {
+          value: "50M",
+          label: "Target Annual Capacity (Units)",
+          detail: "Underwear, boxer briefs, plain tees, bras & knitted apparel for all ages",
+        },
+      ],
+      pillarsTitle: "The Four Pillars of Utrust",
+      pillarsSubtitle:
+        "Our daily operations, corporate culture, and customer relationships are guided by four unshakeable principles established on our executive factory floor.",
+      vision: {
+        tag: "OUR VISION",
+        title: "Industry Leadership",
+        statement: "To be the best practitioner in the production and distribution of garments and textile products.",
+        desc: "Setting the benchmark for textile quality, operational efficiency, and ethical manufacturing across East and Central Africa.",
+      },
+      mission: {
+        tag: "OUR MISSION",
+        title: "Local Value Addition",
+        statement: "To provide value addition to locally manufactured textile products.",
+        desc: "Transforming rich local Tanzanian cotton into premium finished apparel, keeping industrial wealth and skills within our nation.",
+      },
+      value: {
+        tag: "OUR VALUE",
+        title: "Dedicated People & Modernized Dealers",
+        statement: "Through our dedicated, competent, professional, motivated organization, modernized and experienced dealers / personnel.",
+        desc: "At the core of our organization lies an unwavering commitment to excellence, driven by people and principles that serve as the foundation for sustainable growth and long-term success.",
+      },
+      belief: {
+        tag: "OUR BELIEF",
+        title: "Everlasting Dealer Experience",
+        statement: "Constantly striving to leave our dealers an everlasting positive experience.",
+        desc: "At the heart of our business lies an unwavering commitment to building meaningful and lasting relationships. We believe that our success is deeply intertwined with the satisfaction and prosperity of those who partner with us.",
+      },
+      processBadge: "🏭 VERTICAL MANUFACTURING EXCELLENCE",
+      processTitle: "The 6-Stage Textile Production Process",
+      processSubtitle:
+        "From raw Tanzanian cotton fiber to boxed, export-ready garments — every stage is executed with strict quality control under one roof in Kigamboni.",
+      processSteps: [
+        {
+          step: "01",
+          name: "Fiber Extraction & Preparation",
+          headline: "Combed Tanzanian Cotton Selection",
+          description:
+            "High-grade local cotton fibers are carefully selected, cleaned, and opened to eliminate impurities and prepare for spinning.",
+          specs: ["100% Combed Tanzanian Cotton", "Impurity Free", "Uniform Fiber Length"],
+        },
+        {
+          step: "02",
+          name: "Spinning",
+          headline: "Ring-Spun High-Tensile Yarn",
+          description:
+            "Precision automated ring-spinning frames convert raw fiber bobbins into high-tensile, knot-free combed cotton yarn.",
+          specs: ["High-Tensile Combed Yarn", "Anti-Pilling Count", "Zero-Knot Precision"],
+        },
+        {
+          step: "03",
+          name: "Weaving & Knitting",
+          headline: "High-Gauge Circular & Flatbed Knitting",
+          description:
+            "Advanced circular knitting machinery produces ultra-soft, breathable single jersey (180–200 GSM), honeycomb pique, and stretch rib fabrics.",
+          specs: ["180–200 GSM Jersey & Pique", "Micro-Ribbed Elasticity", "Breathable Structure"],
+        },
+        {
+          step: "04",
+          name: "Dyeing",
+          headline: "Eco-Friendly Reactive Vat Dyeing",
+          description:
+            "Automated pressurized industrial dyeing tanks infuse deep, colorfast reactive dyes that withstand 50+ commercial washes without bleeding.",
+          specs: ["Grade 4+ Colorfastness", "Eco-Friendly Reactive Dyes", "Zero Color Bleed"],
+        },
+        {
+          step: "05",
+          name: "Finishing Treatments",
+          headline: "Precision Cutting & JUKI Stitching",
+          description:
+            "CAD precision fabric cutting paired with multi-needle overlock and twin-needle hem stitching by trained Tanzanian seamstresses.",
+          specs: ["JUKI Industrial Sewing", "Anti-Chafe Flatlock Seams", "Reinforced Stress Points"],
+        },
+        {
+          step: "06",
+          name: "Quality Control & Packaging",
+          headline: "100% Lightbox Inspection & Boxing",
+          description:
+            "Every single unit undergoes illuminated lightbox scrutiny for micro-flaws, dimensional shrinkage testing, and sealed 3-pack retail packaging.",
+          specs: ["100% Lightbox Inspection", "Under 3% Shrinkage Guarantee", "120-Pack Master Carton"],
+        },
+      ],
+      dealerBannerTitle: "A Partnership Beyond Transactions",
+      dealerBannerSub:
+        "We believe our factory's success is directly intertwined with the profitability and prosperity of our wholesale distributors, shopkeepers, and regional export dealers.",
+      dealerBannerQuote:
+        "“Constantly striving to leave our dealers an everlasting positive experience — one that goes beyond transactions and resonates as the foundation of trust, reliability, and shared growth.”",
+      dealerBannerBtn: "Apply for Wholesale Dealership",
+      galleryBadge: "📸 FACTORY & SHOWROOM VERIFICATION",
+      galleryTitle: "Official Boardroom & Production Panels",
     },
     comparison: {
       badge: "Honest Everyday Comparison",
@@ -675,6 +853,7 @@ export const translations: Record<Language, Translations> = {
     header: {
       announcementDirect: "Moja kwa Moja Kutoka Kiwanda cha Dar es Salaam",
       announcementTransit: "Imethibitishwa Usafirishaji Bila Ushuru EAC",
+      aboutUs: "Kuhusu Sisi",
       mitumbaVsUtrust: "Mitumba vs Utrust",
       gallery: "Nguo Zetu",
       factorySpecs: "Uwezo wa Kiwanda",
@@ -711,6 +890,129 @@ export const translations: Record<Language, Translations> = {
       availableUnitsLabel: "Nafasi iliyobaki: Vipande 620,000",
       quarterlyAdvisory: "Showroom ya Kariakoo: Mzigo wa jumla upo tayari kwa usafirishaji wa haraka dukani au kwenye mabasi ya mikoani.",
       reserveButton: "Fursa ya Kuwa Wakala",
+    },
+    about: {
+      badge: "🏭 UZOEFU WA MIAKA 20 • KIWANDA CHA DOLA MILIONI 3",
+      titlePrefix: "Imetengenezwa Tanzania.",
+      titleMain: "Imebuniwa kwa Ajili ya Afrika Mashariki na Soko la Kimataifa.",
+      subtitle:
+        "Utrust Clothing inajivunia uzoefu wa thamani wa miaka 20 katika uzalishaji wa malighafi na vifaa vya nguo. Tukiwa na kiwanda cha kisasa cha dola milioni 3 kwenye eneo la ekari 5 Kigamboni, Dar es Salaam, tunaajiri moja kwa moja mafundi na wataalamu 650 wa Kitanzania na lengo la kuzalisha vipande milioni 50 kwa mwaka.",
+      stats: [
+        {
+          value: "20+",
+          label: "Miaka ya Uzoefu wa Utengenezaji",
+          detail: "Miongo miwili ya utaalamu katika malighafi na uzalishaji wa nguo",
+        },
+        {
+          value: "US$3M",
+          label: "Uwekezaji wa Mtaji wa Awali",
+          detail: "Mitambo ya kisasa ya kukata, kushona, kupaka rangi na kufunga",
+        },
+        {
+          value: "Ekari 5",
+          label: "Eneo la Kiwanda Kigamboni",
+          detail: "Awamu ya 1: Eneo la kisasa la uzalishaji la mita za mraba 3,000",
+        },
+        {
+          value: "650",
+          label: "Ajira za Moja kwa Moja",
+          detail: "Kuwezesha vijana wabunifu na wataalamu wenye ujuzi wa Kitanzania",
+        },
+        {
+          value: "Milioni 50",
+          label: "Lengo la Uzalishaji kwa Mwaka (Vipande)",
+          detail: "Boksa, tisheti, sidiria, na nguo za ndani kwa rika zote",
+        },
+      ],
+      pillarsTitle: "Nguzo Nne Kuu za Utrust",
+      pillarsSubtitle:
+        "Uendeshaji wetu wa kila siku na utamaduni wetu wa kikazi unaongozwa na misingi minne imara iliyowekwa kiwandani kwetu.",
+      vision: {
+        tag: "MAONO YETU",
+        title: "Uongozi wa Sekta",
+        statement: "Kuwa watendaji bora zaidi katika uzalishaji na usambazaji wa nguo na bidhaa za nguo.",
+        desc: "Kuweka kiwango cha juu cha ubora wa nguo, ufanisi wa uendeshaji, na uzalishaji wa maadili Afrika Mashariki na Kati.",
+      },
+      mission: {
+        tag: "DHAMIRA YETU",
+        title: "Kuongeza Thamani ya Ndani",
+        statement: "Kutoa ongezeko la thamani kwa bidhaa za nguo zinazotengenezwa nchini.",
+        desc: "Kubadilisha pamba bora ya Kitanzania kuwa nguo safi za kiwango cha juu, kubakiza utajiri na ujuzi nchini mwetu.",
+      },
+      value: {
+        tag: "THAMANI YETU",
+        title: "Watu Waliojitolea na Mawakala wa Kisasa",
+        statement: "Kupitia shirika letu lililojitolea, lenye uwezo, weledi na ari, pamoja na mawakala na watendaji wenye uzoefu wa kisasa.",
+        desc: "Msingi wa shirika letu upo kwenye kujitolea kwa ubora usiotetereka unaoongozwa na watu wenye weledi na misingi thabiti kwa ukuaji endelevu.",
+      },
+      belief: {
+        tag: "IMANI YETU",
+        title: "Uzoefu Chanya wa Kudumu kwa Mawakala",
+        statement: "Kujitahidi daima kuwaachia mawakala wetu uzoefu chanya na wa kudumu.",
+        desc: "Moyo wa biashara yetu umejikita katika kujenga uhusiano wa kudumu na wenye maana na mawakala wetu; mafanikio yetu yameunganishwa na ustawi wao.",
+      },
+      processBadge: "🏭 UBORA WA UZALISHAJI WA NDANI",
+      processTitle: "Mchakato wa Uzalishaji wa Nguo wa Hatua 6",
+      processSubtitle:
+        "Kutoka pamba ghafi ya Kitanzania hadi nguo zilizofungwa tayari kusafirishwa — kila hatua inathibitishwa na udhibiti madhubuti wa ubora Kigamboni.",
+      processSteps: [
+        {
+          step: "01",
+          name: "Uchimbaji na Maandalizi ya Nyuzi",
+          headline: "Uchaguzi wa Pamba Safi ya Kitanzania",
+          description:
+            "Nyuzi za pamba za daraja la juu huchaguliwa, kusafishwa na kuandaliwa kwa ajili ya kusokota bila uchafu.",
+          specs: ["100% Pamba ya Kitanzania", "Bila Takataka", "Urefu Sawa wa Nyuzi"],
+        },
+        {
+          step: "02",
+          name: "Usokotaji",
+          headline: "Uzi Imara wa Kusokotwa",
+          description:
+            "Mitambo ya kisasa inabadilisha nyuzi za pamba kuwa uzi imara, usio na vifungo tayari kwa ufumaji bora.",
+          specs: ["Uzi Imara wa Pamba", "Haichubuki", "Usahihi wa Hali ya Juu"],
+        },
+        {
+          step: "03",
+          name: "Ufumaji",
+          headline: "Ufumaji wa Kisasa wa Vitambaa",
+          description:
+            "Mitambo ya mviringo huzalisha vitambaa laini vinavyopumua (GSM 180–200), pique ya vishikizo na vitambaa vya kunyumbuka.",
+          specs: ["GSM 180–200", "Unyumbulifu Imara", "Kitambaa Kinachopumua"],
+        },
+        {
+          step: "04",
+          name: "Upakaji Rangi",
+          headline: "Upakaji Rangi Usiofifia wa Mazingira",
+          description:
+            "Mashine maalum huweka rangi imara inayodumu hata baada ya kufua zaidi ya mara 50 bila kupauka.",
+          specs: ["Daraja la 4+ la Kudumu", "Rangi Salama za Mazingira", "Haitoi Rangi Majini"],
+        },
+        {
+          step: "05",
+          name: "Ukamilishaji na Ushonaji",
+          headline: "Ukataji wa Kisasa na Ushonaji wa JUKI",
+          description:
+            "Ukataji wa kompyuta unaoendana na ushonaji thabiti wa mashine za JUKI unaofanywa na mafundi stadi wa Kitanzania.",
+          specs: ["Mashine za JUKI", "Mishono Laini Isiyowasha", "Mishono Imara ya Kudumu"],
+        },
+        {
+          step: "06",
+          name: "Udhibiti wa Ubora na Ufungashaji",
+          headline: "Ukaguzi wa 100% wa Meza za Nuru",
+          description:
+            "Kila kipande kinakaguliwa kwenye meza maalum zenye mwanga kuzuia kasoro, na kufungwa kwenye boksi za pakiti 3.",
+          specs: ["Ukaguzi wa 100% wa Nuru", "Kipimo cha Kutonywea chini ya 3%", "Boksi Kuu ya Pakiti 120"],
+        },
+      ],
+      dealerBannerTitle: "Ushirikiano Zaidi ya Biashara ya Kawaida",
+      dealerBannerSub:
+        "Tunaamini kuwa mafanikio ya kiwanda chetu yamefungamana moja kwa moja na faida ya mawakala, wenye maduka, na wafanyabiashara wa kikanda.",
+      dealerBannerQuote:
+        "“Kujitahidi daima kuwaachia mawakala wetu uzoefu chanya na wa kudumu — unaovuka shughuli za kawaida na kuwa msingi wa uaminifu, uthabiti, na ukuaji wa pamoja.”",
+      dealerBannerBtn: "Jiunge na Mtandao wa Mawakala wa Jumla",
+      galleryBadge: "📸 UTHIBITISHO WA KIWANDA NA OFISI",
+      galleryTitle: "Mbao Rasmi za Bodi na Maonyesho ya Uzalishaji",
     },
     comparison: {
       badge: "Ukweli wa Wazi Kila Siku",
@@ -1114,6 +1416,7 @@ export const translations: Record<Language, Translations> = {
     header: {
       announcementDirect: "达累斯萨拉姆自营大型现代化服装工厂直发",
       announcementTransit: "东非共同体 (EAC) 原产地免关税认证",
+      aboutUs: "关于我们",
       mitumbaVsUtrust: "二手旧衣对比",
       gallery: "精选产品系列",
       factorySpecs: "工厂设备与工艺",
@@ -1150,6 +1453,129 @@ export const translations: Record<Language, Translations> = {
       availableUnitsLabel: "剩余可预定: 62万件",
       quarterlyAdvisory: "卡里亚库展厅现货：成箱现货可当天送达档口，或当天送达长途客运班车站（发往姆万扎/阿鲁沙等）。",
       reserveButton: "申请合作分销计划",
+    },
+    about: {
+      badge: "🏭 20年制造传承 • 300万美元工业基地",
+      titlePrefix: "坦桑尼亚制造。",
+      titleMain: "立足东非，辐射全球的高品质纺织标杆。",
+      subtitle:
+        "Utrust Clothing（优创服饰）在服装原材料及辅料领域拥有20年深厚经验。我们在达累斯萨拉姆基甘博尼（Kigamboni）占地5英亩的工业园区投资300万美元建设现代化纺织基地，第一期建筑面积达3,000平方米，直接创造650个本土就业岗位，年设计产能目标达5,000万件。",
+      stats: [
+        {
+          value: "20+",
+          label: "年纺织服装制造经验",
+          detail: "深耕服装原材料、面料辅料与现代化成衣制造二十载",
+        },
+        {
+          value: "300万+",
+          label: "美元一期项目总投资",
+          detail: "引进高精密自动化裁床、织造、环保染色与JUKI成衣生产线",
+        },
+        {
+          value: "5英亩",
+          label: "基甘博尼工业园区面积",
+          detail: "一期3,000平方米现代化生产车间与高标准绿色厂房",
+        },
+        {
+          value: "650",
+          label: "直接创造本土就业岗位",
+          detail: "赋能年轻、有创意、高技术水准的坦桑尼亚技术工人与管理团队",
+        },
+        {
+          value: "5,000万",
+          label: "件年设计生产产能",
+          detail: "涵盖全年龄段平纹T恤、内裤、文胸、吊带衫等针织全品类服饰",
+        },
+      ],
+      pillarsTitle: "Utrust 四大企业核心支柱",
+      pillarsSubtitle:
+        "设立于展厅与董事会议室的核心理念，是我们每天运营与发展的最高准则。",
+      vision: {
+        tag: "企业愿景 (VISION)",
+        title: "行业领跑者",
+        statement: "成为服装及纺织品生产与分销领域的最佳实践者。",
+        desc: "在东非与中非树立纺织品品质、生产效率和绿色制造的行业新标杆。",
+      },
+      mission: {
+        tag: "企业使命 (MISSION)",
+        title: "提升本土产业附加值",
+        statement: "为坦桑尼亚本土制造的纺织产品提供高附加值。",
+        desc: "将优质坦桑尼亚棉花就地深加工为高端成衣，把产业财富、技术与就业扎根在本土。",
+      },
+      value: {
+        tag: "核心价值观 (VALUE)",
+        title: "敬业团队与现代化经销商",
+        statement: "依托我们敬业、胜任、专业、充满活力的团队，以及现代化、经验丰富的经销商网络与合作伙伴。",
+        desc: "我们坚信公司的力量不仅来自优质产品，更源于指引日常运营的人才与原则，为可持续发展奠定基石。",
+      },
+      belief: {
+        tag: "企业信念 (BELIEF)",
+        title: "让经销商享有恒久的卓越体验",
+        statement: "始终致力于为我们的经销商创造持久且积极的合作体验。",
+        desc: "商业的核心在于建立长久而有意义的伙伴关系。我们的成功与经销商伙伴的繁荣息息相关，合作超越简单买卖，筑牢信任与共赢。",
+      },
+      processBadge: "🏭 全流程垂直一体化制造",
+      processTitle: "六步全产业链纺织工艺",
+      processSubtitle:
+        "从坦桑尼亚优质天然棉原纤维到包装出厂的出口级成衣——每一个环节均在同一园区严格把控。",
+      processSteps: [
+        {
+          step: "01",
+          name: "纤维提取与准备",
+          headline: "严选坦桑尼亚精梳天然原棉",
+          description:
+            "精选本土长绒棉花原纤维，经过开清棉与除杂工序，确保原纤维纯净均一。",
+          specs: ["100% 坦桑尼亚精梳棉", "深度去除杂质", "纤维长度均匀一致"],
+        },
+        {
+          step: "02",
+          name: "纺纱工艺",
+          headline: "高强力环锭精梳纺纱",
+          description:
+            "高精密自动化环锭纺纱设备将棉纤维加工为高强力、低毛羽、抗起球的精梳棉纱线筒子。",
+          specs: ["高强力精梳纱线", "抗起球工艺", "无结头精密卷绕"],
+        },
+        {
+          step: "03",
+          name: "织造工艺",
+          headline: "大圆机高密平纹与罗纹织造",
+          description:
+            "现代化针织大圆机精准编织透气单面汗布（180–200 GSM）、蜂巢珠地网眼及高弹氨纶面料。",
+          specs: ["180–200 GSM 重磅汗布", "微罗纹领口弹性", "亲肤透气微孔"],
+        },
+        {
+          step: "04",
+          name: "染色处理",
+          headline: "高温高压环保活性染色",
+          description:
+            "封闭式加压环保染色机采用活性环保染料，达到4级以上色牢度，历经50次专业洗涤不褪色。",
+          specs: ["4级以上国际色牢度", "环保无毒活性染料", "下水零掉色零晕染"],
+        },
+        {
+          step: "05",
+          name: "后整理与车缝",
+          headline: "CAD立体裁剪与JUKI多针车缝",
+          description:
+            "CAD自动化精准裁床配合专业JUKI工业缝纫机，由熟练车工进行四线包缝与双针锁边。",
+          specs: ["JUKI重工级缝纫机", "平整防磨皮走线", "受力点全套结加固"],
+        },
+        {
+          step: "06",
+          name: "品质检验与包装",
+          headline: "100% 灯箱全检与外贸包装",
+          description:
+            "每件成衣均在强光透光灯箱下由品检员100%全检，经预缩测试后进行3件装精美盒装与整箱打包。",
+          specs: ["100% 强光灯箱品检", "缩水率低于3%出厂标准", "120包一箱国际箱规"],
+        },
+      ],
+      dealerBannerTitle: "超越单纯买卖的长期事业共赢",
+      dealerBannerSub:
+        "我们坚信工厂的持续发展直接取决于批发分销商、店铺店主及跨境出口商的盈利能力。",
+      dealerBannerQuote:
+        "“始终致力于为我们的经销商创造持久且积极的合作体验——超越简单的买卖交易，成为信任、可靠与共同繁荣的基石。”",
+      dealerBannerBtn: "申请成为批发经销商",
+      galleryBadge: "📸 真实工厂与展厅实景核验",
+      galleryTitle: "官方展厅与车间实景看板",
     },
     comparison: {
       badge: "日常真实对比",

@@ -124,6 +124,9 @@ export default function Header() {
 
           {/* Center Navigation Links (Desktop) */}
           <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <a href="#about" className="hover:text-[#d46f24] transition-colors">
+              {t.header.aboutUs}
+            </a>
             <a href="#comparison" className="hover:text-[#d46f24] transition-colors">
               {t.header.mitumbaVsUtrust}
             </a>
